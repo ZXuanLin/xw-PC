@@ -1,0 +1,504 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!--<link rel="shortcut icon" href="/favicon.ico">-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="css/frames/sm.min.css" rel="stylesheet" />
+    <link href="css/frames/sm-extend.min.css" rel="stylesheet" />
+    <link href="css/frames/common.css" rel="stylesheet" />
+    <link href="css/views/home.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper WP-Home" id="WP-Home">
+        <div class="page-group">
+            <div class="page">
+                <header class="bar bar-nav row">
+                    <div class="col-10">
+                        <a href="#">
+                            <i class="icon icon-menu"></i>
+                        </a>
+                    </div>
+                    <div class="col-80">
+                        <div class="searchbar">
+                            <a class="searchbar-cancel">取消</a>
+                            <div class="search-input">
+                                <label class="icon icon-search" for="search"></label>
+                                <input type="search" id='search' placeholder='搜索...' />
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-10">
+                        <a href="../views/order.html">
+                            <i class="icon icon-cart"></i>
+
+                        </a>
+                    </div>
+                </header>
+                <nav class="bar bar-tab">
+                    <a class="tab-item active" href="index.html">
+                        <span class="icon icon-home"></span>
+                        <span class="tab-label">首页</span>
+                    </a>
+                    <a class="tab-item external" href="../views/mall.html">
+                        <span class="icon icon-app"></span>
+                        <span class="tab-label">商品</span>
+                    </a>
+                    <a class="tab-item external" href="../views/order.html">
+                        <span class="icon icon-cart"></span>
+                        <span class="tab-label">开单</span>
+                    </a>
+                    <a class="tab-item external" href="../views/account.html">
+                        <span class="icon icon-me"></span>
+                        <span class="tab-label">我的</span>
+                    </a>
+                </nav>
+                <div class="content">
+                    <div id="home_swiper" class="m_part u_part_TG u_swiper_container">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a href="../views/detail.html"><img src="asset/imgs/b_01_150914.png" alt="" /></a></div>
+                                <div class="swiper-slide"><a href="../views/detail.html"><img src="asset/imgs/b_02_150914.png" alt=""></a></div>
+                                <div class="swiper-slide"><a href="../views/detail.html"><img src="asset/imgs/b_03_150914.png" alt=""></a></div>
+                                <div class="swiper-slide"><a href="../views/detail.html"><img src="asset/imgs/b_02_150914.png" alt=""></a></div>
+                                <div class="swiper-slide"><a href="../views/detail.html"><img src="asset/imgs/th_02_150914.jpg" alt=""></a></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div id="home_hotlist" class="m_part u_part_HOT">
+                        <div class="card">
+                            <div class="card-header">
+                                <span>热销商品</span>
+                                <a href="#">
+                                    <span>更多</span>
+                                    <i class="icon icon-right"></i>
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <div class="list-block media-list">
+                                    <ul>
+                                        <li>
+                                            <a href="#" class="item-link item-content">
+                                                <div class="item-media"><img src="asset/imgs/list_01.jpg"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-text">皮带传动式空压机/气泵 W-1.6/8。适用于轮胎修补，建筑装潢，工厂装配供气，产品喷漆，纺织服装，石油化工，矿山等等。</div>
+                                                    <div class="item-footer item-sm-footer">
+                                                        <div class="pull-left">
+                                                            已售
+                                                            <b>40</b>
+                                                            台
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            总额：
+                                                            <dfn>￥</dfn>
+                                                            <b>50000</b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="item-link item-content">
+                                                <div class="item-media"><img src="asset/imgs/list_02.jpg"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-text">无油静音空压机/气泵经济款550W*1 BD-550x1-30L(加电磁阀)</div>
+                                                    <div class="item-footer item-sm-footer">
+                                                        <div class="pull-left">
+                                                            已售
+                                                            <b>20</b>
+                                                            台
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            总额：
+                                                            <dfn>￥</dfn>
+                                                            <b>30450</b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="item-link item-content">
+                                                <div class="item-media"><img src="asset/imgs/list_03.png"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-text">抛光机/气动砂纸机/气动打磨机/砂光机 5寸带管子 宝瑞</div>
+                                                    <div class="item-footer item-sm-footer">
+                                                        <div class="pull-left">
+                                                            已售
+                                                            <b>126</b>
+                                                            台
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            总额：
+                                                            <dfn>￥</dfn>
+                                                            <b>10343</b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="home_goldCst" class="u_part_GC">
+                        <div class="card">
+                            <div class="card-header">
+                                <span>金牌客户</span>
+                                <a href="#">
+                                    <span>更多</span>
+                                    <i class="icon icon-right"></i>
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>
+                                        <div class="u_base">
+                                            <div class="u_cust-avatar">
+                                                <span><img src="asset/avatar/default_face.png" alt="" /></span>
+                                            </div>
+                                            <div class="u_item">
+                                                <sapn class="u_label">
+                                                    <i class="icon icon-me"></i>
+                                                    <span>名称:</span>
+                                                </sapn>
+                                                <a href="#" class="u_value">三一重工集团</a>
+                                            </div>
+                                            <div class="u_item">
+                                                <sapn class="u_label">
+                                                    <i class="icon icon-phone"></i>
+                                                    <span>电话:</span>
+                                                </sapn>
+                                                <a href="tel:13100393434" class="u_value">13100393434</a>
+                                            </div>
+                                            <div class="u_item">
+                                                <sapn class="u_label">
+                                                    <i class="icon icon-cart"></i>
+                                                    <span>已消费:</span>
+                                                </sapn>
+                                                <span class="u_value">
+                                                    <dfn>￥</dfn>
+                                                    300,000
+                                                </span>
+                                                <span class="u_ext">
+                                                    <a class="u_ext-show">明细</a>
+                                                    <a class="u_ext-hidden">收起</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="u_detail">
+                                            <div class="list-block media-list">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#" class="item-link item-content">
+                                                            <div class="item-media"><img src="asset/imgs/list_01.jpg"></div>
+                                                            <div class="item-inner">
+                                                                <div class="item-text">皮带传动式空压机/气泵 W-1.6/8。适用于轮胎修补，建筑装潢，工厂装配供气，产品喷漆，纺织服装，石油化工，矿山等等。</div>
+                                                                <div class="item-footer item-sm-footer">
+                                                                    <div class="pull-left">
+                                                                        已购置
+                                                                        <b>40</b>
+                                                                        台
+                                                                    </div>
+                                                                    <div class="pull-right">
+                                                                        总额：
+                                                                        <dfn>￥</dfn>
+                                                                        <b>50000</b>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="item-link item-content">
+                                                            <div class="item-media"><img src="asset/imgs/list_02.jpg"></div>
+                                                            <div class="item-inner">
+                                                                <div class="item-text">无油静音空压机/气泵经济款550W*1 BD-550x1-30L(加电磁阀)</div>
+                                                                <div class="item-footer item-sm-footer">
+                                                                    <div class="pull-left">
+                                                                        已购置
+                                                                        <b>20</b>
+                                                                        台
+                                                                    </div>
+                                                                    <div class="pull-right">
+                                                                        总额：
+                                                                        <dfn>￥</dfn>
+                                                                        <b>30450</b>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="item-link item-content">
+                                                            <div class="item-media"><img src="asset/imgs/list_03.png"></div>
+                                                            <div class="item-inner">
+                                                                <div class="item-text">抛光机/气动砂纸机/气动打磨机/砂光机 5寸带管子 宝瑞</div>
+                                                                <div class="item-footer item-sm-footer">
+                                                                    <div class="pull-left">
+                                                                        已购置
+                                                                        <b>126</b>
+                                                                        台
+                                                                    </div>
+                                                                    <div class="pull-right">
+                                                                        总额：
+                                                                        <dfn>￥</dfn>
+                                                                        <b>10343</b>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="u_base">
+                                            <div class="u_cust-avatar">
+                                                <span><img src="asset/avatar/default_face.png" alt="" /></span>
+                                            </div>
+                                            <div class="u_item">
+                                                <sapn class="u_label">
+                                                    <i class="icon icon-me"></i>
+                                                    <span>名称:</span>
+                                                </sapn>
+                                                <a href="#" class="u_value">瑞典滚珠轴承(北京)公司</a>
+                                            </div>
+                                            <div class="u_item">
+                                                <sapn class="u_label">
+                                                    <i class="icon icon-phone"></i>
+                                                    <span>电话:</span>
+                                                </sapn>
+                                                <a href="tel:13100393434" class="u_value">(010)245945</a>
+                                            </div>
+                                            <div class="u_item">
+                                                <sapn class="u_label">
+                                                    <i class="icon icon-cart"></i>
+                                                    <span>已消费:</span>
+                                                </sapn>
+                                                <span class="u_value">
+                                                    <dfn>￥</dfn>
+                                                    4,800,000
+                                                </span>
+                                                <span class="u_ext">
+                                                    <a class="u_ext-show">明细</a>
+                                                    <a class="u_ext-hidden">收起</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="u_detail">
+                                            <div class="list-block media-list">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#" class="item-link item-content">
+                                                            <div class="item-media"><img src="asset/imgs/list_01.jpg"></div>
+                                                            <div class="item-inner">
+                                                                <div class="item-text">皮带传动式空压机/气泵 W-1.6/8。适用于轮胎修补，建筑装潢，工厂装配供气，产品喷漆，纺织服装，石油化工，矿山等等。</div>
+                                                                <div class="item-footer item-sm-footer">
+                                                                    <div class="pull-left">
+                                                                        已购置
+                                                                        <b>40</b>
+                                                                        台
+                                                                    </div>
+                                                                    <div class="pull-right">
+                                                                        总额：
+                                                                        <dfn>￥</dfn>
+                                                                        <b>50000</b>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="item-link item-content">
+                                                            <div class="item-media"><img src="asset/imgs/list_02.jpg"></div>
+                                                            <div class="item-inner">
+                                                                <div class="item-text">无油静音空压机/气泵经济款550W*1 BD-550x1-30L(加电磁阀)</div>
+                                                                <div class="item-footer item-sm-footer">
+                                                                    <div class="pull-left">
+                                                                        已购置
+                                                                        <b>20</b>
+                                                                        台
+                                                                    </div>
+                                                                    <div class="pull-right">
+                                                                        总额：
+                                                                        <dfn>￥</dfn>
+                                                                        <b>30450</b>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="item-link item-content">
+                                                            <div class="item-media"><img src="asset/imgs/list_03.png"></div>
+                                                            <div class="item-inner">
+                                                                <div class="item-text">抛光机/气动砂纸机/气动打磨机/砂光机 5寸带管子 宝瑞</div>
+                                                                <div class="item-footer item-sm-footer">
+                                                                    <div class="pull-left">
+                                                                        已购置
+                                                                        <b>126</b>
+                                                                        台
+                                                                    </div>
+                                                                    <div class="pull-right">
+                                                                        总额：
+                                                                        <dfn>￥</dfn>
+                                                                        <b>10343</b>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="u_base">
+                                            <div class="u_cust-avatar">
+                                                <span><img src="asset/avatar/default_face.png" alt="" /></span>
+                                            </div>
+                                            <div class="u_item">
+                                                <sapn class="u_label">
+                                                    <i class="icon icon-me"></i>
+                                                    <span>名称:</span>
+                                                </sapn>
+                                                <a href="#" class="u_value"> 蒂森—克虏伯(上海)集团公司</a>
+                                            </div>
+                                            <div class="u_item">
+                                                <sapn class="u_label">
+                                                    <i class="icon icon-phone"></i>
+                                                    <span>电话:</span>
+                                                </sapn>
+                                                <a href="tel:13100393434" class="u_value">(021)045223</a>
+                                            </div>
+                                            <div class="u_item">
+                                                <sapn class="u_label">
+                                                    <i class="icon icon-cart"></i>
+                                                    <span>已消费:</span>
+                                                </sapn>
+                                                <span class="u_value">
+                                                    <dfn>￥</dfn>
+                                                    123,000
+                                                </span>
+                                                <span class="u_ext">
+                                                    <a class="u_ext-show">明细</a>
+                                                    <a class="u_ext-hidden">收起</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="u_detail">
+                                            <div class="list-block media-list">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#" class="item-link item-content">
+                                                            <div class="item-media"><img src="asset/imgs/list_01.jpg"></div>
+                                                            <div class="item-inner">
+                                                                <div class="item-text">皮带传动式空压机/气泵 W-1.6/8。适用于轮胎修补，建筑装潢，工厂装配供气，产品喷漆，纺织服装，石油化工，矿山等等。</div>
+                                                                <div class="item-footer item-sm-footer">
+                                                                    <div class="pull-left">
+                                                                        已购置
+                                                                        <b>40</b>
+                                                                        台
+                                                                    </div>
+                                                                    <div class="pull-right">
+                                                                        总额：
+                                                                        <dfn>￥</dfn>
+                                                                        <b>50000</b>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="item-link item-content">
+                                                            <div class="item-media"><img src="asset/imgs/list_02.jpg"></div>
+                                                            <div class="item-inner">
+                                                                <div class="item-text">无油静音空压机/气泵经济款550W*1 BD-550x1-30L(加电磁阀)</div>
+                                                                <div class="item-footer item-sm-footer">
+                                                                    <div class="pull-left">
+                                                                        已购置
+                                                                        <b>20</b>
+                                                                        台
+                                                                    </div>
+                                                                    <div class="pull-right">
+                                                                        总额：
+                                                                        <dfn>￥</dfn>
+                                                                        <b>30450</b>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="item-link item-content">
+                                                            <div class="item-media"><img src="asset/imgs/list_03.png"></div>
+                                                            <div class="item-inner">
+                                                                <div class="item-text">抛光机/气动砂纸机/气动打磨机/砂光机 5寸带管子 宝瑞</div>
+                                                                <div class="item-footer item-sm-footer">
+                                                                    <div class="pull-left">
+                                                                        已购置
+                                                                        <b>126</b>
+                                                                        台
+                                                                    </div>
+                                                                    <div class="pull-right">
+                                                                        总额：
+                                                                        <dfn>￥</dfn>
+                                                                        <b>10343</b>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/frames/zepto.js"></script>
+    <script>$.config = { router: false }</script>
+    <script src="js/frames/sm.min.js"></script>
+    <script src="js/frames/sm-extend.min.js"></script>
+    <script>
+        $(function () {
+            $(".swiper-container").swiper({
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                loop: true,
+                preloadImages: false,
+                lazyLoading: true,
+                lazyLoadingInPrevNext: true,
+                autoplay: 2000,
+                autoplayDisableOnInteraction: false
+            });
+        });
+
+        $('#home_goldCst').on('click', '.u_ext-show', function () {
+            var $this = $(this);
+            $this.parents('.u_base').siblings('.u_detail').show();
+        });
+
+        $('#home_goldCst').on('click', '.u_ext-hidden', function () {
+            var $this = $(this);
+            $this.parents('.u_base').siblings('.u_detail').hide();
+        });
+
+
+        $.init();
+    </script>
+</body>
+</html>

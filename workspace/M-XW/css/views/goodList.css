@@ -1,0 +1,113 @@
+﻿/*头部导航*/
+.page-group .page-top-nav{
+    display: flex;
+    justify-content:space-between; 
+    height:2rem;
+    background:#fafafa;
+    border-bottom:1px solid #ccc;
+}
+    .page-group .page-top-nav ul {
+        width:100%;
+    }
+    .page-group .page-top-nav ul li{
+        float:left;
+        width:25%;
+        height:2rem;
+        line-height:2rem;
+    }
+    .page-group .page-top-nav ul li a{
+    }
+    .j-afjea {
+    margin: 0;
+    padding: 0;
+}
+    .j-vaesd{
+    margin-left:.5rem;
+    display:block;
+}
+    .j-xde{
+        position:relative;
+    }
+    .icon-up,.icon-down{
+            font-size: .2rem;
+            position:absolute;    
+    }
+    .icon-down{
+        top: -0.3rem;
+    }
+    .icon-up{
+        top: -0.8rem;
+    }
+    .gl-im{
+        width:5rem;
+    }
+    .gl-hj h4{
+     font-size: .7rem;
+    color: #000;
+    font-weight: bold;
+    }
+    .gl-xkk{
+        padding: .4rem;
+        border-top:1px solid #ccc;
+        position:relative;
+    }
+    .gl-rt,.gl-uo,.gl-qw{
+        margin:0;
+        padding:0;    
+    }
+    .gl-uo{
+    position: absolute;
+    right: 0;
+    width: 3rem;
+    top: .9rem;
+    font-size: 1rem;
+    padding-left:.6rem;
+    }
+    .gl-qw{
+        font-size: .5rem;  
+        position:relative;  
+    }
+    .gl-rt{
+        font-size: .6rem;    
+    }
+    .gl-sed{
+        padding-left: .4rem;
+    }
+    .gl-we{
+        color:#ec3c12;
+        font-weight:bold;
+    }
+    .gl-ex{
+        color:#ec3c14;
+    }
+    .gl-bn{
+     border: 1px solid #fa465a;
+    color: #fa465a;
+    margin-right: .2rem;
+    }
+    .gl-ml{
+    background: #fd6b2e;
+    color: #fff;
+    margin-right: .2rem;
+    }
+    .gl-sd{
+        color:#fa5245;
+    }
+    .gl-ttr{
+    position: absolute;
+    top: 1rem;
+    font-size:.7rem;
+    }
+    .gl-wwd{
+        color:#f05c1e;
+        font-size: 1.3rem;
+    }
+    .gl-rrd{
+    display: block;
+    position: absolute;
+    right: .2rem;
+    bottom: 0;
+    }
+    .gl-ppd{
+        margin-left:1rem;
+    }

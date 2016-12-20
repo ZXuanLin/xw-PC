@@ -1,0 +1,130 @@
+﻿.m_icon {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+    background-image: url(../../asset/icons/icons.png);
+}
+
+.icon-sm_list,
+.icon-big_list {
+    background-image: url(../../asset/icons/icon-list.png);
+}
+
+.icon-sm_list {
+    background-position: 0 0;
+}
+
+.icon-big_list {
+    background-position: 20px 0;
+}
+
+.icon_add,
+.icon_subtraction {
+    position: relative;
+    background: none;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.icon_add::before,
+.icon_subtraction::before,
+.icon_add::after {
+    content: " ";
+    position: absolute;
+    border-color: #ccc;
+    border-style: solid;
+}
+
+.icon_add::before,
+.icon_subtraction::before {
+    top: 0.4rem;
+    left: 0.15rem;
+    width: 0.6rem;
+    height: 0;
+    border-width: 0.1rem 0 0 0;
+}
+
+.icon_add::after {
+    top: 0.15rem;
+    left: 0.4rem;
+    width: 0;
+    height: 0.6rem;
+    border-width: 0 0 0 0.1rem;
+}
+
+.icon_checkbox {
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    border-radius: 100%;
+    border: 1px solid #c7c7cc;
+    box-sizing: border-box;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    background-image:none;
+}
+
+.icon_checkbox.u_checked {
+    border: none;
+    background-color: #0894ec;
+}
+
+.icon_checkbox.u_checked::after {
+    content: ' ';
+    position: absolute;
+    left: 50%;
+    margin-left: -.3rem;
+    top: 50%;
+    margin-top: -.2rem;
+    width: .6rem;
+    height: .45rem;
+    background: no-repeat center;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20x%3D'0px'%20y%3D'0px'%20viewBox%3D'0%200%2012%209'%20xml%3Aspace%3D'preserve'%3E%3Cpolygon%20fill%3D'%23ffffff'%20points%3D'12%2C0.7%2011.3%2C0%203.9%2C7.4%200.7%2C4.2%200%2C4.9%203.9%2C8.8%203.9%2C8.8%203.9%2C8.8%20'%2F%3E%3C%2Fsvg%3E");
+    background-size: .6rem .45rem;
+}
+
+.icon-cash,
+.icon-coupon,
+.icon-point {
+    border: 1px solid #808080;
+    border-radius: 100%;
+    font-style: normal;
+    font-size: 0.6rem;
+}
+
+.icon-cash:after {
+    content: "现";
+}
+
+.icon-coupon:after {
+    content: "券";
+}
+
+.icon-point:after {
+    content: "积";
+}
+
+.icon-account {
+    background-position: -20px -75px;
+}
+
+.icon-pay {
+    background-position: -19px -119px;
+}
+
+.icon-receive {
+    background-position: -19px -165px;
+}
+
+.icon-return {
+    background-position: -19px -210px;
+}
+
+.icon-call {
+    background-position: -20px -257px;
+}
+
+.icon-crash {
+    background-position: -17px -300px;
+}

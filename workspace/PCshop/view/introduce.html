@@ -1,0 +1,957 @@
+﻿
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="UTF-8" />
+    <title>雄威商城</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=1226" />
+    <link href="../css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/lib/jquery-3.1.1.min.js"></script>
+    <script src="../js/index.js"></script>
+    <link href="../css/view/productList.css" rel="stylesheet" />
+    <script src="../js/header.js"></script>
+    <style>
+        html {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            line-height: 1.6;
+        }
+
+        body {
+            -webkit-touch-callout: none;
+            font-family: -apple-system-font,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+            background-color: #f3f3f3;
+            line-height: inherit;
+        }
+
+            body.rich_media_empty_extra {
+                background-color: #fff;
+            }
+
+                body.rich_media_empty_extra .rich_media_area_primary:before {
+                    display: none;
+                }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #607fa6;
+            text-decoration: none;
+        }
+
+        @media screen and (min-width:1024px) {
+            .rich_media {
+                width: 740px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .rich_media_inner {
+                padding: 20px;
+            }
+
+            body {
+                background-color: #fff;
+            }
+        }
+
+        @media screen and (min-width:1025px) {
+            body {
+                font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+            }
+
+            .rich_media {
+                position: relative;
+            }
+
+            .rich_media_inner {
+                background-color: #fff;
+                padding-bottom: 100px;
+            }
+        }
+
+        .rich_media_global_msg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1em 35px 1em 15px;
+            z-index: 1;
+            background-color: #c6e0f8;
+            color: #8c8c8c;
+            font-size: 13px;
+        }
+
+            .rich_media_global_msg .icon_closed {
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                margin-top: -5px;
+                line-height: 300px;
+                overflow: hidden;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                background: transparent url(/mmbizwap/zh_CN/htmledition/images/icon/appmsg/icon_appmsg_msg_closed_sprite.2x.png) no-repeat 0 0;
+                width: 11px;
+                height: 11px;
+                vertical-align: middle;
+                display: inline-block;
+                -webkit-background-size: 100% auto;
+                background-size: 100% auto;
+            }
+
+                .rich_media_global_msg .icon_closed:active {
+                    background-position: 0 -17px;
+                }
+
+        .preview_appmsg .rich_media_title {
+            margin-top: 1.9em;
+        }
+
+        @media screen and (min-width:1024px) {
+            .rich_media_global_msg {
+                position: relative;
+                margin: 0 20px;
+            }
+
+            .preview_appmsg .rich_media_title {
+                margin-top: 0;
+            }
+        }
+
+        p {
+            line-height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+        <div class="mall_container clearfix" id="top">
+            <!--<div class="top_tags top-my-ruigu" style="-display: none;z-index:99999">
+                <a href="javascript" target="_blank"><span>卖家中心</span><i class="icon iconfont arrow" style="margin: 0 0 0 3px;"></i></a>
+                <ul class="transaction">
+                    <li><a href="#">交易管理</a></li>
+                    <li><a href="#">账号管理</a></li>
+                    <li><a href="#">交易管理</a></li>
+                    <li><a href="#">账号</a></li>
+                </ul>
+            </div>-->
+            <div class="top-right fr">
+                <div class="top-favorite fr" onclick="AddFavorite()">
+                    <a href="javascript:;">登陆</a><span style="position:absolute">|</span>
+                    <a href="javascript:;">注册</a><span style="position:absolute">|</span>
+                    <a href="javascript:;">消息通知</a>
+                    <span class="t-phone">全国统一服务热线： 666666666666</span>
+                </div>
+            </div>
+
+            <div class="fl">
+                <div class="back_home">
+                    <!--<div class="top_tags"><a href="/">雄威商城首页</a></div>-->
+                </div>
+                <span class="t-phone" style="float:left;">欢迎来到雄威商场!</span>
+                <div class="top_tags top-mobile">
+                    <a href="" class="top_tag_a"><i class="fa fa-mobile fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;手机雄威&nbsp;&nbsp;<i class="fa fa-angle-down fa-1x"></i></a>
+                    <div class="top_panel top-mobile-child t-c" style="display:none">
+                        <div class="scan-ios">
+                            <img src="/static/home/content/images/home/iosScan.png" />
+                            <div class="text">
+                                <p class="t1">iPhone客户端</p>
+                                <p class="t2">扫描下载雄威</p>
+                                <p class="t3">商城App</p>
+                                <i style="background:url(/static/home/content/images/home/ai.png) no-repeat;background-position: 0 0;"></i>
+                            </div>
+                        </div>
+                        <div class="scan-android">
+                            <img src="/static/home/content/images/home/scan.png" />
+                            <div class="text">
+                                <p class="t1">Android客户端</p>
+                                <p class="t2">扫描下载雄威</p>
+                                <p class="t3">商城App</p>
+                                <i style="background:url(/static/home/content/images/home/ai.png) no-repeat;background-position: -21px 0;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top_tags">
+                    <a href="#" class="top_tag_a">客户服务<i class="fa fa-angle-down fa-1x"></i></a>
+                    <div class="top_panel top-kefu-child t-c" style="display:none">
+                        <a href="" target="_blank">帮助中心</a>
+                        <a href="" target="_blank">账户信息</a>
+                        <a href="" target="_blank">个人中心</a>
+                        <a href="" target="_blank">订单查询</a>
+                        <a href="" target="_blank">开票信息</a>
+                        <a href="" target="_blank">维修信息</a>
+                        <a href="" onclick="javascript:dstj()">反馈建议</a>
+                    </div>
+                </div>
+                <div class="top_tags top-follow">
+                    <a href="javascript:void(0)" class="top_tag_a"><i class="fa fa-qrcode"></i>&nbsp;关注雄威</a>
+                    <div class="top_panel top-follow-child t-c" style="display:none">
+                        <img src="/static/home/content/images/home/weixin.png" style="padding:10px;" />
+                        <p>关注雄威</p>
+                        <p><b>微信二维码</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--头部广告-->
+    <!-- <div class="top-ad"><a><img src="../image/view/details/top/top-ad.jpg" width="100%" /></a></div>-->
+    <!--logo部分-->
+    <div class="mall-header">
+        <div class="container clearfix">
+            <a class="mall-header-logo" href=""><img src="../image/header/logo.jpg" /></a>
+            <div class="mall-header-search" style="padding-top: 30px;">
+                <div class="merchandise clearfix" style="display: none">
+                    <div class="myshop"><a href="javascript:;" class="current">商品</a></div>
+                    <div class="mudian"><a href="javascript:;">店铺</a></div>
+                </div>
+                <form id="searchForm" action="/Channel/index.html" onsubmit="return false;">
+                    <div class="search-val">
+                        <input type="text" class="intype-text search-keyword" name="s" value="">
+                    </div>
+                    <input type="submit" class="search-btn" value="搜索">
+                    <div id="keywordNew" class="search-hotwords">
+                        <a href="" target="_blank" class="first ">热门搜索:</a><a href="" target="_blank" class="">电动工具</a><a href="" target="_blank" class="">空压机</a><a href="" target="_blank" class="">水泵</a><a href="" target="_blank" class="">焊机</a>
+                    </div>
+                </form>
+
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="mall-header-prompt">
+                <ul>
+                    <li><div class="goods-name">第一个商品</div><div class="amount">约20个商品</div></li>
+                </ul>
+                <div class="close"><a href="javascript:;" onclick="close_prompt()">关闭窗口</a></div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+
+            <div class="mall-header-right">
+                <a class="btn hd-login-btn" href="">云POS</a>
+                <div class="hd-min-cart">
+                    <a href="" target="_blank">
+                        <i class="fa fa-shopping-cart fa-lg"></i><span>购物车</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--下拉导航-->
+    <div class="ng-nav-bar public-head-bar" style="width:100%;">
+        <div class="ng-nav-bar public-head-bar" style="width:1251px;">
+            <div class="ng-sort ng-sort-index public-head" id="ngSortNav">
+                <a name="public0_none_ml_qbspfl" class="ng-all-hook" href="javascript:;">
+                    <span>全部产品分类</span>
+                    <i class="fa fa-angle-down fa-lg" style="margin-left:10px;" id="icon-angle-down"></i>
+                    <i class="fa fa-angle-up fa-lg" style="margin-left:10px;" id="icon-angle-up"></i>
+                </a>
+                <div class="container public-content" style="display:none">
+                    <div class="site_category">
+                        <ul class="site_category_list clearfix">
+                            <li class="category-item">
+                                <a class="title">水泵<i class="fa fa-angle-right fa-2x"></i></a>
+                                <div class="children clearfix children-col-3">
+                                    <ul class="children-list children-list-col children-list-col-1">
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="category-item">
+                                <a class="title">工具<i class="fa fa-angle-right fa-2x"></i></a>
+                                <div class="children clearfix children-col-3" style="-display:none">
+                                    <ul class="children-list children-list-col children-list-col-1">
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="category-item">
+                                <a class="title">吊机<i class="fa fa-angle-right fa-2x"></i></a>
+                                <div class="children clearfix children-col-3" style="-display:none">
+                                    <ul class="children-list children-list-col children-list-col-1">
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="category-item">
+                                <a class="title">焊机<i class="fa fa-angle-right fa-2x"></i></a>
+                                <div class="children clearfix children-col-3" style="-display:none">
+                                    <ul class="children-list children-list-col children-list-col-1">
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                            <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="category-item">
+                                <a class="title">空压机<i class="fa fa-angle-right fa-2x"></i></a>
+                                <div class="children clearfix children-col-3" style="-display:none">
+                                    <ul class="children-list children-list-col children-list-col-1">
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="category-item">
+                                <a class="title">水管/水带<i class="fa fa-angle-right fa-2x"></i></a>
+                                <div class="children clearfix children-col-3" style="-display:none">
+                                    <ul class="children-list children-list-col children-list-col-1">
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="category-item">
+                                <a class="title">园林机械<i class="fa fa-angle-right fa-2x"></i></a>
+                                <div class="children clearfix children-col-3" style="-display:none">
+                                    <ul class="children-list children-list-col children-list-col-1">
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="category-item">
+                                <a class="title">建筑机械<i class="fa fa-angle-right fa-2x"></i></a>
+                                <div class="children clearfix children-col-3" style="-display:none">
+                                    <ul class="children-list children-list-col children-list-col-1">
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="category-item">
+                                <a class="title">食品机械<i class="fa fa-angle-right fa-2x"></i></a>
+                                <div class="children clearfix children-col-3" style="-display:none">
+                                    <ul class="children-list children-list-col children-list-col-1">
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="category-item">
+                                <a class="title">清洗设备<i class="fa fa-angle-right fa-2x"></i></a>
+                                <div class="children clearfix children-col-3" style="-display:none">
+                                    <ul class="children-list children-list-col children-list-col-1">
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                        <li class="star-goods">
+                                            <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                            <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ng-nav-index">
+                <ul class="ng-nav">
+                    <li><a href="../index.html" target="_blank">商场主页</a></li>
+                    <li><a href="" target="_blank">我的雄威</a></li>
+                    <li><a href="" target="_blank">售后网点</a></li>
+                    <li><a href="" target="_blank">供应链</a></li>
+                    <li>
+                        <a>关于雄威</a>
+                        <div class="about-xw" style="-display:block">
+                            <a href="introduce.html">公司介绍</a>
+                            <a>公司新闻</a>
+                            <a>联系我们</a>
+                        </div>
+                    </li>
+                    <li><a href="" target="_blank">帮助中心</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="js_article" class="rich_media">
+        <div class="logo-img"><img src="../image/introduce/introduce.png" /></div>
+        <p style="text-indent:2em">
+            广西雄威供应链管理有限公司成立于2000年，作为广西最具规模、经营国内外品牌最多的机电连锁企业，
+            主要经营产品包括:水泵、电动工具、五金工具、焊接设备、风动设备、起重设备、水管水带、园林机械、建筑机械、食品机械、清洗设备、通用设备、通风设备等。
+        </p>
+        <p style="text-indent:2em">通过16年时间的不懈努力，逐渐成长为集“厂家+分仓+加盟店+分销商+消费者”的B2S五金机电厂商直供平台，融合了电子商务、连锁经营、现代物流管理、供应链金融和云计算等经营元素而成的信息化云平台新模式。将平台商、供应商和终端的利益紧密的链接在一起，革新了五金机电行业的运营效率和消费者的购物体验，并引领了五金机电行业B2S变革的潮流。</p>
+        <p style="text-indent:2em">目前，公司旗下拥有4个区域配送中心，16家机电连锁直营店，5个业务大区，1家子公司——广西玉林瑞威农业机械有限公司，销售网点遍布全广西省及广东省部分县市，网点覆盖1000多家，是目前省内最大最具规模的机电连锁企业。我们将一如既往致力于：</p>
+        <p style="text-align:center">为用户提供高性价比的机电产品，</p>
+        <p style="text-align:center">为商家提供高回报率的商业模式，</p>
+        <p style="text-align:center">为厂家提供高渗透率的网络渠道，</p>
+        <p style="text-align:center">为员工提供高速成长的职业舞台。</p>
+        <p style="text-indent:2em">我们愿为机电行业的发展与建设竭尽全力，愿与各界朋友精诚合作，共创商机，共同发展！</p>
+        <div class="logo-img"><img src="../image/introduce/introduce.png" /></div>
+        <div class="logo-img"><img src="../image/introduce/fanwei.png" style="width:100%;height:100%" /></div>
+        <div class="logo-img"><img src="../image/introduce/yewu.png" style="width:100%;height:100%" /></div>
+        <p style="font-size:22px; color:#f05c1e">我们南宁新办公地点已经进入装修尾声，预计2017年春节后入驻，且看看新办公地点，畅想一下未来我们将出入名企汇聚的企业区，与各界精英奋斗在成长的路上￭￭￭￭￭￭</p>
+        <div class="logo-img"><img src="../image/introduce/introduce.png" /></div>
+        <p style="color:#f05c1e;font-size:18px">我们在南宁西乡塘华尔街工谷</p>
+        <div class="logo-img"><img src="../image/introduce/building.jpg" style="width:100%;height:100%" /></div>
+        <p style="color:#f05c1e;font-size:18px">我们在2号楼</p>
+        <div class="logo-img"><img src="../image/introduce/building2.jpg" style="width:100%;height:100%" /></div>
+        <div class="logo-img"><img src="../image/introduce/introduce.png" /></div>
+        <p style="color:#f05c1e;font-size:18px">我们在11层-1-7-8号</p>
+        <div class="logo-img"><img src="../image/introduce/building3.jpg" style="width:100%;height:400px" /></div>
+        <p style="color:#f05c1e;font-size:18px">我们的办公场地布局</p>
+        <div class="logo-img"><img src="../image/introduce/building4.jpg" style="width:100%;height:400px" /></div>
+        <div class="logo-img"><img src="../image/introduce/introduce.png" /></div>
+        <div class="logo-img"><img src="../image/introduce/building5.jpg" style="width:100%;height:100%" /></div>
+    </div>
+    <!--联系帮助-->
+    <div class="floor-middle-ad">
+        <div class="footer-service">
+            <ul class="list-service clearfix">
+                <li><a rel="nofollow" href="" target="_blank"><i class="fa fa-shopping-cart fa-2x"></i>购物指南</a></li>
+                <li><a rel="nofollow" href="" target="_blank"><i class="fa fa-truck fa-2x"></i>商品配送</a></li>
+                <li><a rel="nofollow" href="" target="_blank"><i class="fa fa-wrench fa-2x"></i>商品售后</a></li>
+                <li><a rel="nofollow" href="" target="_blank"><i class="fa fa-question-circle-o fa-2x"></i>需要帮助</a></li>
+                <li><a rel="nofollow" href="" target="_blank"><i class="fa fa-commenting fa-2x"></i>联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="floor-middle-list-content">
+        <ul class="floor-middle-list-ul">
+            <li class="floor-middle-li"><a>购物流程</a></li>
+            <li class="floor-middle-li"><a>交易条款</a></li>
+            <li class="floor-middle-li"><a>开票须知</a></li>
+            <li class="floor-middle-li"><a>订单答疑</a></li>
+        </ul>
+        <ul class="floor-middle-list-ul">
+            <li class="floor-middle-li"><a>配送范围</a></li>
+            <li class="floor-middle-li"><a>服务说明</a></li>
+            <li class="floor-middle-li"><a>物流承诺</a></li>
+            <li class="floor-middle-li"><a>配送须知</a></li>
+        </ul>
+        <ul class="floor-middle-list-ul">
+            <li class="floor-middle-li"><a>购物流程</a></li>
+            <li class="floor-middle-li"><a>交易条款</a></li>
+            <li class="floor-middle-li"><a>开票须知</a></li>
+            <li class="floor-middle-li"><a>订单答疑</a></li>
+        </ul>
+        <ul class="floor-middle-list-ul">
+            <li class="floor-middle-li"><a>购物流程</a></li>
+            <li class="floor-middle-li"><a>交易条款</a></li>
+            <li class="floor-middle-li"><a>开票须知</a></li>
+            <li class="floor-middle-li"><a>订单答疑</a></li>
+        </ul>
+        <ul class="floor-middle-list-ul">
+            <li class="floor-middle-li"><a>购物流程</a></li>
+            <li class="floor-middle-li"><a>交易条款</a></li>
+            <li class="floor-middle-li"><a>开票须知</a></li>
+            <li class="floor-middle-li"><a>订单答疑</a></li>
+        </ul>
+    </div>
+    <!--公司版权-->
+    <div class="gsbq">Copyright © 2009-2014 czvv.com 广西雄威供应链管理有限公司(15279189.czvv.com) 版权所有</div>
+</body>
+</html>

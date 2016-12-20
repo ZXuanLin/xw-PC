@@ -1,0 +1,36 @@
+﻿.WP-AllOrder u_order-lists .u_order-item {
+    margin-top: 0.5rem;
+}
+
+.WP-AllOrder .m_card {
+    margin-bottom: 0.5rem;
+}
+
+.WP-AllOrder .u_order-lists .u_order-item .card-header {
+    font-size: 0.6rem;
+}
+
+.WP-AllOrder .u_order-lists .u_order-item .card-header .m_icon{
+    margin-left:0.3rem;
+}
+
+.WP-AllOrder .u_order-lists .u_order-item .card-header .pull-right {
+    color: #FF6347;
+}
+
+.WP-AllOrder .u_order-lists .u_order-item .card-content .u_price {
+    font-size: 0.6rem;
+}
+
+.WP-AllOrder .u_order-lists .u_order-item .card-footer a {
+    display: inline-block;
+    padding: 0.25rem 0.3rem;
+    font-size: 0.6rem;
+    color: #978d91;
+    border: 1px solid;
+    border-radius: 0.15rem;
+}
+
+.WP-AllOrder .u_order-lists .u_order-item img {
+    width: 3.5rem;
+}

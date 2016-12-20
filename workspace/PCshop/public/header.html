@@ -1,0 +1,120 @@
+﻿    <!--头部-->
+    <div class="top">
+        <div class="mall_container clearfix" id="top">
+            <!--<div class="top_tags top-my-ruigu" style="-display: none;z-index:99999">
+                <a href="javascript" target="_blank"><span>卖家中心</span><i class="icon iconfont arrow" style="margin: 0 0 0 3px;"></i></a>
+                <ul class="transaction">
+                    <li><a href="#">交易管理</a></li>
+                    <li><a href="#">账号管理</a></li>
+                    <li><a href="#">交易管理</a></li>
+                    <li><a href="#">账号</a></li>
+                </ul>
+            </div>-->
+            <div class="top-right fr">
+                <div class="top-favorite fr" onclick="AddFavorite()">
+                    <a href="javascript:;">登陆</a><span style="position:absolute">|</span>
+                    <a href="javascript:;">注册</a><span style="position:absolute">|</span>
+                    <a href="javascript:;">消息通知</a>
+                    <a href="javascript:;" style="padding-right:0"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>&nbsp;购物车</a>
+                </div>
+            </div>
+
+            <div class="fl">
+                <div class="back_home">
+                    <!--<div class="top_tags"><a href="/">雄威商城首页</a></div>-->
+                </div>
+                <div class="top_tags top-mobile">
+                    <a href="" class="top_tag_a"><i class="fa fa-mobile fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;手机雄威&nbsp;&nbsp;<i class="fa fa-angle-down fa-1x"></i></a>
+                    <div class="top_panel top-mobile-child t-c" style="display:none">
+                        <div class="scan-ios">
+                            <img src="/static/home/content/images/home/iosScan.png" />
+                            <div class="text">
+                                <p class="t1">iPhone客户端</p>
+                                <p class="t2">扫描下载雄威</p>
+                                <p class="t3">商城App</p>
+                                <i style="background:url(/static/home/content/images/home/ai.png) no-repeat;background-position: 0 0;"></i>
+                            </div>
+                        </div>
+                        <div class="scan-android">
+                            <img src="/static/home/content/images/home/scan.png" />
+                            <div class="text">
+                                <p class="t1">Android客户端</p>
+                                <p class="t2">扫描下载雄威</p>
+                                <p class="t3">商城App</p>
+                                <i style="background:url(/static/home/content/images/home/ai.png) no-repeat;background-position: -21px 0;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top_tags">
+                    <a href="#" class="top_tag_a">客户服务<i class="fa fa-angle-down fa-1x"></i></a>
+                    <div class="top_panel top-kefu-child t-c" style="display:none">
+                        <a href="" target="_blank">帮助中心</a>
+                        <a href="" target="_blank">账户信息</a>
+                        <a href="" target="_blank">个人中心</a>
+                        <a href="" target="_blank">订单查询</a>
+                        <a href="" target="_blank">开票信息</a>
+                        <a href="" target="_blank">维修信息</a>
+                        <a href="" onclick="javascript:dstj()">反馈建议</a>
+                    </div>
+                </div>
+                <div class="top_tags top-follow">
+                    <a href="javascript:void(0)" class="top_tag_a"><i class="fa fa-qrcode"></i>&nbsp;关注雄威</a>
+                    <div class="top_panel top-follow-child t-c" style="display:none">
+                        <img src="/static/home/content/images/home/weixin.png" style="padding:10px;" />
+                        <p>关注雄威</p>
+                        <p><b>微信二维码</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--logo部分-->
+    <div class="mall-header">
+        <div class="mall_container clearfix">
+            <a class="mall-header-logo" href="/"><img src="../image/header/logo.png"></a>
+            <div class="mall-header-search" style="padding-top: 30px;">
+                <div class="merchandise clearfix" style="display: none">
+                    <div class="myshop"><a href="javascript:;" class="current">商品</a></div>
+                    <div class="mudian"><a href="javascript:;">店铺</a></div>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="mall-header-prompt">
+                <ul>
+                    <li><div class="goods-name">第一个商品</div><div class="amount">约20个商品</div></li>
+                </ul>
+                <div class="close"><a href="javascript:;" onClick="close_prompt()">关闭窗口</a></div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="mall-header-nav">
+                <ul class="mall-header-nav-content">
+                    <li class="mall-header-list"><a>商场主页</a></li>
+                    <li class="mall-header-list"><a>我的雄威</a></li>
+                    <li class="mall-header-list"><a>售后网点</a></li>
+                    <li class="mall-header-list"><a>供应链</a></li>
+                    <li class="mall-header-list about-xw-list">
+                        <a>关于雄威</a>
+                        <div class="about-xw">
+                            <a id="company-intri">公司介绍</a>
+                            <a>公司新闻</a>
+                            <a>联系我们</a>
+                        </div>
+                    </li>
+                    <li class="mall-header-list"><a>帮助中心</a></li>
+                </ul>
+            </div>
+
+            <div class="mall-header-right">
+                <div class="hd-min-cart">
+                    <form id="searchForm" action="/Channel/index.html" onsubmit="return false;">
+                        <div class="search-val">
+                            <input type="text" class="intype-text search-keyword" name="s" value="" placeholder="搜索您要的产品信息">
+                        </div>
+                        <img src="../image/header/search_btn.png" class="search-btn" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+

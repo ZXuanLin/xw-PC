@@ -1,0 +1,2854 @@
+﻿
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="UTF-8" />
+    <title>雄威商城</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=1226" />
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/public.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="js/lib/jquery-3.1.1.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <div class="top">
+        <div class="mall_container clearfix" id="top">
+            <!--<div class="top_tags top-my-ruigu" style="-display: none;z-index:99999">
+                <a href="javascript" target="_blank"><span>卖家中心</span><i class="icon iconfont arrow" style="margin: 0 0 0 3px;"></i></a>
+                <ul class="transaction">
+                    <li><a href="#">交易管理</a></li>
+                    <li><a href="#">账号管理</a></li>
+                    <li><a href="#">交易管理</a></li>
+                    <li><a href="#">账号</a></li>
+                </ul>
+            </div>-->
+            <div class="top-right fr">
+                <div class="top-favorite fr" onclick="AddFavorite()">
+                    <a href="javascript:;">登陆</a><span style="position:absolute">|</span>
+                    <a href="javascript:;">注册</a><span style="position:absolute">|</span>
+                    <a href="javascript:;">消息通知</a>
+                    <span class="t-phone">全国统一服务热线： 666666666666</span>
+                </div>
+            </div>
+
+            <div class="fl">
+                <div class="back_home">
+                    <!--<div class="top_tags"><a href="/">雄威商城首页</a></div>-->
+                </div>
+                    <span class="t-phone" style="float:left;">欢迎来到雄威商场!</span>
+                <div class="top_tags top-mobile">
+                    <a href="" class="top_tag_a"><i class="fa fa-mobile fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;手机雄威&nbsp;&nbsp;<i class="fa fa-angle-down fa-1x"></i></a>
+                    <div class="top_panel top-mobile-child t-c" style="display:none">
+                        <div class="scan-ios">
+                            <img src="" />
+                            <div class="text">
+                                <p class="t1">iPhone客户端</p>
+                                <p class="t2">扫描下载雄威</p>
+                                <p class="t3">商城App</p>
+                                <i style="background:url() no-repeat;background-position: 0 0;"></i>
+                            </div>
+                        </div>
+                        <div class="scan-android">
+                            <img src="" />
+                            <div class="text">
+                                <p class="t1">Android客户端</p>
+                                <p class="t2">扫描下载雄威</p>
+                                <p class="t3">商城App</p>
+                                <i style="background:url() no-repeat;background-position: -21px 0;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top_tags">
+                    <a href="#" class="top_tag_a">客户服务<i class="fa fa-angle-down fa-1x"></i></a>
+                    <div class="top_panel top-kefu-child t-c" style="display:none">
+                        <a href="" target="_blank">帮助中心</a>
+                        <a href="" target="_blank">账户信息</a>
+                        <a href="" target="_blank">个人中心</a>
+                        <a href="" target="_blank">订单查询</a>
+                        <a href="" target="_blank">开票信息</a>
+                        <a href="" target="_blank">维修信息</a>
+                        <a href="" onclick="javascript:dstj()">反馈建议</a>
+                    </div>
+                </div>
+                <div class="top_tags top-follow">
+                    <a href="javascript:void(0)" class="top_tag_a"><i class="fa fa-qrcode"></i>&nbsp;关注雄威</a>
+                    <div class="top_panel top-follow-child t-c" style="display:none">
+                        <img src="" style="padding:10px;" />
+                        <p>关注雄威</p>
+                        <p><b>微信二维码</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--头部广告-->
+     <div class="top-ad"><a><img src="image/view/details/top/top-ad.jpg" width="100%"/></a></div>
+    <!--logo部分-->
+    <div class="mall-header">
+        <div class="container clearfix">
+            <a class="mall-header-logo" href=""><img src="image/header/logo.jpg" /></a>
+            <div class="mall-header-search" style="padding-top: 30px;">
+                <div class="merchandise clearfix" style="display: none">
+                    <div class="myshop"><a href="javascript:;" class="current">商品</a></div>
+                    <div class="mudian"><a href="javascript:;">店铺</a></div>
+                </div>
+                <form id="searchForm" action="https://cn.bing.com/search" onsubmit="return false;">
+                    <div class="search-val">
+                        <input type="text" class="intype-text search-keyword" name="s" value="" placeholder="请输入搜索内容" id="input_searche_text">
+                    </div>
+                    <div class="xwsug">
+                        <ul>
+                            <li class="xwsug-overflow">内容一</li>
+                            <li class="xwsug-overflow">内容二</li>
+                        </ul>
+                    </div>
+                    <input type="submit" class="search-btn" value="搜索">
+                    <div id="keywordNew" class="search-hotwords">
+                        <a href="" target="_blank" class="first ">热门搜索:</a><a href="" target="_blank" class="">电动工具</a><a href="" target="_blank" class="">空压机</a><a href="" target="_blank" class="">水泵</a><a href="" target="_blank" class="">焊机</a>
+                    </div>
+                </form>
+                
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="mall-header-prompt">
+                <ul>
+                    <li><div class="goods-name">第一个商品</div><div class="amount">约20个商品</div></li>
+                </ul>
+                <div class="close"><a href="javascript:;" onclick="close_prompt()">关闭窗口</a></div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+
+            <div class="mall-header-right">
+                <a class="btn hd-login-btn" href="">云POS</a>
+                <div class="hd-min-cart">
+                    <a href="" target="_blank">
+                        <i class="fa fa-shopping-cart fa-lg"></i><span>购物车</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ng-nav-bar">
+        <div class="ng-sort ng-sort-index" id="ngSortNav">
+            <a name="public0_none_ml_qbspfl" class="ng-all-hook" href="javascript:;">
+                <span>全部产品分类</span>
+                <b></b>
+            </a>
+            <div class="site_category">
+                <ul class="site_category_list clearfix">
+                    <li class="category-item">
+                        <a class="title">水泵<i class="fa fa-angle-right fa-2x"></i></a>
+                        <div class="children clearfix children-col-3">
+                            <ul class="children-list children-list-col children-list-col-1">
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="category-item">
+                        <a class="title">工具<i class="fa fa-angle-right fa-2x"></i></a>
+                        <div class="children clearfix children-col-3" style="-display:none">
+                            <ul class="children-list children-list-col children-list-col-1">
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="category-item">
+                        <a class="title">吊机<i class="fa fa-angle-right fa-2x"></i></a>
+                        <div class="children clearfix children-col-3" style="-display:none">
+                            <ul class="children-list children-list-col children-list-col-1">
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">制造</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="category-item">
+                        <a class="title">焊机<i class="fa fa-angle-right fa-2x"></i></a>
+                        <div class="children clearfix children-col-3" style="-display:none">
+                            <ul class="children-list children-list-col children-list-col-1">
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">水泵</span></a>
+                                    <!--<a class="btn btn-line-primary btn-small btn-buy">选购</a>-->
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="category-item">
+                        <a class="title">空压机<i class="fa fa-angle-right fa-2x"></i></a>
+                        <div class="children clearfix children-col-3" style="-display:none">
+                            <ul class="children-list children-list-col children-list-col-1">
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="category-item">
+                        <a class="title">水管/水带<i class="fa fa-angle-right fa-2x"></i></a>
+                        <div class="children clearfix children-col-3" style="-display:none">
+                            <ul class="children-list children-list-col children-list-col-1">
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="category-item">
+                        <a class="title">园林机械<i class="fa fa-angle-right fa-2x"></i></a>
+                        <div class="children clearfix children-col-3" style="-display:none">
+                            <ul class="children-list children-list-col children-list-col-1">
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="category-item">
+                        <a class="title">建筑机械<i class="fa fa-angle-right fa-2x"></i></a>
+                        <div class="children clearfix children-col-3" style="-display:none">
+                            <ul class="children-list children-list-col children-list-col-1">
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="category-item">
+                        <a class="title">食品机械<i class="fa fa-angle-right fa-2x"></i></a>
+                        <div class="children clearfix children-col-3" style="-display:none">
+                            <ul class="children-list children-list-col children-list-col-1">
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="category-item">
+                        <a class="title">清洗设备<i class="fa fa-angle-right fa-2x"></i></a>
+                        <div class="children clearfix children-col-3" style="-display:none">
+                            <ul class="children-list children-list-col children-list-col-1">
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">东成</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                                <li class="star-goods">
+                                    <a class="link"><img class="thumb" src="" /><span class="text">金峰</span></a>
+                                    <a class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ng-nav-index">
+            <ul class="ng-nav">
+                <li><a href="index.html" target="_blank">商场主页</a></li>
+                <li><a href="" target="_blank">我的雄威</a></li>
+                <li><a href="../view/map.html" target="_blank">售后网点</a></li>
+                <li><a href="" target="_blank">供应链</a></li>
+                <li>
+                    <a>关于雄威</a>
+                    <div class="about-xw" style="-display:block">
+                        <a href="view/introduce.html">公司介绍</a>
+                        <a>公司新闻</a>
+                        <a>联系我们</a>
+                    </div>
+                </li>
+                <li><a href="" target="_blank">帮助中心</a></li>
+            </ul>
+            
+        </div>
+    </div>
+    <!--滚动图部分-->
+    <div class="container">
+       
+        <!--图片滚动-->
+        <div class="home-hero-slider">
+            <div id="J_homeSlider" class="xm-slider" data-stat-title="焦点图轮播">
+
+                <div class="slide" loaded="loaded">
+                    <a href="" data-stat-aid="AA14203" data-stat-pid="2_15_1_67" target="_blank"><img src="image/header/b2.png" /></a>
+                </div>
+
+                <div class="slide">
+                    <a href="" data-stat-aid="AA14203" data-stat-pid="2_15_1_67" target="_blank"><img src="image/header/b1.png" /></a>
+                </div>
+
+                <div class="slide">
+                    <a href="" data-stat-aid="AA14203" data-stat-pid="2_15_1_67" target="_blank"><img src="image/header/b2.png" /></a>
+                </div>
+
+                <div class="slide">
+                    <a href="" data-stat-aid="AA14203" data-stat-pid="2_15_1_67" target="_blank"><img src="image/header/b3.png" /></a>
+                </div>
+
+                <div class="slide">
+                    <a href="" data-stat-aid="AA14203" data-stat-pid="2_15_1_67" target="_blank"><img src="image/header/b4.png" /></a>
+                </div>
+            </div>
+        </div>
+        <!--按钮-->
+        <div class="ui-controls-direction">
+            <a class="ui-prev" href="javascript: void(0);" data-stat-id="76844b8f89037755">上一张</a>
+            <a class="ui-next" href="javascript: void(0);" data-stat-id="2f67a19a4f208791">下一张</a>
+        </div>
+        <!--小圆点-->
+        <div class="ui-default-pager">
+            <div class="ui-pager-item">
+                <a href="javascript: void(0);" data-slide-index="0" class="ui-pager-link">1</a>
+            </div>
+            <div class="ui-pager-item">
+                <a href="javascript: void(0);" data-slide-index="1" class="ui-pager-link">2</a>
+            </div>
+            <div class="ui-pager-item">
+                <a href="javascript: void(0);" data-slide-index="2" class="ui-pager-link">3</a>
+            </div>
+            <div class="ui-pager-item">
+                <a href="javascript: void(0);" data-slide-index="3" class="ui-pager-link active">4</a>
+            </div>
+            <div class="ui-pager-item">
+                <a href="javascript: void(0);" data-slide-index="4" class="ui-pager-link">5</a>
+            </div>
+        </div>
+    </div>
+    <!--图片滚动下方小图-->
+    <div class="span16" id="J_homePromo" data-stat-title="焦点图下方小图">
+        <ul class="home-promo-list clearfix">
+            <li class="first">
+                <a class="item" href="view/producList.html" data-stat-aid="AA14204" data-stat-pid="2_16_1_77" target="_blank"><img src="image/header/b1.png" /></a>
+                <h3 class="home-first-title"><a>新品活动专场</a></h3>
+                <p class="home-first-text">火热抢购中~</p>
+                <a class="home-first-go">抢GO&nbsp;<i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="first">
+                <a class="item" href="" data-stat-aid="AA14206" data-stat-pid="2_16_2_78" target="_blank"><img src="image/header/b2.png" /></a>
+                <h3 class="home-first-title"><a>发电机爆款专场</a></h3>
+                <p class="home-first-text">停电不再是困扰~</p>
+                <a class="home-first-go hot-color">抢GO&nbsp;<i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="first">
+                <a class="item" href="" data-stat-aid="AA14201" data-stat-pid="2_16_3_79" target="_blank"><img src="image/header/b3.png" /></a>
+                <h3 class="home-first-title"><a>全能工具爆款专场</a></h3>
+                <p class="home-first-text">全能工具应有尽有~</p>
+                <a class="home-first-go shop-color">抢GO&nbsp;<i class="fa fa-angle-right"></i></a>
+            </li>
+            <li style="margin-right:0;" class="first">
+                <a class="item" href="" data-stat-aid="AA14201" data-stat-pid="2_16_3_79" target="_blank"><img src="image/header/b4.png" /></a>
+                <h3 class="home-first-title"><a>全能发动机爆款专场</a></h3>
+                <p class="home-first-text">发电不用愁~</p>
+                <a class="home-first-go Electri-color">抢GO&nbsp;<i class="fa fa-angle-right"></i></a>
+            </li>
+        </ul>
+    </div>
+    <!--特惠专区-->
+    <div class="home-star-goods" id="J_homeStar">
+        <div class="xm-plain-box clearfix">
+            <div class="box-hd">
+                <h2 class="title_big">特惠专区</h2>
+                <!--<div class="more"><a class="more-left"><i class="fa fa-angle-left fa-2x"></i></a><a class="more-right"><i class="fa fa-angle-right fa-2x"></i></a></div>-->
+            </div>
+            <div class="box-bd">
+                <ul class="xm-carousel-list clearfix">
+                    <li class="rainbow-item-1">
+                        <a class="thumb" href="" target="_blank"><img src="image/header/c1.png" /></a>
+                        <h3 class="rainbow-title"><a>厂家直供</a></h3>
+                        <p class="rainbow-text-cen">100多种商品</p>
+                        <p class="rainbow-text-bot">然您一省到底~</p>
+                    </li>
+                    <li class="rainbow-item-1">
+                        <a class="thumb" href="" target="_blank"><img src="image/header/c2.png" /></a>
+                        <h3 class="rainbow-title"><a class="title-color-pi">耗材批发</a></h3>
+                        <p class="rainbow-text-cen">百余种耗材</p>
+                        <p class="rainbow-text-bot">批量购买更实惠~</p>
+                    </li>
+                    <li class="rainbow-item-1">
+                        <a class="thumb" href="" target="_blank"><img src="image/header/c3.png" /></a>
+                        <h3 class="rainbow-title"><a class="title-colot-time">限时特惠</a></h3>
+                        <p class="rainbow-text-cen">17大品类</p>
+                        <p class="rainbow-text-bot">天天给您新惊喜~</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--精品推荐-->
+    <div class="floor-boutique-add container">
+        <div class="fl-hd">
+            <span class="c-gray">精品推荐</span><span class="f-s">为您工作和生活精心推荐</span>
+        </div>
+        <div class="box clearfix">
+            <a href="" target="_blank" class="fb-box mf0">
+                <span class="fb-tags fb-tags1">精品推荐</span>
+                <img src="image/jingping/a1.png" />
+                <p class="fb-tags-text1">全副武装</p>
+                <p class="fb-tags-text2">迎战家装</p>
+            </a>
+            <a href="" target="_blank" class="fb-box ">
+                <span class="fb-tags fb-tags2">精品推荐</span>
+                <img src="image/jingping/a2.png" />
+                <p class="fb-tags-text1">全副武装</p>
+                <p class="fb-tags-text2">迎战家装</p>
+            </a>
+            <a href="" target="_blank" class="fb-box ">
+                <span class="fb-tags fb-tags3">精品推荐</span>
+                <img src="image/jingping/a3.png" />
+                <p class="fb-tags-text1">全副武装</p>
+                <p class="fb-tags-text2">迎战家装</p>
+            </a>
+            <a href="" target="_blank" class="fb-box " style="margin-right:0;">
+                <span class="fb-tags fb-tags4">精品推荐</span>
+                <img src="image/jingping/a4.png" />
+                <p class="fb-tags-text1">全副武装</p>
+                <p class="fb-tags-text2">迎战家装</p>
+            </a>
+            <a href="" target="_blank" class="fb-box mf0">
+                <span class="fb-tags fb-tags5">精品推荐</span>
+                <img src="image/jingping/b1.png" />
+                <p class="fb-tags-text1">全副武装</p>
+                <p class="fb-tags-text2">迎战家装</p>
+            </a>
+            <a href="" target="_blank" class="fb-box ">
+                <span class="fb-tags fb-tags6">精品推荐</span>
+                <img src="image/jingping/b2.png" />
+                <p class="fb-tags-text1">全副武装</p>
+                <p class="fb-tags-text2">迎战家装</p>
+            </a>
+            <a href="" target="_blank" class="fb-box ">
+                <span class="fb-tags fb-tags7">精品推荐</span>
+                <img src="image/jingping/b3.png" />
+                <p class="fb-tags-text1">全副武装</p>
+                <p class="fb-tags-text2">迎战家装</p>
+            </a>
+            <a href="" target="_blank" class="fb-box " style="margin-right:0;">
+                <span class="fb-tags fb-tags8">精品推荐</span>
+                <img src="image/jingping/b4.png" />
+                <p class="fb-tags-text1">全副武装</p>
+                <p class="fb-tags-text2">迎战家装</p>
+            </a>
+            <a href="" target="_blank" class="fb-box mf0">
+                <span class="fb-tags fb-tags1">精品推荐</span>
+                <img src="image/jingping/a1.png" />
+                <p class="fb-tags-text1">全副武装</p>
+                <p class="fb-tags-text2">迎战家装</p>
+            </a>
+            <a href="" target="_blank" class="fb-box ">
+                <span class="fb-tags fb-tags2">精品推荐</span>
+                <img src="image/jingping/a2.png" />
+                <p class="fb-tags-text1">全副武装</p>
+                <p class="fb-tags-text2">迎战家装</p>
+            </a>
+            <a href="" target="_blank" class="fb-box ">
+                <span class="fb-tags fb-tags3">精品推荐</span>
+                <img src="image/jingping/a3.png" />
+                <p class="fb-tags-text1">全副武装</p>
+                <p class="fb-tags-text2">迎战家装</p>
+            </a>
+            <a href="" target="_blank" class="fb-box " style="margin-right:0;">
+                <span class="fb-tags fb-tags4">精品推荐</span>
+                <img src="image/jingping/a4.png" />
+                <p class="fb-tags-text1">全副武装</p>
+                <p class="fb-tags-text2">迎战家装</p>
+            </a>
+        </div>
+    </div>
+    <!--广告图片-->
+    <div class="floor-middle-ad">
+        <img src="image/jingping/banner.png" />
+    </div>
+    <!--001L-->
+    <div class="floors floors1 container-floors">
+        <div class="fl-hd">
+            <b></b><span>水泵</span>
+        </div>
+        <div class="box clearfix">
+            <div class="f-links fl">
+                <a href="" target="_blank">
+                    <img src="image/product/001/a1.png" />
+                </a>
+                <div class="f-links-bd">
+                    <a href="" target="_blank">焊割设备</a>
+                    |<a href="" target="_blank">焊割配件</a>
+                    |<a href="" target="_blank">气焊割及配件</a>
+                    |<a href="" target="_blank">焊接辅件</a>
+                    |<a href="" target="_blank">焊接耗材</a>
+                </div>
+            </div>
+            <div class="f-pro-box fr">
+                <ul class="clearfix">
+                    <li class="row1">
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a2.png" alt="">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                喷嘴/等离子切割枪P80喷嘴 1.5紫铜 黑狼
+                            </a>
+                            <a class="parameter">80A</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥35.80
+                                        <span class="unit">/盒(10只)</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="2473"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="row2">
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a3.png" alt="">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                防堵剂/防堵膏 200g
+                            </a>
+                            <a class="parameter">200g</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥6.00
+                                        <span class="unit">/盒</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="21031"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="/Product/index/id/20175.html" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a4.png" alt="">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                双电压逆变手工弧焊机 (单管IGBT) ZX7-250DV
+                            </a>
+                            <a class="parameter"></a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥810.00
+                                        <span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="20175"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a5.png" alt="">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">双电压逆变手工弧焊机 (单管IGBT) ZX7-315DV</a>
+                            <a class="parameter"></a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥1050.00
+                                        <span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="" data-id="20176"> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a6.png" alt="">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">松下四柄导电嘴 1.2 铬锆铜ECR</a>
+                            <a class="parameter">9*45*1.2 铬锆铜ECR</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥25.00
+                                        <span class="unit">/盒(10个)</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="20227"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--103L-->
+    <div class="floors floors2">
+        <div class="fl-hd">
+            <b></b><span>工具</span>
+        </div>
+        <div class="box clearfix">
+            <div class="f-links fl">
+                <!--左侧栏图片待删除@qing<img src="http://static.ruigushop.com/mobile/category/diandonggongju1@3x.png">-->
+                <!--待删除<h2>电动工具</h2>-->
+                <a href="" target="_blank"><img src="image/product/103/a1.png"></a>
+                <div class="f-links-bd">
+                    <a href="" target="_blank">角磨机</a>
+                    |<a href="" target="_blank">电锤</a>
+                    |<a href="" target="_blank">电镐</a>
+                    |<a href="" target="_blank">石材切割机</a>
+                    |<a href="" target="_blank">电圆锯</a>
+                </div>
+            </div>
+            <div class="f-pro-box fr">
+                <ul class="clearfix">
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a2.png" alt="角向磨光机/角磨机/磨光机 9710 100mm 710W 锐奇">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                角向磨光机/角磨机/磨光机 9710 100mm 710W 锐奇
+                            </a>
+
+
+                            <a class="parameter">710W</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥119.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                    <!--<div class="product-icon" >-->
+                                    <!--<img src="/static/home/content/images/home/te_icon.png"/>-->
+                                    <!--</div>-->
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="21334"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a3.png" alt="电锤 GBH2-26E 26mm 800W 双功能 博世">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                电锤 GBH2-26E 26mm 800W 双功能 博世
+                            </a>
+
+
+                            <a class="parameter">GBH2-26E</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥1089.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                    <!--<div class="product-icon" >-->
+                                    <!--<img src="/static/home/content/images/home/te_icon.png"/>-->
+                                    <!--</div>-->
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="21497"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a4.png" alt="角向磨光机/角磨机 DW810B-A9 100mm 680W 得伟">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                角向磨光机/角磨机 DW810B-A9 100mm 680W 得伟
+                            </a>
+
+
+                            <a class="parameter">680W</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥239.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                    <!--<div class="product-icon" >-->
+                                    <!--<img src="/static/home/content/images/home/te_icon.png"/>-->
+                                    <!--</div>-->
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="21346"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a5.png" alt="锯铝机/铝材切割机 RC105C 255mm 1850W 豪迈">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                锯铝机/铝材切割机 RC105C 255mm 1850W 豪迈
+                            </a>
+
+
+                            <a class="parameter"></a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥398.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="19651"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row1">
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a6.png" alt="角向磨光机/角磨机 G21-100 100mm 720W 博大">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                角向磨光机/角磨机 G21-100 100mm 720W 博大
+                            </a>
+
+
+                            <a class="parameter">G21-100</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥109.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                    <!--<div class="product-icon" >-->
+                                    <!--<img src="/static/home/content/images/home/te_icon.png"/>-->
+                                    <!--</div>-->
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="21507"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--145L-->
+    <div class="floors floors3">
+        <div class="fl-hd">
+            <b></b><span>吊机</span>
+        </div>
+        <div class="box clearfix">
+            <div class="f-links fl">
+                <!--左侧栏图片待删除@qing<img src="http://static.ruigushop.com/mobile/category/shoudonggongju1@3x.png">-->
+                <!--待删除<h2>手动工具</h2>-->
+                <a href="" target="_blank"><img src="image/product/145/a1.png"></a>
+                <div class="f-links-bd">
+                    <a href="" target="_blank">剪类</a>
+                    |<a href="" target="_blank">敲击类</a>
+                    |<a href="" target="_blank">扳手</a>
+                    |<a href="" target="_blank">钳类</a>
+                    |<a href="" target="_blank">冲凿</a>
+                </div>
+            </div>
+            <div class="f-pro-box fr">
+                <ul class="clearfix">
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a2.png" alt="一字螺丝批 6x100  4寸">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                一字螺丝批 6x100  4寸
+                            </a>
+
+
+                            <a class="parameter">6X100</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥5.70                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1609"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a3.png" alt="管子台虎钳 3寸">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                管子台虎钳 3寸
+                            </a>
+
+
+                            <a class="parameter">　3寸</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥117.00                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1488"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row1">
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a4.png" alt="9件套加长公制球头内六角扳手组套">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                9件套加长公制球头内六角扳手组套
+                            </a>
+
+
+                            <a class="parameter">9件套</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥19.50                                		<span class="unit">/套</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1667"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a5.png" alt="呆扳手6件套 6-24mm">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                呆扳手6件套 6-24mm
+                            </a>
+
+
+                            <a class="parameter">6件套（6-24mm）</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥34.30                                		<span class="unit">/套</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1394"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a6.png" alt="专业级德式钢丝钳 8" "=" ">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                专业级德式钢丝钳 8"
+                            </a>
+
+
+                            <a class="parameter">专业级德式钢丝钳 8"</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥21.10                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="21038"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--广告-->
+    <div class="floor-middle-ad">
+        <img src="image/product/145/banner.png">
+    </div>
+    <!--146L-->
+    <div class="floors floors4">
+        <div class="fl-hd">
+            <b></b><span>焊机</span>
+        </div>
+        <div class="box clearfix">
+            <div class="f-links fl">
+                <!--左侧栏图片待删除@qing<img src="http://static.ruigushop.com/mobile/category/yuanlingongju@3x.png">-->
+                <!--待删除<h2>园林工具</h2>-->
+                <a href="" target="_blank">
+                    <img src="image/product/164/a1.png" />
+                </a>
+                <div class="f-links-bd">
+                    <a href="" target="_blank">割草机</a>
+                    |<a href="" target="_blank">油锯</a>
+                    |<a href="" target="_blank">电链锯</a>
+                    |<a href="" target="_blank">绿篱机</a>
+                    |<a href="" target="_blank">多功能机</a>
+                </div>
+            </div>
+            <div class="f-pro-box fr">
+                <ul class="clearfix">
+                    <li class="row1">
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a2.png" alt="">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                刀片/2齿刀片 武义富有
+                            </a>
+                            <a class="parameter">305mm</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥11.00                                		<span class="unit">/片</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1143"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a3.png" alt="锯片/40齿合金锯片 武义富有">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                锯片/40齿合金锯片 武义富有
+                            </a>
+
+
+                            <a class="parameter">255X25.4X40T</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥38.00                                		<span class="unit">/片</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1145"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a4.png" alt="电链锯2200W SF03-405A 2200W">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                电链锯2200W SF03-405A 2200W
+                            </a>
+
+
+                            <a class="parameter">2200W</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥345.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="2385"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a5.png" alt="油锯52CC FY5200 2.2KW （链条原料卡顿进口CARLTON） 武义富有">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                油锯52CC FY5200 2.2KW （链条原料卡顿进口CARLTON） 武义富有
+                            </a>
+
+
+                            <a class="parameter">2.2KW</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥500.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1972"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a6.png" alt="割草机/割灌机侧挂式139 GZ139F 31cc (四冲程）">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                割草机/割灌机侧挂式139 GZ139F 31cc (四冲程）
+                            </a>
+
+
+                            <a class="parameter">31cc</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥542.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="2471"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--151L-->
+    <div class="floors floors5">
+        <div class="fl-hd">
+            <b></b><span>空压机</span>
+        </div>
+        <div class="box clearfix">
+            <div class="f-links fl">
+                <!--左侧栏图片待删除@qing<img src="http://static.ruigushop.com/mobile/category/laobao1@3x.png">-->
+                <!--待删除<h2>劳保用品</h2>-->
+                <a href="" target="_blank"><img src="image/product/151/a1.png"></a>
+                <div class="f-links-bd">
+                    <a href="" target="_blank">安全帽</a>
+                    |<a href="" target="_blank">口罩</a>
+                    |<a href="" target="_blank">耳塞耳罩</a>
+                    |<a href="" target="_blank">眼镜</a>
+                    |<a href="" target="_blank">背心</a>
+                </div>
+            </div>
+            <div class="f-pro-box fr">
+                <ul class="clearfix">
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a3.png" alt="安全帽 黄色（PE）">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                安全帽 黄色（PE）
+                            </a>
+
+
+                            <a class="parameter">黄色（PE）</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥16.00                                		<span class="unit">/个</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="2433"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a4.png" alt="安全帽 红色（PE）">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                安全帽 红色（PE）
+                            </a>
+
+
+                            <a class="parameter">红色（PE）</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥16.00                                		<span class="unit">/个</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="2435"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a5.png" alt="手套/电焊手套 金黄色 16寸 牛二层皮">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                手套/电焊手套 金黄色 16寸 牛二层皮
+                            </a>
+
+
+                            <a class="parameter">16寸</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥27.00                                		<span class="unit">/副</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1060"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a6.png" alt="手套(PU） 登升">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                手套(PU） 登升
+                            </a>
+
+
+                            <a class="parameter"> 8/M</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥44.40                                		<span class="unit">/盒(12副)</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="993"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row1">
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a6.png" alt="耳罩/防护隔音耳罩 ">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                耳罩/防护隔音耳罩
+                            </a>
+
+
+                            <a class="parameter">橘黄</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥28.00                                		<span class="unit">/副</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1087"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--155L-->
+    <div class="floors floors6">
+        <div class="fl-hd">
+            <b></b><span>水管/水带</span>
+        </div>
+        <div class="box clearfix">
+            <div class="f-links fl">
+                <!--左侧栏图片待删除@qing<img src="http://static.ruigushop.com/mobile/category/kongyaji1@3x.png">-->
+                <!--待删除<h2>空压机</h2>-->
+                <a href="" target="_blank"><img src="image/product/155/a1.png"></a>
+                <div class="f-links-bd">
+                    <a href="" target="_blank">静音无油式</a>
+                    |<a href="" target="_blank">直联便携式</a>
+                    |<a href="" target="_blank">皮带传动式</a>
+                    |
+                </div>
+            </div>
+            <div class="f-pro-box fr">
+                <ul class="clearfix">
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a2.png" alt="无油静音空压机/气泵标准款550W*1 LJ-1530">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                无油静音空压机/气泵标准款550W*1 LJ-1530
+                            </a>
+
+
+                            <a class="parameter"> LJ-1530</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥466.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="234"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a3.png" alt="无油静音空压机/气泵经济款550W*1 BD-550x1-9L(加电磁阀)">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                无油静音空压机/气泵经济款550W*1 BD-550x1-9L(加电磁阀)
+                            </a>
+
+
+                            <a class="parameter"> BD-550x1-9L</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥399.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="241"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row1">
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a4.png" alt="皮带传动式空压机/气泵 W-0.36/8 3kw">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                皮带传动式空压机/气泵 W-0.36/8 3kw
+                            </a>
+
+
+                            <a class="parameter">W-0.36/8-380V</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥1890.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="261"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a5.png" alt="双缸直联空压机（经济款）BV-5008 5HP">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                双缸直联空压机（经济款）BV-5008 5HP
+                            </a>
+
+
+                            <a class="parameter"></a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥868.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="20784"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a6.png" alt="直联便携式空压机/气泵 BFL-2.5HP-30L 低排量">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                直联便携式空压机/气泵 BFL-2.5HP-30L 低排量
+                            </a>
+
+
+                            <a class="parameter">BFL-3008E</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥490.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="252"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--广告-->
+    <div class="floor-middle-ad">
+        <img src="image/product/155/banner.png">
+    </div>
+    <!--164L-->
+    <div class="floors floors7">
+        <div class="fl-hd">
+            <b></b><span>园林机械</span>
+        </div>
+        <div class="box clearfix">
+            <div class="f-links fl">
+                <!--左侧栏图片待删除@qing<img src="http://static.ruigushop.com/mobile/category/fadianji1@3x.png">-->
+                <!--待删除<h2>发电机</h2>-->
+                <a href="" target="_blank">
+                    <img src="image/product/146/a1.png" />
+                </a>
+                <div class="f-links-bd">
+                    <a href="" target="_blank">数码变频发电机</a>
+                    |<a href="" target="_blank">汽油发电机</a>
+                    |<a href="" target="_blank">柴油发电机</a>
+                    |<a href="" target="_blank">静音柴油发电机</a>
+                    |<a href="" target="_blank">柴油电焊发电机</a>
+                </div>
+            </div>
+            <div class="f-pro-box fr">
+                <ul class="clearfix">
+                    <li class="row1">
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a2.png" alt="汽油发电机 FPG3801 2.5KW  手启单相直流12V两用 双马">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                汽油发电机 FPG3801 2.5KW  手启单相直流12V两用 双马
+                            </a>
+
+
+                            <a class="parameter">2.5kw/单相</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥1522.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="977"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a3.png" alt="汽油发电机 FPG7801E  5.0KW  电启单相直流12V两用 双马">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                汽油发电机 FPG7801E  5.0KW  电启单相直流12V两用 双马
+                            </a>
+
+
+                            <a class="parameter">5.0kw/单相</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥3115.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="978"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a4.png" alt="开架式柴油发电机 HP7500CXE-3D 电启单相5.0KW/三相5.0KW/直流12V  海龙">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                开架式柴油发电机 HP7500CXE-3D 电启单相5.0KW/三相5.0KW/直流12V  海龙
+                            </a>
+
+
+                            <a class="parameter">5.0KW/三相5.0KW</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥4420.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="2505"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a5.png" alt="开架式柴油发电机 HP8500CXE-3D 电启单相6.0KW/三相6.0KW/直流12V 海龙">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                开架式柴油发电机 HP8500CXE-3D 电启单相6.0KW/三相6.0KW/直流12V 海龙
+                            </a>
+
+
+                            <a class="parameter">6.0KW/三相6.0KW</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥4910.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="2517"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a6.png" alt="开架式柴油电焊发电机 HP8500WE 电启200A 海龙 ">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                开架式柴油电焊发电机 HP8500WE 电启200A 海龙
+                            </a>
+
+
+                            <a class="parameter">200A</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥5805.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="2548"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--167L-->
+    <div class="floors floors8">
+        <div class="fl-hd">
+            <b></b><span>建筑机械</span>
+        </div>
+        <div class="box clearfix">
+            <div class="f-links fl">
+                <!--左侧栏图片待删除@qing<img src="http://static.ruigushop.com/mobile/category/qibaogongju1@3x.png">-->
+                <!--待删除<h2>汽保工具</h2>-->
+                <a href="" target="_blank"><img src="image/product/167/a1.png"></a>
+                <div class="f-links-bd">
+                    <a href="" target="_blank">黄油枪</a>
+                    |<a href="" target="_blank">顶类</a>
+                    |<a href="" target="_blank">吊机</a>
+                    |<a href="" target="_blank">压机</a>
+                    |<a href="" target="_blank">支架</a>
+                </div>
+            </div>
+            <div class="f-pro-box fr">
+                <ul class="clearfix">
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a2.png" alt="立式油压千斤顶 10吨 通润">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                立式油压千斤顶 10吨 通润
+                            </a>
+
+
+                            <a class="parameter">10吨</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥101.00                                		<span class="unit">/个</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="2399"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a3.png" alt="剪顶 1吨">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                剪顶 1吨
+                            </a>
+
+
+                            <a class="parameter">1吨</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥53.00                                		<span class="unit">/个</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="2444"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a4.png" alt="气动扳手 8114">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                气动扳手 8114
+                            </a>
+
+
+                            <a class="parameter"></a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥272.00                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="19861"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a5.png" alt="32件套12.5mm系列套筒组套">
+                            </a>
+                            <a href="/Product/index/id/533.html" class="txt" style="margin-top:-13px;" target="_blank">
+                                32件套12.5mm系列套筒组套
+                            </a>
+
+
+                            <a class="parameter">12.5MM</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥186.00                                		<span class="unit">/套</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="533"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row1">
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a6.png" alt="电泳三叉套筒扳手12-14-17mm">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                电泳三叉套筒扳手12-14-17mm
+                            </a>
+
+
+                            <a class="parameter">12-14-17mm</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥8.60                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="20197"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--170L-->
+    <div class="floors floors9">
+        <div class="fl-hd">
+            <b></b><span>食品机械</span>
+        </div>
+        <div class="box clearfix">
+            <div class="f-links fl">
+                <!--左侧栏图片待删除@qing<img src="http://static.ruigushop.com/mobile/category/liangju1@3x.png">-->
+                <!--待删除<h2>测量工具</h2>-->
+                <a href="" target="_blank">
+                    <img src="image/product/170/a1.png" />
+                </a>
+                <div class="f-links-bd">
+                    <a href="" target="_blank">尺类</a>
+                    |<a href="" target="_blank">测电类</a>
+                    |<a href="" target="_blank">测温类</a>
+                    |<a href="" target="_blank">网络类</a>
+                    |<a href="" target="_blank">测距类</a>
+                </div>
+            </div>
+            <div class="f-pro-box fr">
+                <ul class="clearfix">
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a2.png" alt="钢直尺 1000（mm）">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                钢直尺 1000（mm）
+                            </a>
+
+
+                            <a class="parameter">1000MM</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥15.00                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1225"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a3.png" alt="钢卷尺88款 3M*16">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                钢卷尺88款 3M*16
+                            </a>
+
+
+                            <a class="parameter">3M</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥5.00                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1274"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row1">
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a4.png" alt="钢卷尺88款 5M*25">
+                            </a>
+                            <a href="/Product/index/id/1277.html" class="txt" style="margin-top:-13px;" target="_blank">
+                                钢卷尺88款 5M*25
+                            </a>
+
+
+                            <a class="parameter">5M</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥9.00                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1277"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a5.png" alt="激光水平仪 红光 2线">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                激光水平仪 红光 2线
+                            </a>
+
+
+                            <a class="parameter">2线</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥178.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1289"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a6.png" alt="红外线测温仪 EM526">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                红外线测温仪 EM526
+                            </a>
+
+
+                            <a class="parameter">EM526</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥155.00                                		<span class="unit">/个</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1271"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--广告-->
+    <div class="floor-middle-ad">
+        <img src="image/product/170/banner.png" />
+    </div>
+    <!--174L-->
+    <div class="floors floors10">
+        <div class="fl-hd">
+            <b></b><span>清洗设备</span>
+        </div>
+        <div class="box clearfix">
+            <div class="f-links fl">
+                <!--左侧栏图片待删除@qing<img src="http://static.ruigushop.com/mobile/category/qidonggongju1@3x.png">-->
+                <!--待删除<h2>气动工具</h2>-->
+                <a href="" target="_blank">
+                    <img src="image/product/174/a1.png" />
+                </a>
+                <div class="f-links-bd">
+                    <a href="" target="_blank">风批</a>
+                    |<a href="" target="_blank">刻磨机</a>
+                    |<a href="" target="_blank">抛光机</a>
+                    |<a href="" target="_blank">气钻</a>
+                    |<a href="" target="_blank">吹尘枪</a>
+                </div>
+            </div>
+            <div class="f-pro-box fr">
+                <ul class="clearfix">
+                    <li class="row1">
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a2.png" alt="直式风批 EP3205">
+                            </a>
+                            <a href="/Product/index/id/19870.html" class="txt" style="margin-top:-13px;" target="_blank">
+                                直式风批 EP3205
+                            </a>
+
+
+                            <a class="parameter"></a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥83.00                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="19870"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a3.png" alt="码钉枪/气钉枪 浇铸422J">
+                            </a>
+                            <a href="/Product/index/id/691.html" class="txt" style="margin-top:-13px;" target="_blank">
+                                码钉枪/气钉枪 浇铸422J
+                            </a>
+
+
+                            <a class="parameter">422J</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥65.00                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="691"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a4.png" alt="直钉枪/气钉枪 浇铸F30">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                直钉枪/气钉枪 浇铸F30
+                            </a>
+
+
+                            <a class="parameter">F30B</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥65.00                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="694"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a5.png" alt="吹尘枪/吹风枪/吹气枪  108.5mm 瑞丰五福">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                吹尘枪/吹风枪/吹气枪  108.5mm 瑞丰五福
+                            </a>
+
+
+                            <a class="parameter"> A6O-2</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥13.00                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="2424"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/001/a6.png" alt="喷枪/喷漆枪 F-75S 1.5mm 瑞丰五福">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                喷枪/喷漆枪 F-75S 1.5mm 瑞丰五福
+                            </a>
+
+
+                            <a class="parameter">1.5mm</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥58.00                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="2343"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--178L-->
+    <div class="floors floors11">
+        <div class="fl-hd">
+            <b></b><span>通用设备</span>
+        </div>
+        <div class="box clearfix">
+            <div class="f-links fl">
+                <!--左侧栏图片待删除@qing<img src="http://static.ruigushop.com/mobile/category/yeyagongju1@3x.png">-->
+                <!--待删除<h2>液压工具</h2>-->
+                <a href="" target="_blank">
+                    <img src="image/product/178/a1.png" />
+                </a>
+                <div class="f-links-bd">
+                    <a href="" target="_blank">液压钳</a>
+                    |<a href="" target="_blank">液压剪</a>
+                    |<a href="" target="_blank">液压拉马</a>
+                    |<a href="" target="_blank">开孔器</a>
+                    |<a href="" target="_blank">液压螺帽破切器</a>
+                </div>
+            </div>
+            <div class="f-pro-box fr">
+                <ul class="clearfix">
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a2.png" alt="整体式液压钳 YQK-240A">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                整体式液压钳 YQK-240A
+                            </a>
+
+
+                            <a class="parameter"></a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥220.00                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="19832"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a3.png" alt="液压拉马 YL-10T">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                液压拉马 YL-10T
+                            </a>
+
+
+                            <a class="parameter"></a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥392.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="19820"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a4.png" alt="分离式液压开孔器 SYK-8">
+                            </a>
+                            <a href="/Product/index/id/19828.html" class="txt" style="margin-top:-13px;" target="_blank">
+                                分离式液压开孔器 SYK-8
+                            </a>
+
+
+                            <a class="parameter"></a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥448.00                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="19828"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a5.png" alt="钢筋剪 CPC-16B">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                钢筋剪 CPC-16B
+                            </a>
+
+
+                            <a class="parameter"></a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥248.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="19826"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row1">
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/103/a6.png" alt="整体式液压螺母破切器 JK-24A">
+                            </a>
+                            <a href="/Product/index/id/19830.html" class="txt" style="margin-top:-13px;" target="_blank">
+                                整体式液压螺母破切器 JK-24A
+                            </a>
+
+
+                            <a class="parameter"></a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥480.00                                		<span class="unit">/把</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="19830"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--189L-->
+    <div class="floors floors12" style="position:relative;">
+        <!--左侧导航-->
+        <div id="lift" class="floatCtro">
+            <ul style="display: block;">
+                <li class="">
+                    <span class="lift-num">01L</span>
+                    <p class="name">水泵</p>
+                </li>
+                <li class="">
+                    <span class="lift-num">02L</span>
+                    <p class="name">工具</p>
+                </li>
+                <li class="">
+                    <span class="lift-num">03L</span>
+                    <p class="name">吊机</p>
+                </li>
+                <li class="">
+                    <span class="lift-num">04L</span>
+                    <p class="name">焊机</p>
+                </li>
+                <li class="">
+                    <span class="lift-num">05L</span>
+                    <p class="name">空压</p>
+                </li>
+                <li class="">
+                    <span class="lift-num">06L</span>
+                    <p class="name">水管</p>
+                </li>
+                <li class="">
+                    <span class="lift-num">07L</span>
+                    <p class="name">园林</p>
+                </li>
+                <li class="">
+                    <span class="lift-num">08L</span>
+                    <p class="name">建筑</p>
+                </li>
+                <li class="">
+                    <span class="lift-num">09L</span>
+                    <p class="name">食品</p>
+                </li>
+                <li class="">
+                    <span class="lift-num">10L</span>
+                    <p class="name">清洗</p>
+                </li>
+                <li class="">
+                    <span class="lift-num">11L</span>
+                    <p class="name">通用</p>
+                </li>
+
+            </ul>
+            <a>
+                <!--<font style="width:30px; height:1px; display:block"></font>-->
+                <span>TOP</span>
+            </a>
+        </div>
+        <div class="fl-hd">
+            <b></b><span>通风设备</span>
+        </div>
+        <div class="box clearfix">
+            <div class="f-links fl">
+                <!--左侧栏图片待删除@qing<img src="http://static.ruigushop.com/mobile/category/shuibeng1@3x.png">-->
+                <!--待删除<h2>水泵</h2>-->
+                <a href="" target="_blank">
+                    <img src="image/product/189/a1.png" />
+                </a>
+                <div class="f-links-bd">
+                    <a href="" target="_blank">清水介质</a>
+                    |<a href="" target="_blank">类清水化学介质</a>
+                    |<a href="" target="_blank">污水介质</a>
+                    |<a href="" target="_blank">轻度化学污水介质</a>
+                    |<a href="" target="_blank">增压泵</a>
+                </div>
+            </div>
+            <div class="f-pro-box fr">
+                <ul class="clearfix">
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a2.png" alt="水泵/汽油水泵 2寸 双马">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                水泵/汽油水泵 2寸 双马
+                            </a>
+
+
+                            <a class="parameter">3.6kw</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥863.00<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1185"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a3.png" alt="水泵/井用潜水泵/多级潜水泵/深井泵220V 100QJD4-75-1.5 1.5KW 永乐">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                水泵/井用潜水泵/多级潜水泵/深井泵220V 100QJD4-75-1.5 1.5KW 永乐
+                            </a>
+
+
+                            <a class="parameter">4寸井泵</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥615.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1181"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row1">
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a4.png" alt="水泵/潜水泵/小型潜水电泵 QDX1.5-32-0.75 0.75KW 新界老百姓">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                水泵/潜水泵/小型潜水电泵 QDX1.5-32-0.75 0.75KW 新界老百姓
+                            </a>
+
+
+                            <a class="parameter">0.75kw</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥469.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1881"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row2">
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a5.png" alt="水泵/自吸泵/旋涡式自吸电泵<泵体电泳> 1WZB-15 0.37KW 新界老百姓">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                水泵/自吸泵/旋涡式自吸电泵&lt;泵体电泳&gt; 1WZB-15 0.37KW 新界老百姓
+                            </a>
+
+
+                            <a class="parameter">0.37kw</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥322.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1870"> </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="f-items">
+                            <a href="" class="f-img" target="_blank">
+                                <img class="big-img" src="image/product/145/a6.png" alt="水泵/潜水排污泵/污水污物潜水电泵<T型> WQ10-10-0.75 0.75KW 新界老百姓">
+                            </a>
+                            <a href="" class="txt" style="margin-top:-13px;" target="_blank">
+                                水泵/潜水排污泵/污水污物潜水电泵<t型> WQ10-10-0.75 0.75KW 新界老百姓                            	                            </t型>
+                            </a>
+
+
+                            <a class="parameter">0.75kw</a>
+                            <div class="clearfix f-items-buy">
+                                <div class="price fl">
+                                    <p class="pleft">
+                                        ￥540.00                                		<span class="unit">/台</span>
+                                    </p>
+                                    <!---->
+                                </div>
+                                <div class="operation fr">
+                                    <a href="javascript:void(0);" title="加入购物车" class="icon-mini-cart addCartBtn" data-id="1897"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+   
+    <!--联系帮助-->
+    <div class="floor-middle-ad">
+        <div class="footer-service">
+            <ul class="list-service clearfix">
+                <li><a rel="nofollow" href="" target="_blank"><i class="fa fa-shopping-cart fa-2x"></i>购物指南</a></li>
+                <li><a rel="nofollow" href="" target="_blank"><i class="fa fa-truck fa-2x"></i>商品配送</a></li>
+                <li><a rel="nofollow" href="" target="_blank"><i class="fa fa-wrench fa-2x"></i>商品售后</a></li>
+                <li><a rel="nofollow" href="" target="_blank"><i class="fa fa-question-circle-o fa-2x"></i>需要帮助</a></li>
+                <li><a rel="nofollow" href="" target="_blank"><i class="fa fa-commenting fa-2x"></i>联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="floor-middle-list-content">
+        <ul class="floor-middle-list-ul">
+            <li class="floor-middle-li"><a>购物流程</a></li>
+            <li class="floor-middle-li"><a>交易条款</a></li>
+            <li class="floor-middle-li"><a>开票须知</a></li>
+            <li class="floor-middle-li"><a>订单答疑</a></li>
+        </ul>
+        <ul class="floor-middle-list-ul">
+            <li class="floor-middle-li"><a>配送范围</a></li>
+            <li class="floor-middle-li"><a>服务说明</a></li>
+            <li class="floor-middle-li"><a>物流承诺</a></li>
+            <li class="floor-middle-li"><a>配送须知</a></li>
+        </ul>
+        <ul class="floor-middle-list-ul">
+            <li class="floor-middle-li"><a>购物流程</a></li>
+            <li class="floor-middle-li"><a>交易条款</a></li>
+            <li class="floor-middle-li"><a>开票须知</a></li>
+            <li class="floor-middle-li"><a>订单答疑</a></li>
+        </ul>
+        <ul class="floor-middle-list-ul">
+            <li class="floor-middle-li"><a>购物流程</a></li>
+            <li class="floor-middle-li"><a>交易条款</a></li>
+            <li class="floor-middle-li"><a>开票须知</a></li>
+            <li class="floor-middle-li"><a>订单答疑</a></li>
+        </ul>
+        <ul class="floor-middle-list-ul">
+            <li class="floor-middle-li"><a>购物流程</a></li>
+            <li class="floor-middle-li"><a>交易条款</a></li>
+            <li class="floor-middle-li"><a>开票须知</a></li>
+            <li class="floor-middle-li"><a>订单答疑</a></li>
+        </ul>
+    </div>
+    <!--公司版权-->
+    <div class="gsbq">Copyright © 2009-2014 czvv.com 广西雄威供应链管理有限公司(15279189.czvv.com) 版权所有</div>
+</body>
+</html>

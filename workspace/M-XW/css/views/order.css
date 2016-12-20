@@ -1,0 +1,82 @@
+﻿.WP-Order .list-block .item-content {
+    padding-left: 0;
+}
+
+.WP-Order .list-block .item-content img {
+    width: 3rem;
+}
+
+.WP-Order .list-block .item-content label {
+    margin-right: 0.5rem;
+    width:1.68rem;
+}
+
+.WP-Order .list-block .item-footer .price {
+    font-family: arial,verdana,sans-serif !important;
+    color: #dd2727;
+    letter-spacing: normal;
+    overflow: inherit !important;
+    white-space: nowrap;
+}
+
+.WP-Order .list-block .item-footer .item_count {
+    padding: 0.1rem 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.WP-Order .list-block .item-footer .price b {
+    font-size: 0.8rem;
+}
+
+.WP-Order .list-block .item-footer .input_count {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1rem;
+    font-size: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
+.WP-Order .u_barcode {
+    padding: 10px;
+    text-align:center;
+}
+
+.WP-Order .bar-tab .u_title{
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.WP-Order .bar-tab .m_item-checkbox{
+    margin-left:0.5rem;
+    text-align:left;
+}
+
+.WP-Order .bar-tab .m_item-checkbox .u_title{
+    margin-top:5px;
+}
+
+.WP-Order .bar-tab .u_amount {
+    margin-left: 1rem;
+    font-family: arial,verdana,sans-serif !important;
+    color: #dd2727;
+    letter-spacing: normal;
+    overflow: inherit !important;
+    white-space: nowrap;
+    text-align:left;
+}
+
+.WP-Order .bar-tab .u_total .u_title{
+    font-weight:600;
+}
+
+.WP-Order .bar-tab .u_sales {
+    color: #808080;
+    font-size: 0.6rem;
+}
+
+.WP-Order .bar-tab .u_right{
+    background-color:  rgba(255, 0, 0, 0.80);
+}

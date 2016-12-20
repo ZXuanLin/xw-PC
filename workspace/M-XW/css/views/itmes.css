@@ -1,0 +1,33 @@
+﻿.WP-Items .list-block {
+    margin: 5px 0 0;
+}
+
+.WP-Items .item-media img,
+.WP-Items .item-media img {
+    width: 3.5rem;
+}
+
+.WP-Items .list-block .item-footer {
+    height:1.5rem;
+    line-height:1.5rem;
+    font-size: 0.8rem;
+}
+
+.WP-Items .list-block .item-footer .price,
+.WP-Items .list-block .item-footer .buynow {
+    font-family: arial,verdana,sans-serif !important;
+    color: #dd2727;
+    letter-spacing: normal;
+    overflow: inherit !important;
+    white-space: nowrap
+}
+
+.WP-Items .list-block .item-footer .price b,
+.WP-Items .list-block .item-footer .buynow {
+    font-size: 1rem;
+}
+
+.WP-Items .list-block .item-footer .unit {
+    padding-left:5px;
+    font-size: 0.6rem;
+}

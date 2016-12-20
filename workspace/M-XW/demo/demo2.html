@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>delete checked cells</title>
+    <script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="javascript2.js" ></script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <table>
+        <tr id="head">
+                <th>选项</th>
+                <th>编号</th>
+                <th>封面</th>
+                <th>购书人</th>
+                <th>性别</th>
+                <th>购书价</th>
+        </tr>
+        <tr id="0">
+            <td><input id="checkbox0" type="checkbox" value="0"></td>
+            <td>1001</td>
+            <td><img src="imges/img1.png" alt="book"></td>
+            <td>李小明</td>
+            <td>男</td>
+            <td>35.4元</td>
+        </tr>
+        <tr id="1">
+            <td><input id="checkbox1" type="checkbox" value="1"></td>
+            <td>1001</td>
+            <td><img src="imges/img1.png" alt="book"></td>
+            <td>李小明</td>
+            <td>男</td>
+            <td>35.4元</td>
+        </tr>
+        <tr id="2">
+            <td><input id="checkbox2" type="checkbox" value="2"></td>
+            <td>1001</td>
+            <td><img src="imges/img1.png" alt="book"></td>
+            <td>李小明</td>
+            <td>男</td>
+            <td>35.4元</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td style="text-align:left; height:28px">
+                <span><input id="cheAll" type="checkbox">全选</span>
+                <span>
+                    <input id="delbtn" type="button" value="删除">
+                </span>
+            </td>
+        </tr>
+    </table>
+    <img id="imgtop" src="imges/img1.png" alt="" style="display:none">
+</body>
+</html>

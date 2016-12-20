@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的账户</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!--<link rel="shortcut icon" href="/favicon.ico">-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../css/frames/sm.min.css" rel="stylesheet" />
+    <link href="../css/frames/sm-extend.min.css" rel="stylesheet" />
+    <link href="../css/frames/common.css" rel="stylesheet" />
+    <link href="../css/frames/icons.css" rel="stylesheet" />
+    <link href="../css/views/account.css" rel="stylesheet" />
+    <link href="../css/views/orders.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page-group  WP-Account WP-AllOrder">
+        <div class="page page-current" id="detail">
+            <header class="bar bar-nav">
+                <h1 class="title">我的账户</h1>
+            </header>
+            <nav class="bar bar-tab">
+                <a class="tab-item external" href="../index.html">
+                    <span class="icon icon-home"></span>
+                    <span class="tab-label">首页</span>
+                </a>
+                <a class="tab-item external" href="recommend.html">
+                    <span class="icon icon-app"></span>
+                    <span class="tab-label">推荐</span>
+                </a>
+                <a class="tab-item external" href="cart.html">
+                    <span class="icon icon-cart"></span>
+                    <span class="tab-label">购物车</span>
+                </a>
+                <a class="tab-item external active" href="account.html">
+                    <span class="icon icon-me"></span>
+                    <span class="tab-label">我的</span>
+                </a>
+            </nav>
+            <div class="content">
+                <div class="m_part">
+                    <div class="u_account">
+                        <div class="u_account-basic">
+                            <div class="u_name">帅到睡不着</div>
+                            <div class="u_company">熊威供应链信息管理有限公司</div>
+                        </div>
+                        <div class="u_account-more">
+                            <a href="#">
+                                <span>5</span>
+                                <span>我的关注</span>
+                            </a>
+                            <a href="#">
+                                <span>4</span>
+                                <span>我的足迹</span>
+                            </a>
+                            <a href="#">
+                                <span>10</span>
+                                <span>售后记录</span>
+                            </a>
+                        </div>
+                        <div class="u_account-avatar">
+                            <img src="../asset/avatar/default_face.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="m_part" id="js_orders">
+                    <div class="list-block">
+                        <ul>
+                            <li>
+                                <a href="javascript:0;" class="item-link item-content" data-page="1">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            <i class="m_icon icon-account"></i>
+                                            我的订单
+                                        </div>
+                                        <div class="item-after">全部订单</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="u_order-more">
+                        <a href="javascript:0;" data-page="2">
+                            <span><i class="m_icon icon-pay"></i></span>
+                            <span>待付款</span>
+                        </a>
+                        <a href="javascript:0;" data-page="3">
+                            <span><i class="m_icon icon-receive"></i></span>
+                            <span>待收货</span>
+                        </a>
+                        <a href="javascript:0;" data-page="4">
+                            <span><i class="m_icon icon-return"></i></span>
+                            <span>退换/返修</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="m_part">
+                    <div class="list-block">
+                        <ul>
+                            <li>
+                                <a href="tel:021-09034234" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            <i class="m_icon icon-call"></i>
+                                            客服
+                                        </div>
+                                        <div class="item-after">021-09034234</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/frames/zepto.js"></script>
+    <script src="../js/frames/sm.min.js"></script>
+    <script src="../js/frames/sm-extend.min.js"></script>
+    <script src="../js/components/title.js"></script>
+    <script src="../js/components/card.js"></script>
+    <script src="../js/components/tpl.js"></script>
+    <script src="../js/components/pager.js"></script>
+    <script src="../js/views/account.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+﻿.p-left{
+    height: 100%;
+    overflow: scroll;
+    float: left;
+    background-color: #fff;
+    width:30%;
+}
+.p-right{
+    overflow: scroll;
+    height:100%;
+    width:70%;
+    float: right;
+}
+.p-con{
+    position: fixed;
+    top: 2em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #efefef;
+}
+.p-scroll{
+    height:100%;
+}
+.p-xjae{
+    overflow:hidden;
+}
+
+.p-left a {
+    padding-left: .8em;
+    display: block;
+    line-height: 3.6;
+    vertical-align: middle;
+    overflow: hidden;
+    word-break: break-all;
+    color: #333!important;
+}
+
+.p-left a span {
+    font-size: .7em;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+    .p-left a.current {
+        display: block;
+        color: #e01d20 !important;
+        background: url(../../asset/icons/arrowToLeft.png) no-repeat right;
+        background-size: .365em .665em;
+        margin-right: -1px;
+    }
+
+ .pro-panels {
+    background-color: #efefef;
+    border-bottom: 1px solid #e1e1e1;
+    border-top: 0;
+    padding: .4em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+ 
+.p-right .pro-panels .p-img {
+    border: 0;
+    height: 3.4em;
+    width: 3.4em;
+    float: left;
+    position: relative;
+}
+
+.p-right .pro-panels .p-name {
+    max-height: inherit
+}
+
+.p-right .pro-panels .p-name span {
+    line-height: 4.8;
+    top: 0;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: .7rem;
+    position: relative;
+}

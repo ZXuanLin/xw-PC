@@ -1,0 +1,103 @@
+﻿.WP-Account .list-block {
+    margin: 0.5rem 0;
+    font-size: 0.6rem;
+    color: #808080;
+}
+
+.WP-Account .item-content {
+    padding-left: 0.5rem;
+}
+
+.WP-Account .list-block .item-after {
+    color: #808080;
+}
+
+.WP-Account .m_icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.WP-Account .u_account {
+    position: relative;
+}
+
+.WP-Account .u_account-basic {
+    position: relative;
+    padding: 2.2rem 0 0 5rem;
+    width: 100%;
+    height: 4.8rem;
+    background: rgba(178, 0, 255, 0.37) url(../../asset/accout-bg.png) no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    font-size: 0.6rem;
+    line-height: 1.2;
+    z-index: 2;
+}
+
+.WP-Account .u_account-basic .u_name {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.WP-Account .u_account-basic .u_company {
+    margin-top: 0.3rem;
+}
+
+.WP-Account .u_account-more {
+    padding: 0.35rem 0 0 5rem;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 2.6rem;
+    /*line-height:2.8rem;*/
+}
+
+.WP-Account .u_account-more a {
+    color: #808080;
+    display: block;
+    height: 100%;
+    /*outline:1px solid;*/
+    font-size: 0.6rem;
+    box-sizing: border-box;
+}
+
+.WP-Account .u_account-more a span {
+    display: block;
+    /*margin-top:0.1rem;*/
+    text-align: center;
+}
+
+.WP-Account .u_account-avatar {
+    position: absolute;
+    left: .5rem;
+    top: 2.2rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.WP-Account .u_order-more {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 2.4rem;
+}
+
+.WP-Account .u_order-more a {
+    color: #808080;
+    display: block;
+    height: 100%;
+    font-size: 0.6rem;
+    box-sizing: border-box;
+}
+
+.WP-Account .u_order-more a span {
+    display: block;
+    text-align: center;
+}

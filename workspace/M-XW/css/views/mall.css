@@ -1,0 +1,103 @@
+﻿.WP-Mall .u_part_category .card {
+    margin: 0.5rem 0 0;
+}
+
+.WP-Mall .u_mall_category .u_row {
+    /*padding:0.5rem;*/
+}
+
+.WP-Mall .u_mall_category .u_item {
+    border-color: #e6e6e6;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+}
+
+.WP-Mall .u_mall_category .u_item a {
+    display: block;
+    color: #808080;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.WP-Mall .u_mall_category .u_item img {
+    width: 6rem;
+    height: 6rem;
+    min-width: 4rem;
+    min-height: 4rem;
+    /*outline:1px solid;*/
+}
+
+.WP-Mall .u_mall_category .u_item span {
+    display: block;
+    margin: 0.25rem 0;
+}
+
+.WP-Mall .u_more-category .u_content-title {
+    position: relative;
+    margin-top: 0.75rem;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+.WP-Mall .u_more-category .u_content-title span {
+    /*background-color:tr;*/
+    display: inline-block;
+    padding:0.25rem 0;
+    /*border: 1px dashed;*/
+    width: 5rem;
+}
+
+.WP-Mall .u_more-category .u_content-title:before,
+.WP-Mall .u_more-category .u_content-title:after {
+    content: '';
+    position: absolute;
+    top: 0.6rem;
+    width: calc(50% - 2.5rem);
+    border-top: 1px solid #d5caca;
+}
+
+.WP-Mall .u_more-category .u_content-title:before {
+    left: 0;
+}
+
+.WP-Mall .u_more-category .u_content-title:after {
+    right: 0;
+}
+
+.WP-Mall .u_more-category .u_item {
+    display: block;
+    width: 100%;
+    height: 10rem;
+    border-color: #e6e6e6;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.WP-Mall .u_more-category .u_item img {
+    height: 8rem;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.WP-Mall .u_more-category .u_sm_item {
+    height: 5rem;
+}
+
+.WP-Mall .u_more-category .u_sm_item img {
+    height: 3rem;
+}
+
+
+.WP-Mall .u_more-category .desc {
+    display: block;
+    max-width: 100%;
+    padding: 0 10px;
+    font-size: 0.5rem;
+    color: #808080;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

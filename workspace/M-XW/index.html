@@ -1,0 +1,1128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!--<link rel="shortcut icon" href="/favicon.ico">-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>雄威供应链管理系统</title>
+    <link href="css/frames/sm.min.css" rel="stylesheet" />
+    <link href="css/frames/sm-extend.min.css" rel="stylesheet" />
+    <link href="css/frames/common.css" rel="stylesheet" />
+    <link href="css/frames/icons.css" rel="stylesheet" />
+    <link href="css/views/index.css?v=1111" rel="stylesheet" />
+    <link href="css/views/itmes.css" rel="stylesheet" />
+    <script src="js/frames/zepto.js"></script>
+    <script type="text/javascript">
+        var token = getCookie('token');
+        var code = GetQueryString('code');
+        var api = 'http://api.xw-scm.com/';
+        if (!token && !code) {
+           // window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx00802ffc843a7d28&redirect_uri=http%3a%2f%2fwww.xw-scm.com&response_type=code&scope=snsapi_userinfo#wechat_redirect';
+        }
+
+        if (!token && code) {
+            var params = {
+                'Tonken': '',
+                'BrowserID': 'WeChat',
+                'Method': 'Q',
+                'Content': { 'Code': code }
+            };
+            $.post(api + 'api/WX/Login', params, function (re) {
+                setCookie('token', re.Tonken, 60);
+                //确保设置成功
+                token = getCookie('token');
+            });
+        }
+        if (localStorage.getItem("token") != null) {
+            console.log("登录成功, Token:" + getCookie('token'));
+        }
+
+
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+
+        function setCookie(c_name, value, expiredays) {
+            var exdate = new Date()
+            exdate.setDate(exdate.getDate() + expiredays)
+            document.cookie = c_name + "=" + escape(value) +
+            ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString())
+        }
+
+        //取回cookie
+        function getCookie(c_name) {
+            //如果cookie存在
+            if (document.cookie.length > 0) {
+                c_start = document.cookie.indexOf(c_name + "=")
+                if (c_start != -1) {
+                    c_start = c_start + c_name.length + 1
+                    c_end = document.cookie.indexOf(";", c_start)
+                    if (c_end == -1) c_end = document.cookie.length
+                    return unescape(document.cookie.substring(c_start, c_end))
+                }
+            }
+            return ""
+        }
+    </script>
+</head>
+<body>
+    <div class="page-group WP-Home WP-Items" id="WP-Home">
+        <div class="page page-current" id="page-Home">
+            <!--头部导航-->
+            <header class="bar bar-nav row top-content">
+                <div class="logo">
+                    <a href="#">
+                        <img src="asset/imgs/top/logo.jpg" style="width:100%;height:100%;"/>
+                    </a>
+                </div>
+                <div class="searchbar row col-60 search-label">
+                    <div class="search-input col-100">
+                        <input type="search" id='search' placeholder='输入关键字...' style="border-radius:1rem"/>
+                    </div>
+                    <a class="button button-primary top-button"><span class="icon icon-search"></span></a>
+                </div>
+                <div class="top-shop col-10">
+                    <a href="views/cart.html">
+                        <img src="asset/imgs/top/top-shop.jpg" />
+                    </a>
+                </div>
+            </header>
+            
+            <!--底部菜单栏-->
+            <nav class="bar bar-tab" style="background:#FFF">
+                <a class="tab-item external active" href="index.html">
+                    <span class="icon icon-home"></span>
+                    <span class="tab-label">首页</span>
+                </a>
+                
+                <a class="tab-item external" href="views/cart.html">
+                    <span class="icon icon-cart"></span>
+                    <span class="tab-label">购物车</span>
+                </a>
+                <a class="tab-item external" href="views/recommend.html">
+                    <span class="icon icon-app"></span>
+                    <span class="tab-label">我的订单</span>
+                </a>
+                <a class="tab-item external" href="views/account.html">
+                    <span class="icon icon-me"></span>
+                    <span class="tab-label">我的</span>
+                </a>
+            </nav>
+            <div class="content">
+                <!--图片滚动-->
+                <div id="" class="m_part u_swiper_container">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="views/detail.html"><img src="asset/imgs/b_01_150914.png" alt="" /></a></div>
+                            <div class="swiper-slide"><a href="views/detail.html"><img src="asset/imgs/b_03_150914.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="views/detail.html"><img src="asset/imgs/b_02_150914.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="views/detail.html"><img src="asset/imgs/th_02_150914.jpg" alt=""></a></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <!--小圆图-->
+                <article class="quicklink">
+                    <ul class="clearfix">
+                        <li><a href=""><i><img src="asset/imgs/top/t1.png"></i><p>商品分类</p></a></li>
+                        <li><a href=""><i><img src="asset/imgs/top/t2.png"></i><p>品牌分类</p></a></li>
+                        <li><a href=""><i><img src="asset/imgs/top/t3.png"></i><p>店面分销</p></a></li>
+                        <li><a href=""><i><img src="asset/imgs/top/t4.png"></i><p>售后服务</p></a></li>
+                    </ul>
+                </article>
+                
+                
+                <!--热卖推荐-->
+                <div id="more-category" class="u_part_category u_more-category">
+                    <div class="m_part">
+                        <!--特惠专区商品-->
+                        <div class="card">
+                            <div class="specialzone ">
+                                <h3>特惠专区</h3>
+                                <a>更多<span class="icon icon-right"></span></a>
+                            </div>
+                            <div class="card-content">
+                                <div class="row no-gutter">
+                                    <div class="col-50">
+                                        
+                                        <div class="u_item"> <!--data-param="{'type'='hj', 'id'='LGK-80/CUT80'}"-->
+                                            <a href="">
+                                                <h3 class="x-title">限时特惠</h3>
+                                                <span class="d-num">12大品类</span>
+                                                <span class="d-num">天天给你惊喜</span>
+                                                <img src="asset/imgs/top/p1.png" alt="" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-50">
+                                        <div class="u_item u_sm_item">
+                                            <a href="#">
+                                                <h3 class="x-title-qn">全能工具应有尽有</h3>
+                                                <a class="xw-go-more">抢GO<span class="icon icon-right"></span></a>
+                                                <img src="asset/imgs/top/p2.png" alt="" class="xs-sm-im"/>
+                                            </a>
+                                        </div>
+                                        <div class="u_item u_sm_item col-100">
+                                            <div class="col-50" style="float:left">
+                                                <a href="#">
+                                                    <span class="desc">地线夹/接地夹/搭铁夹 500A</span>
+                                                    <img src="asset/imgs/top/p3.png" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="col-50" style="float:left;border-left:1px solid #e6e6e6;">
+                                                <a href="#">
+                                                    <span class="desc">地线夹/接地夹/搭铁夹 500A</span>
+                                                    <img src="asset/imgs/top/p3.png" alt="" />
+                                                </a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="m_part">
+                        <div class="card">
+                            <!--精品推荐-->
+                            <div class="specialzone ">
+                                <h3>精品推荐</h3>
+                                <a>更多<span class="icon icon-right"></span></a>
+                            </div>
+                            <div class="card-content">
+                                <div class="row no-gutter">
+                                    <div class="col-33 re-xjn">
+                                        <div class="xj-cn-xw">精品推荐</div>
+                                        <div class="u_item">
+                                            <a href="#">
+                                                <img src="asset/imgs/top/j1.png" alt="" />
+                                                <span class="desc">切割机/型材切割机87001(355mm2300W) 百闻</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-33 re-xjn">
+                                        <div class="xj-cn-xw">精品推荐</div>
+                                        <div class="u_item">
+                                            <a href="#">
+                                                <img src="asset/imgs/top/j1.png" alt="" />
+                                                <span class="desc">切割机/型材切割机87001(355mm2300W) 百闻</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-33 re-xjn">
+                                        <div class="xj-cn-xw">精品推荐</div>
+                                        <div class="u_item">
+                                            <a href="#">
+                                                <img src="asset/imgs/top/j1.png" alt="" />
+                                                <span class="desc">切割机/型材切割机87001(355mm2300W) 百闻</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="row no-gutter">
+                                    <div class="col-33 re-xjn">
+                                        <div class="xj-cn-xw">精品推荐</div>
+                                        <div class="u_item">
+                                            <a href="#">
+                                                <img src="asset/imgs/top/j2.png" alt="" />
+                                                <span class="desc">切割机/型材切割机87001(355mm2300W) 百闻</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-33 re-xjn">
+                                        <div class="xj-cn-xw">精品推荐</div>
+                                        <div class="u_item">
+                                            <a href="#">
+                                                <img src="asset/imgs/top/j2.png" alt="" />
+                                                <span class="desc">切割机/型材切割机87001(355mm2300W) 百闻</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-33 re-xjn">
+                                        <div class="xj-cn-xw">精品推荐</div>
+                                        <div class="u_item">
+                                            <a href="#">
+                                                <img src="asset/imgs/top/j2.png" alt="" />
+                                                <span class="desc">切割机/型材切割机87001(355mm2300W) 百闻</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m_part">
+                        <div class="card">
+                            <div class="card-conten w-cnsd">
+                                <div class="m_part u_swiper_container">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide"><a href="views/detail.html"><img src="asset/imgs/product/p1.png" /></a></div>
+                                            <div class="swiper-slide"><a href="views/detail.html"><img src="asset/imgs/product/p1.png" /></a></div>
+                                            <div class="swiper-slide"><a href="views/detail.html"><img src="asset/imgs/product/p1.png" /></a></div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-conten ad-content">
+                                <!--<div class="w-dk"></div>-->
+                                爱/工/作
+                                <!--<div class="w-dx"></div>-->
+                            </div>
+                            <div class="card-conten">
+                                <div class="row no-gutter">
+                                    <div class="col-50 q-zxd">
+                                        <div class="q-cjja col-100">
+                                            <div class="q-djae col-100">
+                                                <img src="asset/imgs/likework/a1.png" />
+                                            </div>
+                                            <h3 class="q-cdjx">你电我动</h3>
+                                            <p class="q-xds">耐用、省电热卖中.....</p>
+                                            <p class="q-kxjd">去享优惠吧！</p>
+                                            <a class="q-jkd">新品上线</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-50 q-zxd">
+                                        <div class="q-cjja col-100">
+                                            <div class="q-djae col-100">
+                                                <img src="asset/imgs/likework/a2.png" />
+                                            </div>
+                                            <h3 class="q-cdjx">你电我动</h3>
+                                            <p class="q-xds">水泵尖货开抢</p>
+                                            <p class="q-kxjd q-hde">去享优惠吧！</p>
+                                            <a class="q-jkd">特价7.5折</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-gutter">
+                                    <div class="col-50 q-zxd">
+                                        <div class="q-cjja col-100">
+                                            <div class="q-djae col-100">
+                                                <img src="asset/imgs/likework/a3.png" />
+                                            </div>
+                                            <h3 class="q-cdjx">你电我动</h3>
+                                            <p class="q-xds">雄威是最强</p>
+                                            <a class="q-jkd">品质杠杠滴</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-50 q-zxd">
+                                        <div class="q-cjja col-100">
+                                            <div class="q-djae col-100">
+                                                <img src="asset/imgs/likework/a4.png" />
+                                            </div>
+                                            <h3 class="q-cdjx">你电我动</h3>
+                                            <p class="q-xds">永远不分开</p>
+                                            <p class="q-kxjd">牢固一辈子</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-gutter">
+                                    <div class="col-25">
+                                        <div class="col-100 w-djad">
+                                            <div class="w-cjs">
+                                                <img src="asset/imgs/likework/a5.png" />
+                                                <h3 class="w-jch">空压机</h3>
+                                                <p class="w-hgd">我的肺活量最大</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-25">
+                                        <div class="col-100 w-djad">
+                                            <div class="w-cjs">
+                                                <img src="asset/imgs/likework/a6.png" />
+                                                <h3 class="w-jch">水管/水带</h3>
+                                                <p class="w-hgd">我的肺活量最大</p>
+                                                <a class="w-gds">首选品质</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-25">
+                                        <div class="col-100 w-djad">
+                                            <div class="w-cjs">
+                                                <img src="asset/imgs/likework/a7.png" />
+                                                <h3 class="w-jch">园林机械</h3>
+                                                <p class="w-hgd">我的肺活量最大</p>
+                                                <a class="w-gds">正品专业</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-25">
+                                        <div class="col-100 w-djad">
+                                            <div class="w-cjs">
+                                                <img src="asset/imgs/likework/a8.png" />
+                                                <h3 class="w-jch">建筑机械</h3>
+                                                <p class="w-hgd">我的肺活量最大</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-gutter">
+                                    <div class="col-25">
+                                        <div class="col-100 w-djad">
+                                            <div class="w-cjs">
+                                                <img src="asset/imgs/likework/a5.png" />
+                                                <h3 class="w-jch">空压机</h3>
+                                                <p class="w-hgd">我的肺活量最大</p>
+                                                <a class="w-gds">好货买送一</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-25">
+                                        <div class="col-100 w-djad">
+                                            <div class="w-cjs">
+                                                <img src="asset/imgs/likework/a6.png" />
+                                                <h3 class="w-jch">水管/水带</h3>
+                                                <p class="w-hgd">我的肺活量最大</p>
+                                                <a class="w-gds">首选品质</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-25">
+                                        <div class="col-100 w-djad">
+                                            <div class="w-cjs">
+                                                <img src="asset/imgs/likework/a7.png" />
+                                                <h3 class="w-jch">园林机械</h3>
+                                                <p class="w-hgd">我的肺活量最大</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-25">
+                                        <div class="col-100 w-djad">
+                                            <div class="w-cjs">
+                                                <img src="asset/imgs/likework/a8.png" />
+                                                <h3 class="w-jch">建筑机械</h3>
+                                                <p class="w-hgd">我的肺活量最大</p>
+                                                <a class="w-gds">通风设备</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m_part">
+                        <div class="card">
+                            <!--工具是必备的-->
+                            <div class="card-conten w-cnsd">
+                                <div class="m_part u_swiper_container">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide"><a href="views/detail.html"><img src="asset/imgs/product/p1.png" /></a></div>
+                                            <div class="swiper-slide"><a href="views/detail.html"><img src="asset/imgs/product/p1.png" /></a></div>
+                                            <div class="swiper-slide"><a href="views/detail.html"><img src="asset/imgs/product/p1.png" /></a></div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-conten ad-content">工具是必备的</div>
+                            <div class="row no-gutter">
+                                <div class="col-50">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/gongju/a1.png" />
+                                            <h3 class="w-jch h-cus">空压机</h3>
+                                            <p class="w-hgd h-cus">12.12买3送一</p>
+                                            <a class="w-gds h-xd">数量有限  先到先得</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/gongju/a2.png" />
+                                            <h3 class="w-jch">水管/水带</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/gongju/a2.png" />
+                                            <h3 class="w-jch">园林机械</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter">
+                                <div class="col-50">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/gongju/a1.png" />
+                                            <h3 class="w-jch h-cus">空压机</h3>
+                                            <p class="w-hgd h-cus">回馈老客户<br />数量有限</p>
+                                            <a class="w-gds h-xd">数量有限  先到先得</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/gongju/a2.png" />
+                                            <h3 class="w-jch">水管/水带</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/gongju/a2.png" />
+                                            <h3 class="w-jch">园林机械</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter">
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--12 12超强好货-->
+                            <div class="card-conten ad-content">12 12超强好货</div>
+                            <div class="row no-gutter">
+                                <div class="col-50 q-zxd">
+                                    <div class="q-cjja col-100">
+                                        <div class="q-djae col-100">
+                                            <img src="asset/imgs/likework/a1.png" />
+                                        </div>
+                                        <h3 class="q-cdjx">你电我动</h3>
+                                        <p class="q-xds">耐用、省电热卖中.....</p>
+                                        <p class="q-kxjd">去享优惠吧！</p>
+                                        <a class="q-jkd">新品上线</a>
+                                    </div>
+                                </div>
+                                <div class="col-50 q-zxd">
+                                    <div class="q-cjja col-100">
+                                        <div class="q-djae col-100">
+                                            <img src="asset/imgs/likework/a2.png" />
+                                        </div>
+                                        <h3 class="q-cdjx">你电我动</h3>
+                                        <p class="q-xds">水泵尖货开抢</p>
+                                        <p class="q-kxjd q-hde">去享优惠吧！</p>
+                                        <a class="q-jkd">特价7.5折</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter">
+                                <div class="col-50 q-zxd">
+                                    <div class="q-cjja col-100">
+                                        <div class="q-djae col-100">
+                                            <img src="asset/imgs/likework/a1.png" />
+                                        </div>
+                                        <h3 class="q-cdjx">你电我动</h3>
+                                        <p class="q-xds">耐用、省电热卖中.....</p>
+                                        <p class="q-kxjd">去享优惠吧！</p>
+                                        <a class="q-jkd">新品上线</a>
+                                    </div>
+                                </div>
+                                <div class="col-50 q-zxd">
+                                    <div class="q-cjja col-100">
+                                        <div class="q-djae col-100">
+                                            <img src="asset/imgs/likework/a2.png" />
+                                        </div>
+                                        <h3 class="q-cdjx">你电我动</h3>
+                                        <p class="q-xds">水泵尖货开抢</p>
+                                        <p class="q-kxjd q-hde">去享优惠吧！</p>
+                                        <a class="q-jkd">特价7.5折</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter">
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--吊机哪家强-->
+                            <div class="card-conten ad-content">吊机哪家强？</div>
+                            <div class="row no-gutter">
+                                <div class="col-50 q-zxd">
+                                    <div class="q-cjja col-100">
+                                        <div class="q-djae col-100">
+                                            <img src="asset/imgs/likework/a1.png" />
+                                        </div>
+                                        <h3 class="q-cdjx">你电我动</h3>
+                                        <p class="q-xds">耐用、省电热卖中.....</p>
+                                        <p class="q-kxjd">去享优惠吧！</p>
+                                        <a class="q-jkd">新品上线</a>
+                                    </div>
+                                </div>
+                                <div class="col-50 q-zxd">
+                                    <div class="q-cjja col-100">
+                                        <div class="q-djae col-100">
+                                            <img src="asset/imgs/likework/a2.png" />
+                                        </div>
+                                        <h3 class="q-cdjx">你电我动</h3>
+                                        <p class="q-xds">水泵尖货开抢</p>
+                                        <p class="q-kxjd q-hde">去享优惠吧！</p>
+                                        <a class="q-jkd">特价7.5折</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter">
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--新界、金葵系列-->
+                            <div class="card-conten ad-content">新界、金葵系列</div>
+                            <div class="row no-gutter">
+                                <div class="col-50 q-zxd">
+                                    <div class="q-cjja col-100">
+                                        <div class="q-djae col-100">
+                                            <img src="asset/imgs/likework/a1.png" />
+                                        </div>
+                                        <h3 class="q-cdjx">你电我动</h3>
+                                        <p class="q-xds">耐用、省电热卖中.....</p>
+                                        <p class="q-kxjd">去享优惠吧！</p>
+                                        <a class="q-jkd">新品上线</a>
+                                    </div>
+                                </div>
+                                <div class="col-50 q-zxd">
+                                    <div class="q-cjja col-100">
+                                        <div class="q-djae col-100">
+                                            <img src="asset/imgs/likework/a2.png" />
+                                        </div>
+                                        <h3 class="q-cdjx">你电我动</h3>
+                                        <p class="q-xds">水泵尖货开抢</p>
+                                        <p class="q-kxjd q-hde">去享优惠吧！</p>
+                                        <a class="q-jkd">特价7.5折</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter">
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--地球坏境就靠它了-->
+                            <div class="card-conten ad-content">地球坏境就靠它了</div>
+                            <div class="row no-gutter">
+                                <div class="col-50">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/gongju/a1.png" />
+                                            <h3 class="w-jch h-cus">空压机</h3>
+                                            <p class="w-hgd h-cus">12.12买3送一</p>
+                                            <a class="w-gds h-xd">数量有限  先到先得</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/gongju/a2.png" />
+                                            <h3 class="w-jch">水管/水带</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/gongju/a2.png" />
+                                            <h3 class="w-jch">园林机械</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter">
+                                <div class="col-50">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/gongju/a1.png" />
+                                            <h3 class="w-jch h-cus">空压机</h3>
+                                            <p class="w-hgd h-cus">12.12买3送一</p>
+                                            <a class="w-gds h-xd">数量有限  先到先得</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/gongju/a2.png" />
+                                            <h3 class="w-jch">水管/水带</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/gongju/a2.png" />
+                                            <h3 class="w-jch">园林机械</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter">
+                                <div class="col-50">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/gongju/a1.png" />
+                                            <h3 class="w-jch h-cus">空压机</h3>
+                                            <p class="w-hgd h-cus">12.12买3送一</p>
+                                            <a class="w-gds h-xd">数量有限  先到先得</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/gongju/a2.png" />
+                                            <h3 class="w-jch">水管/水带</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/gongju/a2.png" />
+                                            <h3 class="w-jch">园林机械</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--机械质量都是杠杠滴-->
+                            <div class="card-conten ad-content">机械质量都是杠杠滴</div>
+                            <div class="row no-gutter">
+                                <div class="col-50 q-zxd">
+                                    <div class="q-cjja col-100">
+                                        <div class="q-djae col-100">
+                                            <img src="asset/imgs/likework/a1.png" />
+                                        </div>
+                                        <h3 class="q-cdjx">你电我动</h3>
+                                        <p class="q-xds">耐用、省电热卖中.....</p>
+                                        <p class="q-kxjd">去享优惠吧！</p>
+                                        <a class="q-jkd">新品上线</a>
+                                    </div>
+                                </div>
+                                <div class="col-50 q-zxd">
+                                    <div class="q-cjja col-100">
+                                        <div class="q-djae col-100">
+                                            <img src="asset/imgs/likework/a2.png" />
+                                        </div>
+                                        <h3 class="q-cdjx">你电我动</h3>
+                                        <p class="q-xds">水泵尖货开抢</p>
+                                        <p class="q-kxjd q-hde">去享优惠吧！</p>
+                                        <a class="q-jkd">特价7.5折</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter">
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter">
+                                <div class="col-50 q-zxd">
+                                    <div class="q-cjja col-100">
+                                        <div class="q-djae col-100">
+                                            <img src="asset/imgs/likework/a1.png" />
+                                        </div>
+                                        <h3 class="q-cdjx">你电我动</h3>
+                                        <p class="q-xds">耐用、省电热卖中.....</p>
+                                        <p class="q-kxjd">去享优惠吧！</p>
+                                        <a class="q-jkd">新品上线</a>
+                                    </div>
+                                </div>
+                                <div class="col-50 q-zxd">
+                                    <div class="q-cjja col-100">
+                                        <div class="q-djae col-100">
+                                            <img src="asset/imgs/likework/a2.png" />
+                                        </div>
+                                        <h3 class="q-cdjx">你电我动</h3>
+                                        <p class="q-xds">水泵尖货开抢</p>
+                                        <p class="q-kxjd q-hde">去享优惠吧！</p>
+                                        <a class="q-jkd">特价7.5折</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter">
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-25">
+                                    <div class="col-100 w-djad">
+                                        <div class="w-cjs">
+                                            <img src="asset/imgs/likework/a5.png" />
+                                            <h3 class="w-jch d-ied">热卖商品</h3>
+                                            <p class="w-hgd">我的肺活量最大</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel-overlay"></div>
+
+        <!--右侧弹窗-->
+        <div class="panel panel-right panel-cover u_filter-panel">
+            <header class="bar bar-nav">
+                <a class="button button-link button-nav pull-left close-panel">
+                    <span class="icon icon-left"></span>
+                    返回
+                </a>
+                <h1 class="title">筛选</h1>
+            </header>
+            <nav class="bar bar-tab u_btns">
+                <a class="tab-item u_btn n_btn-reset" href="#">
+                    <span class="tab-label">重置</span>
+                </a>
+                <a class="tab-item u_btn u_btn-submit" href="#">
+                    <span class="tab-label">确定</span>
+                </a>
+            </nav>
+            <div class="content">
+                <div class="content-block">
+                    <div class="u_filters-container">
+                        <div class="u_contents">
+                            <div class="u_block">
+                                <h4>品牌</h4>
+                                <ul class="u_filters">
+                                    <li class="u_filter u_select">开拓</li>
+                                    <li class="u_filter">隆兴</li>
+                                    <li class="u_filter">拳王</li>
+                                    <li class="u_filter">达英</li>
+                                </ul>
+                            </div>
+                            <div class="u_block">
+                                <h4>区域</h4>
+                                <ul class="u_filters">
+                                    <li class="u_filter">江浙沪</li>
+                                    <li class="u_filter u_select">北京</li>
+                                    <li class="u_filter">珠三角</li>
+                                    <li class="u_filter">上海</li>
+                                    <li class="u_filter u_select">广州</li>
+                                    <li class="u_filter">成都</li>
+                                    <li class="u_filter">欧美</li>
+                                </ul>
+                            </div>
+                            <div class="u_block">
+                                <h4>品牌</h4>
+                                <ul class="u_filters">
+                                    <li class="u_filter u_select">开拓</li>
+                                    <li class="u_filter">隆兴</li>
+                                    <li class="u_filter">拳王</li>
+                                    <li class="u_filter">达英</li>
+                                </ul>
+                            </div>
+                            <div class="u_block">
+                                <h4>区域</h4>
+                                <ul class="u_filters">
+                                    <li class="u_filter">江浙沪</li>
+                                    <li class="u_filter u_select">北京</li>
+                                    <li class="u_filter">珠三角</li>
+                                    <li class="u_filter">上海</li>
+                                    <li class="u_filter u_select">广州</li>
+                                    <li class="u_filter">成都</li>
+                                    <li class="u_filter">欧美</li>
+                                </ul>
+                            </div>
+                            <div class="u_block">
+                                <h4>品牌</h4>
+                                <ul class="u_filters">
+                                    <li class="u_filter u_select">开拓</li>
+                                    <li class="u_filter">隆兴</li>
+                                    <li class="u_filter">拳王</li>
+                                    <li class="u_filter">达英</li>
+                                </ul>
+                            </div>
+                            <div class="u_block">
+                                <h4>区域</h4>
+                                <ul class="u_filters">
+                                    <li class="u_filter">江浙沪</li>
+                                    <li class="u_filter u_select">北京</li>
+                                    <li class="u_filter">珠三角</li>
+                                    <li class="u_filter">上海</li>
+                                    <li class="u_filter u_select">广州</li>
+                                    <li class="u_filter">成都</li>
+                                    <li class="u_filter">欧美</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--底部搜索弹窗-->
+        <div class="popup u_popup-search popup--search-popup" data-toggle="scroller" data-type='native'>
+            <header class="bar bar-nav row">
+                <div class="col-80">
+                    <div class="searchbar">
+                        <a class="searchbar-cancel close-popup">取消</a>
+                        <div class="search-input">
+                            <label class="icon icon-search" for="search"></label>
+                            <input type="search" id='search' placeholder='输入关键字' />
+                        </div>
+                    </div>
+                </div>
+                <a class="button button-fill button-primary col-20">搜索</a>
+            </header>
+            <div class="content">
+                <div class="content-block">
+                    <div class="u_hot">
+                        <h6>热门搜索</h6>
+                        <ul class="u_search_items clearfix">
+                            <li class="u_search_item"><a href="#">韩光</a></li>
+                            <li class="u_search_item"><a href="#">拳王</a></li>
+                            <li class="u_search_item"><a href="#">周年5折</a></li>
+                            <li class="u_search_item"><a href="#">离子切割机</a></li>
+                            <li class="u_search_item"><a href="#">乙炔割嘴</a></li>
+                            <li class="u_search_item"><a href="#">隆兴</a></li>
+                        </ul>
+                    </div>
+                    <div class="u_history">
+                        <h6>最近搜索</h6>
+                        <ul class="u_search_items clearfix">
+                            <li class="u_search_item"><a href="#">韩光</a></li>
+                            <li class="u_search_item"><a href="#">拳王</a></li>
+                            <li class="u_search_item"><a href="#">周年5折</a></li>
+                            <li class="u_search_item"><a href="#">离子切割机</a></li>
+                            <li class="u_search_item"><a href="#">乙炔割嘴</a></li>
+                            <li class="u_search_item"><a href="#">隆兴</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!--<script>$.config = { router: false }</script>-->
+    <script src="js/frames/sm.min.js"></script>
+    <script src="js/frames/sm-extend.min.js"></script>
+    <script src="js/frames/common.js"></script>
+    <script src="js/components/title.js"></script>
+    <script src="js/components/card.js"></script>
+    <script src="js/components/tpl.js"></script>
+    <script src="js/components/pager.js"></script>
+    <script src="js/views/index.js"></script>
+    <script>
+
+
+        //$('#more-category').on('click', '.u_item', function () {
+        //    window.location.href = 'views/detail.html';
+        //});
+
+        //$('#more-category').on('click', '.card-header a', function () {
+        //    window.location.href = 'views/items.html';
+        //});
+
+        //$('#mall_category').on('click', '.u_item', function () {
+        //    window.location.href = 'views/items.html';
+        //});
+    </script>
+
+</body>
+</html>

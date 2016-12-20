@@ -1,0 +1,13 @@
+*{
+    margin: 0px; padding: 0px;
+}
+section{
+    position: relative;
+    width: 430px;
+    margin: 40px auto;
+}
+.sum2{
+    margin-top: 10px; padding: 5px;
+    border: 1px solid #555;
+    
+}

@@ -1,0 +1,27 @@
+*{
+    margin: 0px; padding: 0px;
+}
+#box{
+    width: 200px; height: 200px;
+    border: 1px solid #111;
+    position: relative;
+    margin: 200px auto;
+}
+#button{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0px; right: 5px;
+}
+#bshow{
+    width: 120px; height: 120px;
+    /*position: absolute;*/
+    margin: 25px auto;
+    border: 1px solid #800;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
