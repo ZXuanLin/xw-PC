@@ -224,8 +224,10 @@
     clear:both;
 }
 .t-hsxa{
-    text-align:center;
-    clear:both;
+    text-align: center;
+    clear: both;
+    width: 5rem;
+    margin: 0 auto;
 }
 .t-wzdd,.t-cjse{
     display: block;
