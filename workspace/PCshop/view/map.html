@@ -28,13 +28,190 @@
             white-space: -moz-pre-wrap;
             word-wrap: break-word;
         }
+
+        .after-first{
+    height: 30px;
+    width: 974px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+}
+.after-first p{
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 10px;
+}
+.after-first .lab{
+    float: left;
+    width: 24px;
+    line-height: 20px;
+}
+.after-first .sel{
+    position:relative;
+    float:left;
+    height: 20px;
+    width: 165px;
+    margin-right: 40px;
+    color:#000;
+}
+.after-first .sel-skin{
+    position: absolute;
+    text-align: right;
+    width: 147px;
+    height: 19px;
+    padding-right: 15px;
+    line-height: 19px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.after-first .sel select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 15px;
+    width: 164px;
+    text-align: center;
+    z-index: 22;
+    clip: rect(2px 143px 18px 2px);
+    background-color: transparent;/*åˆ‡é™¤ä¸‹æ‹‰æ¡†(select)å†…å®¹åŒºåŸŸï¼Œåªä¿ç•™ä¸‹æ‹‰ä¸‰è§’ç®­å¤´*/
+}
+.after-first .btn{
+    width: 112px;
+    line-height: 20px;
+    height: 20px;
+    font-size: 12px;
+	background-color:#FFF;
+	color:#ec3c14;
+}
+.after-first .btn:hover{
+	background-color:#ec3c14;
+	color:#FFF;
+}
+/* after-first end*/
+.after-bd{
+    width: 1007px;
+    padding: 0 88px 0 105px; 
+}
+.website li{
+    float: left;
+    padding: 6px;
+    width: 170px;
+    height: 240px;
+    margin-right: 17px;
+    margin-bottom: 27px;
+    border: 1px solid #d9d9d9;
+}
+.website li img{
+    width: 170px;
+    height: 120px;
+	margin-bottom: 5px; 
+}
+.website .name{
+    font-size: 13px;
+    line-height: 20px;
+}
+.website .address,
+.website .tel{
+    font-size: 10px;
+    color: #949494;
+}
+.website .name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.website .address{
+    line-height: 14px;
+    /*height: 29px;*/
+}
+
+
     </style>
     <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 </head>
 
 <body>
+    <!--<div style="width:1000px; height:30px; background:red; margin:0 auto; "> </div>-->
+    <div class="after-first">
+        <!--<p>锐锢商城全国目前已有<span class="c-red">total_count</span>家售后维修网点为您提供售后服务</p>-->
+        <form>
+            <div class="set-items">
+                <div class="lab">省</div>
+                <div class="sel">
+                    <label class="sel-skin" for="province">
+                        <i class="icon iconfont"></i>
+                    </label>
+                    <select name="province" id="province">
+                        <option value="0">所在省份</option>
+                        <option value="12">天津市</option>
+                        <option value="13">河北省</option>
+                        <option value="14">山西省</option>
+                        <option value="15">内蒙古自治区</option>
+                        <option value="21">辽宁省</option>
+                        <option value="31">上海市</option>
+                        <option value="32">江苏省</option>
+                        <option value="33">浙江省</option>
+                        <option value="34">安徽省</option>
+                        <option value="35">福建省</option>
+                        <option value="36">江西省</option>
+                        <option value="37">山东省</option>
+                        <option value="41">河南省</option>
+                        <option value="42">湖北省</option>
+                        <option value="43">湖南省</option>
+                        <option value="44">广东省</option>
+                        <option value="45">广西壮族自治区</option>
+                        <option value="46">海南省</option>
+                        <option value="50">重庆市</option>
+                        <option value="51">四川省</option>
+                        <option value="52">贵州省</option>
+                        <option value="53">云南省</option>
+                        <option value="61">陕西省</option>
+                        <option value="62">甘肃省</option>
+                        <option value="63">青海省</option>
+                        <option value="64">宁夏回族自治区</option>
+                        <option value="65">新疆维吾尔自治区</option>
+                    </select>
+                </div>
+                <div class="lab">市</div>
+                <div class="sel">
+                    <label class="sel-skin">
+                        <i class="icon iconfont"></i>
+                    </label>
+                    <select name="reg" id="reg">
+                        <option value="0">所在城市</option>
+                        <option value="440100">广州市</option>
+                        <option value="440300">深圳市</option>
+                        <option value="440500">汕头市</option>
+                        <option value="440600">佛山市</option>
+                        <option value="440700">江门市</option>
+                        <option value="440800">湛江市</option>
+                        <option value="440900">茂名市</option>
+                        <option value="441200">肇庆市</option>
+                        <option value="441300">惠州市</option>
+                        <option value="441700">阳江市</option>
+                        <option value="441800">清远市</option>
+                        <option value="441900">东莞市</option>
+                        <option value="445300">云浮市</option>
+                    </select>
+                </div>
+                <div class="lab">区</div>
+                <div class="sel">
+                    <label class="sel-skin">
+                        <i class="icon iconfont"></i>
+                    </label>
+                    <select name="city" id="city">
+                        <option value="0">所在地区</option>
+                    </select>
+                </div>
+                <a href="javascript:void(0);" class="btn search-btn">快速查找</a>
+            </div>
+        </form>
+
+    </div>
+
+   
     <!--百度地图容器-->
-    <div style="width:697px;height:550px;border:#ccc solid 1px;margin:0 auto" id="dituContent"></div>
+    <div style="width:1000px;height:1000px;border:#ccc solid 1px; margin:0 auto" id="dituContent"></div>
 </body>
 <script type="text/javascript">
     //创建和初始化地图函数：
@@ -48,8 +225,8 @@
     //创建地图函数：
     function createMap(){
         var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-        var point = new BMap.Point(108.292032,22.887105);//定义一个中心点坐标
-        map.centerAndZoom(point,16);//设定地图的中心点和坐标并将地图显示在地图容器中
+        var point = new BMap.Point(116.848678,39.938838);//定义一个中心点坐标
+        map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
         window.map = map;//将map变量存储在全局
     }
 
@@ -64,19 +241,27 @@
     //地图控件添加函数：
     function addMapControl(){
         //向地图中添加缩放控件
-    var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
-    map.addControl(ctrl_nav);
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
         //向地图中添加缩略图控件
-    var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
-    map.addControl(ctrl_ove);
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
         //向地图中添加比例尺控件
-    var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-    map.addControl(ctrl_sca);
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
     }
 
-    //标注点数组
-    var markerArr = [{title:"广西雄威供应链管理有限公司",content:"广西雄威供应链管理有限公司",point:"108.290487|22.884574",isOpen:1,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
-         ];
+    // 标注点数组 x是x轴上的坐标，
+    // l 和 t 是背景图的位置，lb 是标题和图标的距离，point 是坐标比例：第一个值是 x 轴（值越大越往右），第二个是 y 轴（值越小越往下）
+    // 改变 point 可以改变位置,改变 l 和 t 可以改变图标
+    // isOpen 默认是否显示弹出层
+    var markerArr = [{title:"1",content:"我的备注",point:"116.843792|39.968484",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+		 ,{title:"2",content:"我的备注",point:"116.78515|39.987946",isOpen:0,icon:{w:21,h:21,l:23,t:0,x:6,lb:5}}
+		 ,{title:"3",content:"我的备注",point:"116.798373|39.958751",isOpen:0,icon:{w:21,h:21,l:69,t:46,x:1,lb:10}}
+		 , { title: "4", content: "我的备注", point: "116.85414|39.934855", isOpen: 0, icon: { w: 23, h: 25, l: 0, t: 21, x: 9, lb: 12 } }
+         , { title: "5", content: "我的备注", point: "116.85413|39.834855", isOpen: 2, icon: { w: 23, h: 25, l: 0, t: -4, x: 69, lb: 12 } }
+         , { title: "5333333333333", content: "我的备注", point: "119.95413|39.834855", isOpen: 2, icon: { w: 23, h: 25, l: 0, t: -4, x: 69, lb: 12 } }
+		 ];
     //创建marker
     function addMarker(){
         for(var i=0;i<markerArr.length;i++){
@@ -84,11 +269,11 @@
             var p0 = json.point.split("|")[0];
             var p1 = json.point.split("|")[1];
             var point = new BMap.Point(p0,p1);
-            var iconImg = createIcon(json.icon);
+			var iconImg = createIcon(json.icon);
             var marker = new BMap.Marker(point,{icon:iconImg});
-            var iw = createInfoWindow(i);
-            var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
-            marker.setLabel(label);
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
             map.addOverlay(marker);
             label.setStyle({
                         borderColor:"#808080",
@@ -96,27 +281,27 @@
                         cursor:"pointer"
             });
 
-            (function(){
-                var index = i;
-                var _iw = createInfoWindow(i);
-                var _marker = marker;
-                _marker.addEventListener("click",function(){
-                    this.openInfoWindow(_iw);
-                });
-                _iw.addEventListener("open",function(){
-                    _marker.getLabel().hide();
-                })
-                _iw.addEventListener("close",function(){
-                    _marker.getLabel().show();
-                })
-                label.addEventListener("click",function(){
-                    _marker.openInfoWindow(_iw);
-                })
-                if(!!json.isOpen){
-                    label.hide();
-                    _marker.openInfoWindow(_iw);
-                }
-            })()
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
         }
     }
     //创建InfoWindow
@@ -127,7 +312,7 @@
     }
     //创建一个Icon
     function createIcon(json){
-        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        var icon = new BMap.Icon("http://localhost:59328/image/icon/us_mk_icon.png", new BMap.Size(json.w, json.h), { imageOffset: new BMap.Size(-json.l, -json.t), infoWindowOffset: new BMap.Size(json.lb + 5, 1), offset: new BMap.Size(json.x, json.h) })
         return icon;
     }
 
