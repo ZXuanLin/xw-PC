@@ -23,8 +23,8 @@ $(function () {
     //    $.popup('.u_popup-search');
     //})
 
-    $(document).on('touchstart', '.u_item', function () {
-        $.router.load('/views/detail.html');
-    })
+    //$(document).on('touchstart', '.u_item', function () {
+    //    $.router.load('/views/detail.html');
+    //})
     $.init();
 });
