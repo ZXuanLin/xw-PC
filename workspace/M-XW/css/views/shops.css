@@ -1,0 +1,82 @@
+﻿.shops-y{
+    height:1.5rem;
+    background:#f7f7f7;
+    line-height:1.5rem;
+    padding:0 .5rem 0 .5rem;   
+}
+.shops-y h4{
+    font-size: .66rem;
+    height:1.5rem;
+    line-height:1.5rem;
+    width:5rem;
+    float:left
+}
+
+.shops-m .shops-n{
+    
+    clear:both;
+    margin-top:.3rem;
+}
+.shops-m .shops-mr{
+    margin-top:-.15rem;
+}
+.shops-more{
+    float:right;
+    font-size:.6rem;
+}
+.shops-l{
+    height:auto;
+    clear: both;
+    overflow: hidden;
+    margin-top: .3rem;
+    background:#fff;
+    padding:.5rem .5rem .5rem .5rem;   
+}
+.shops-k{
+    clear: both;
+    overflow: scroll;
+}
+.shops-top{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+       
+}
+.shops-q,.shops-r{
+    /*float:left;*/
+}
+.shops-m .shops-r{
+    font-size:.5rem;
+    float:left;
+    margin-left:.3rem;
+}
+.shops-m .shops-q{
+    width:3rem;
+    height:3rem;
+    float:left;
+}
+.shops-h{
+    margin:0;
+    padding:0;
+}
+.shops-m{
+    width:100%;
+    height:12rem;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    /*display:none;
+    opacity:0;*/
+}
+.shops-content{
+    height:100%;
+}
+.shops-content{
+    margin-top: .4rem;
+}
+.shops-activty{
+    background: #573636;
+    color: #fff;
+}
+#shops-one,#shops-two{
+    display:none;
+}

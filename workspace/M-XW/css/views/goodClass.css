@@ -18,6 +18,8 @@
     left: 0;
     right: 0;
     background-color: #efefef;
+    margin:0;
+    padding:0;
 }
 .p-scroll{
     height:100%;

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!--<link rel="shortcut icon" href="/favicon.ico">-->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -14,6 +15,7 @@
     <link href="css/frames/icons.css" rel="stylesheet" />
     <link href="css/views/index.css?v=1111" rel="stylesheet" />
     <link href="css/views/itmes.css" rel="stylesheet" />
+    <script src="js/components/createPage.js"></script>
     <script src="js/frames/zepto.js"></script>
     <script type="text/javascript">
         var token = getCookie('token');
@@ -72,6 +74,7 @@
 </head>
 <body>
     <div class="page-group WP-Home WP-Items" id="WP-Home">
+
         <div class="page page-current" id="page-Home">
             <!--头部导航-->
             <header class="bar bar-nav row top-content">
@@ -82,7 +85,7 @@
                 </div>
                 <div class="searchbar row col-60 search-label">
                     <div class="search-input col-100">
-                        <input type="search" id='search' placeholder='输入关键字...' style="border-radius:1rem"/>
+                        <input type="search" id='search'class="open-popup" placeholder='输入关键字...' style="border-radius:1rem;background:#fff" disabled/>
                     </div>
                     <a class="button button-primary top-button"><span class="icon icon-search"></span></a>
                 </div>
@@ -92,7 +95,6 @@
                     </a>
                 </div>
             </header>
-            
             <!--底部菜单栏-->
             <nav class="bar bar-tab" style="background:#FFF">
                 <a class="tab-item external active" href="index.html">
@@ -113,23 +115,24 @@
                     <span class="tab-label">我的</span>
                 </a>
             </nav>
+            <!--页面内容-->
             <div class="content">
                 <!--图片滚动-->
                 <div id="" class="m_part u_swiper_container">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><a href="views/detail.html"><img src="asset/imgs/b_01_150914.png" alt="" /></a></div>
-                            <div class="swiper-slide"><a href="views/detail.html"><img src="asset/imgs/b_03_150914.png" alt=""></a></div>
-                            <div class="swiper-slide"><a href="views/detail.html"><img src="asset/imgs/b_02_150914.png" alt=""></a></div>
-                            <div class="swiper-slide"><a href="views/detail.html"><img src="asset/imgs/th_02_150914.jpg" alt=""></a></div>
+                            <div class="swiper-slide"><a href=""><img src="asset/imgs/b_01_150914.png" alt="" /></a></div>
+                            <div class="swiper-slide"><a href=""><img src="asset/imgs/b_03_150914.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href=""><img src="asset/imgs/b_02_150914.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href=""><img src="asset/imgs/th_02_150914.jpg" alt=""></a></div>
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
                 <!--小圆图-->
                 <article class="quicklink">
-                    <ul class="clearfix">
-                        <li><a href="views/goodClass.html" external><i><img src="asset/imgs/top/t1.png"></i><p>商品分类</p></a></li>
+                    <ul class="clearfix" id="linkJump">
+                        <li><a href=""><i><img src="asset/imgs/top/t1.png"></i><p>商品分类</p></a></li>
                         <li><a href=""><i><img src="asset/imgs/top/t2.png"></i><p>品牌分类</p></a></li>
                         <li><a href=""><i><img src="asset/imgs/top/t3.png"></i><p>店面分销</p></a></li>
                         <li><a href=""><i><img src="asset/imgs/top/t4.png"></i><p>售后服务</p></a></li>
@@ -963,7 +966,18 @@
                 </div>
             </div>
         </div>
-        
+
+
+        <!--要手动创建这些内联页面，给他们添加id，点击之后就可以跳转-->
+        <div class="page" id="page-One">this is one page</div>
+
+        <div class="page" id="page-Two"></div>
+
+        <div class="page" id="page-Three"></div>
+
+        <div class="page" id="page-Four"></div>
+
+
         <div class="panel-overlay"></div>
 
         <!--右侧弹窗-->
@@ -1064,7 +1078,7 @@
                         <a class="searchbar-cancel close-popup">取消</a>
                         <div class="search-input">
                             <label class="icon icon-search" for="search"></label>
-                            <input type="search" id='search' placeholder='输入关键字' />
+                            <input type="search" id='search-pop' placeholder='输入关键字' />
                         </div>
                     </div>
                 </div>

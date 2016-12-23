@@ -6,5 +6,7 @@
             $(this).find('a').addClass('current');
         })
     }
-    tabGo()
+    tabGo();
+
+    createPage.returnPage('createGoodClass', 'wwwwwwwww')
 })

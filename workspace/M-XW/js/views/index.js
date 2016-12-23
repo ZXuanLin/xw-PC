@@ -1,6 +1,7 @@
 ﻿/// <reference path="../../views/detail.html" />
 /// <reference path="../../views/detail.html" />
 $(function () {
+    //createPage.returnPage('g','a','b')
     //$('#js_category').on('click', '.u_item', function () {
     //    var item = $(this);
     //    var pageType = item.attr('data-page');
@@ -26,5 +27,13 @@ $(function () {
     //$(document).on('touchstart', '.u_item', function () {
     //    $.router.load('/views/detail.html');
     //})
+
+    $('#search').on('touchstart', function () {
+        $.popup('.popup--search-popup');
+    })
+    createPage.returnPage('createGoodClass')
+    $('#linkJump li').eq(0).on('click', function () {
+        $.router.load("#page-One");
+    })
     $.init();
 });
