@@ -28,9 +28,15 @@ $(function () {
     //    $.router.load('/views/detail.html');
     //})
 
+
+
+    $('#page-Home').append(createPage.header())
+    $('#page-Home').append(createPage.footer())
+    //点击搜索框单出蒙层
+    console.log()
     $('#search').on('touchstart', function () {
         $.popup('.popup--search-popup');
-    })
+    });
     createPage.returnPage('createGoodClass')
     $('#linkJump li').eq(0).on('click', function () {
         $.router.load("#page-One");
