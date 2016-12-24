@@ -11,13 +11,17 @@ $(function () {
             $(this).addClass('shops-activty');
             $('.shops-activty .shops-more').addClass('icon-up');
             target.animate({
-                height: '12rem',
+                height: '13rem',
                 display: 'block',
                 opacity: 1
             }, 100)
         })
     }
-    shopsClick($('#shops-two-title'), $('#shops-two'))
     shopsClick($('#shops-one-title'), $('#shops-one'))
+    shopsClick($('#shops-two-title'), $('#shops-two'))
     shopsClick($('#shops-three-title'), $('#shops-three'))
+    shopsClick($('#shops-four-title'), $('#shops-four'))
+    shopsClick($('#shops-five-title'), $('#shops-five'))
+
+
 })
