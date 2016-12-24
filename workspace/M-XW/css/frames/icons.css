@@ -1,4 +1,4 @@
-﻿.m_icon {
+﻿/*.m_icon {
     display: inline-block;
     width: 1rem;
     height: 1rem;
@@ -127,4 +127,70 @@
 
 .icon-crash {
     background-position: -17px -300px;
+}*/
+.m_icon {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+}
+.icon-pay {
+    background-image: url('../../asset/icons/icon-payg.png');
+    background-size: 1.2rem 1.2rem;
+}
+.icon-shipping{
+     background-image: url('../../asset/icons/icon-shipping.png');
+    background-size: 1.2rem 1.2rem;
+}
+.icon-receipt{
+    background-image: url('../../asset/icons/icon-receipt.png');
+    background-size: 1.2rem 1.2rem;
+}
+.icon-evalute{
+    background-image: url('../../asset/icons/icon-evalute.png');
+    background-size: 1.2rem 1.2rem;
+}
+.icon-customer{
+    background-image: url('../../asset/icons/icon-customer.png');
+    background-size: 1.2rem 1.2rem;
+}
+.icon-order{
+    background-image: url('../../asset/icons/icon-order.png');
+    background-size: 1.2rem 1.2rem;
+    margin-right:.2rem;
+}
+.icon-collection{
+    background-image: url('../../asset/icons/icon-collection.png');
+    background-size: 1.2rem 1.2rem;
+    margin-right:.2rem;
+}
+.icon-shopping{
+    background-image: url('../../asset/icons/icon-shopping.png');
+    background-size: 1.2rem 1.2rem;
+    margin-right:.2rem;
+}
+.icon-note{
+    background-image: url('../../asset/icons/icon-note.png');
+    background-size: 1.2rem 1.2rem;
+    margin-right:.2rem;
+}
+.icon-uerdata{
+     background-image: url('../../asset/icons/icon-uerdata.png');
+    background-size: 1.2rem 1.2rem;
+    margin-right:.2rem;
+}
+.icon-dress{
+     background-image: url('../../asset/icons/icon-dress.png');
+    background-size: 1.2rem 1.2rem;
+    margin-right:.2rem;
+}
+.icon-repair{
+    background-image: url('../../asset/icons/icon-repair.png');
+    background-size: 1.2rem 1.2rem;
+    margin-right:.2rem;
+}
+.icon-help{
+     background-image: url('../../asset/icons/icon-repair.png');
+    background-size: 1.2rem 1.2rem;
+    margin-right:.2rem;
 }

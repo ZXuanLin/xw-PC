@@ -43,56 +43,48 @@
                 <div class="m_part">
                     <div class="u_account">
                         <div class="u_account-basic">
-                            <div class="u_name">帅到睡不着</div>
-                            <div class="u_company">熊威供应链信息管理有限公司</div>
-                        </div>
-                        <div class="u_account-more">
-                            <a href="#">
-                                <span>5</span>
-                                <span>我的关注</span>
-                            </a>
-                            <a href="#">
-                                <span>4</span>
-                                <span>我的足迹</span>
-                            </a>
-                            <a href="#">
-                                <span>10</span>
-                                <span>售后记录</span>
-                            </a>
-                        </div>
-                        <div class="u_account-avatar">
-                            <img src="../asset/avatar/default_face.png" alt="" />
+                            <div class="u_name">
+                                <div class="u_name_per">我的雄威</div>
+                                <div class="u_setting"><img src="../asset/icons/icon-settings.png" /></div>
+                            </div>
+                            
+                            <div class="u_person"><img src="../asset/icons/icon-person.png" /></div>
+                            <div class="u_text">砖石用户</div>
+                            <div class="u_text">SuperMan</div>
                         </div>
                     </div>
                 </div>
-                <div class="m_part" id="js_orders">
-                    <div class="list-block">
-                        <ul>
-                            <li>
-                                <a href="javascript:0;" class="item-link item-content" data-page="1">
-                                    <div class="item-inner">
-                                        <div class="item-title">
-                                            <i class="m_icon icon-account"></i>
-                                            我的订单
-                                        </div>
-                                        <div class="item-after">全部订单</div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="u_order-more">
-                        <a href="javascript:0;" data-page="2">
+
+                <article class="quicklink">
+                    <ul class="clearfix" id="linkJump">
+                        <li><a href=""><i><img src="../asset/icons/icon-xianjin.png"></i><p>0.00</p><p>现金</p></a></li>
+                        <li><a href=""><i><img src="../asset/icons/icon-youhui.png"></i><p>0.00</p><p>金券</p></a></li>
+                        <li><a href=""><i><img src="../asset/icons/icon-jifen.png"></i><p>0.00</p><p>积分</p></a></li>
+                        <li><a href=""><i><img src="../asset/icons/icon-zhifu.png"></i><p>0.00</p><p>支付宝</p></a></li>
+                    </ul>
+                </article>
+
+                <div class="m_part m_part_h" id="js_orders">
+                    <div class="u_order-more list-block">
+                        <a href="javascript:0;" data-page="1">
                             <span><i class="m_icon icon-pay"></i></span>
                             <span>待付款</span>
                         </a>
+                        <a href="javascript:0;" data-page="2">
+                            <span><i class="m_icon icon-shipping"></i></span>
+                            <span>待发货</span>
+                        </a>
                         <a href="javascript:0;" data-page="3">
-                            <span><i class="m_icon icon-receive"></i></span>
+                            <span><i class="m_icon icon-receipt"></i></span>
                             <span>待收货</span>
                         </a>
                         <a href="javascript:0;" data-page="4">
-                            <span><i class="m_icon icon-return"></i></span>
-                            <span>退换/返修</span>
+                            <span><i class="m_icon icon-evalute"></i></span>
+                            <span>待评价</span>
+                        </a>
+                        <a href="javascript:0;" data-page="5" class="s_shouh">
+                            <span><i class="m_icon icon-customer"></i></span>
+                            <span>售后</span>
                         </a>
                     </div>
                 </div>
@@ -103,10 +95,93 @@
                                 <a href="tel:021-09034234" class="item-link item-content">
                                     <div class="item-inner">
                                         <div class="item-title">
-                                            <i class="m_icon icon-call"></i>
-                                            客服
+                                            <i class="m_icon icon-order"></i>
+                                            全部订单
                                         </div>
-                                        <div class="item-after">021-09034234</div>
+                                         
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:021-09034234" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            <i class="m_icon icon-collection"></i>
+                                            收藏夹
+                                        </div>
+                                         
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:021-09034234" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            <i class="m_icon icon-shopping"></i>
+                                            购物车
+                                        </div>
+                                         
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:021-09034234" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            <i class="m_icon icon-note"></i>
+                                            浏览记录
+                                        </div>
+                                         
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="m_part">
+                    <div class="list-block">
+                        <ul>
+                            <li>
+                                <a href="tel:021-09034234" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            <i class="m_icon icon-uerdata"></i>
+                                            用户资料
+                                        </div>
+                                         
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:021-09034234" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            <i class="m_icon icon-dress"></i>
+                                            地址管理
+                                        </div>
+                                         
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:021-09034234" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            <i class="m_icon icon-repair"></i>
+                                            维修网点
+                                        </div>
+                                         
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:021-09034234" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            <i class="m_icon icon-help"></i>
+                                            帮助中心
+                                        </div>
+                                         
                                     </div>
                                 </a>
                             </li>

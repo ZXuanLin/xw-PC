@@ -85,11 +85,11 @@ var createPage = (function () {
             function createGoodClass() {
                 var title = createTitle(1, '商品分类');
                 //外部容器
-                var createGoodClassContent = $('#page-One');
+                var createGoodClassContent = $('#pageGoodClass');
                 //数据填充
                 var data = [];
                 var txt = '';
-                for (var i = 0; i < 11; i++) {
+                for (var i = 0; i < 20; i++) {
                     txt += '工具' + i + ' ';
                 }
                     data.push(txt);
@@ -124,9 +124,6 @@ var createPage = (function () {
                 outContent.append(contentPadd);
                 createGoodClassContent.append(outContent);
                 createGoodClassContent.append(title)
-                createGoodClassContent.append(footer())
-
-        
             }
             //创建detail页面
             function createDetail() {

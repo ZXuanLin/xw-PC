@@ -39,7 +39,7 @@ $(function () {
     });
     createPage.returnPage('createGoodClass')
     $('#linkJump li').eq(0).on('click', function () {
-        $.router.load("#page-One");
+        $.router.load("#pageGoodClass");
     })
     $.init();
 });
