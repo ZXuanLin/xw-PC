@@ -64,12 +64,12 @@
     margin-top: .3rem;
 }
 .WP-Account .u_account-basic .u_person {
-    border: 1px solid;
     width: 3rem;
     height: 3rem;
     margin: 0 auto;
     border-radius: 50%;
     clear: both;
+    position: relative;
 }
 
 .WP-Account .u_account-more {
@@ -172,4 +172,14 @@
     color:#808080;
     /*padding-top: .4545em;*/
     margin:0;
+}
+.u_user-header {
+    opacity:0;
+    filter:alpha(opacity=0);
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background-size:3rem 3rem;
+    z-index:22;
+    position:absolute;
 }

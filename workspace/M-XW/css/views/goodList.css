@@ -11,7 +11,7 @@
     }
     .page-group .page-top-nav ul li{
         float:left;
-        width:25%;
+        width:20%;
         height:2rem;
         line-height:2rem;
     }
@@ -20,7 +20,9 @@
     .j-afjea {
     margin: 0;
     padding: 0;
-}
+}.good-select-panel{
+     width:92% !important;
+ }
     .j-vaesd{
     margin-left:.5rem;
     display:block;

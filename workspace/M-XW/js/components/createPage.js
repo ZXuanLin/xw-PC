@@ -105,6 +105,7 @@ var createPage = (function () {
                 var contentRight = $('<div class="col-70 p-right"></div>');
                 var contentLifeUl = $('<ul class="p-cjs"></ul>');
                 var contentRightUl = $('<ul class="p-ccs"></ul>');
+                var marginDiv = $('<div style="height:2.5rem;"></div>');
                 for (var i = 0; i < data.length; i++) {
                     var contentLeftLi = $('<li><a><span>' + data[i] + '</span></a></li>');
                     var contentRightLi = $('<li><div class="pro-panels"><p class="p-img"><img src="../asset/03_03.jpg" /></p><p class="p-name"><span>'+data[i]+'</span></p></div></li>')
@@ -119,6 +120,8 @@ var createPage = (function () {
                 contentLife.append(contentLifeUl);
                 contentGutter.append(contentLife);
                 contentRight.append(contentRightUl);
+                contentLife.append(marginDiv);
+                contentRight.append(marginDiv);
                 contentGutter.append(contentRight);
                 contentPadd.append(contentGutter);
                 outContent.append(contentPadd);
