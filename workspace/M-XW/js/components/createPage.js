@@ -81,8 +81,13 @@ var createPage = (function () {
             function createGoodList() {
 
             }
-            //创建goodClass页面
+            //创建classifiCation页面（品牌分类）
+            function classifiCation() {
+
+            }
+            //创建goodClass页面（商品分类）
             function createGoodClass() {
+                //创建标题
                 var title = createTitle(1, '商品分类');
                 //外部容器
                 var createGoodClassContent = $('#pageGoodClass');
@@ -106,6 +111,7 @@ var createPage = (function () {
                 var contentLifeUl = $('<ul class="p-cjs"></ul>');
                 var contentRightUl = $('<ul class="p-ccs"></ul>');
                 var marginDiv = $('<div style="height:2.5rem;"></div>');
+                var marginDivo = $('<div style="height:2.5rem;"></div>');
                 for (var i = 0; i < data.length; i++) {
                     var contentLeftLi = $('<li><a><span>' + data[i] + '</span></a></li>');
                     var contentRightLi = $('<li><div class="pro-panels"><p class="p-img"><img src="../asset/03_03.jpg" /></p><p class="p-name"><span>'+data[i]+'</span></p></div></li>')
@@ -121,12 +127,13 @@ var createPage = (function () {
                 contentGutter.append(contentLife);
                 contentRight.append(contentRightUl);
                 contentLife.append(marginDiv);
-                contentRight.append(marginDiv);
+                contentRight.append(marginDivo);
                 contentGutter.append(contentRight);
                 contentPadd.append(contentGutter);
                 outContent.append(contentPadd);
                 createGoodClassContent.append(outContent);
-                createGoodClassContent.append(title)
+                createGoodClassContent.append(title);
+                createGoodClassContent.append(footer())
             }
             //创建detail页面
             function createDetail() {

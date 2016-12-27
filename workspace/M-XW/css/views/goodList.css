@@ -16,6 +16,10 @@
         line-height:2rem;
     }
     .page-group .page-top-nav ul li a{
+        color:#000;
+    }
+    .page-group .page-top-nav ul li .j-good-activity{
+        color:#fd6b2e;
     }
     .j-afjea {
     margin: 0;

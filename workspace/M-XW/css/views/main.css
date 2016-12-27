@@ -1,4 +1,12 @@
-﻿.c-search-top{
+﻿.remarpad{
+    margin:0;
+    padding:0;
+}
+.pull-right .icon{
+    font-size:.5rem;
+}
+
+.c-search-top{
     padding: .6rem 0;
     position:relative;
     margin-top: .4rem;
@@ -73,10 +81,12 @@
 }
 .c-pp-con{
     width:100%;
-    height:100%;
+    height: 16rem;
     margin-top:.5rem;
     z-index:2222;
     overflow:scroll;
+    position: fixed;
+    top: 6rem;
 }
 
 /*地图样式*/

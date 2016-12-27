@@ -56,8 +56,8 @@
     float:right;
     margin-right:.1rem;
     color:#ff0000;
-    width: 1.3rem;
-    height: 1.2rem;
+    width: 2rem;
+    height: 2rem;
     font-size:.5rem;
     text-align:center;
     line-height:1.2rem;
@@ -74,7 +74,7 @@
     padding:.6rem;
 }
 .h-jluh,.h-efak{
-    margin-left:1rem;
+    margin-left: .4rem;
 }
 .h-jled{
     width:2rem;
@@ -92,16 +92,17 @@
 
 .h-nkded{
     float:left;
-    margin:0 1rem .5rem 0;
+    margin:0 .5rem .5rem 0;
     border:1px solid #e6e6e6;
     font-size:.6rem;
+    color: #000;
 }
 .h-ejld{
     clear:both;
 }
 .h-eeda{
     display:inline-block;
-    margin-right:1rem;
+    margin-right:.4rem;
 }
 .h-adljd,.h-acladr{
     display:inline-block;
@@ -109,6 +110,8 @@
     width:1.5rem;
     text-align:center;
     font-size:1rem;
+    height:1.5rem;
+    line-height:1.5rem;
 }
 .h-caldj{
     border:1px solid;
@@ -120,6 +123,8 @@
     border-radius: 0;
     text-align:center;
     z-index: 1;
+    position: relative;
+    top: -.14rem;
 }
 /*input{-webkit-appearance:none;}*/
 .h-cjljsd,.h-clado,.h-cnlad{

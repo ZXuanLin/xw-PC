@@ -101,7 +101,7 @@
     display: block;
     max-width: 100%;
     padding: 0 10px;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     color: #808080;
     text-align: center;
     overflow: hidden;
@@ -500,4 +500,10 @@
   }
   .h-xd{
       background:#fa520c;
+  }
+  .q-ddcc{
+      border-radius:0;
+      background:#ef547e;
+      color:#fff;
+      text-align:center;
   }

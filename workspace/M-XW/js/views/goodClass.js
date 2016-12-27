@@ -7,6 +7,5 @@
         })
     }
     tabGo();
-
     createPage.returnPage('createGoodClass', 'wwwwwwwww')
 })
