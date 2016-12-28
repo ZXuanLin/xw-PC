@@ -29,7 +29,7 @@ $(function () {
     //})
 
 
-
+    //向页面添加公共头部和底部
     $('#page-Home').append(createPage.header())
     $('#page-Home').append(createPage.footer())
     //点击搜索框单出蒙层
@@ -37,9 +37,12 @@ $(function () {
     $('#search').on('touchstart', function () {
         $.popup('.popup--search-popup');
     });
-    createPage.returnPage('createGoodClass')
+    //路由跳转
     $('#linkJump li').eq(0).on('click', function () {
+        createPage.returnPage('createGoodClass')
         $.router.load("#pageGoodClass");
+        $.reinitSwiper('slive-swiper-content')
     })
+
     $.init();
 });

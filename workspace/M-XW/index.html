@@ -13,10 +13,13 @@
     <link href="css/frames/sm-extend.min.css" rel="stylesheet" />
     <link href="css/frames/common.css" rel="stylesheet" />
     <link href="css/frames/icons.css" rel="stylesheet" />
-    <link href="css/views/index.css?v=1111" rel="stylesheet" />
     <link href="css/views/itmes.css" rel="stylesheet" />
+    <link href="css/views/index.css?v=1111" rel="stylesheet" />
+    <link href="css/views/main.css" rel="stylesheet" />
+    <link href="css/views/shops.css" rel="stylesheet" />
     <script src="js/components/createPage.js"></script>
     <script src="js/frames/zepto.js"></script>
+    <script src="js/views/shops.js"></script>
     <script type="text/javascript">
         var token = getCookie('token');
         var code = GetQueryString('code');
@@ -118,7 +121,7 @@
             <!--页面内容-->
             <div class="content">
                 <!--图片滚动-->
-                <div id="" class="m_part u_swiper_container">
+                <div id="slive-swiper-content" class="m_part u_swiper_container">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><a href=""><img src="asset/imgs/b_01_150914.png" alt="" /></a></div>
@@ -133,9 +136,9 @@
                 <article class="quicklink">
                     <ul class="clearfix" id="linkJump">
                         <li><a href=""><i><img src="asset/imgs/top/t1.png"></i><p>商品分类</p></a></li>
-                        <li><a href=""><i><img src="asset/imgs/top/t2.png"></i><p>品牌分类</p></a></li>
-                        <li><a href=""><i><img src="asset/imgs/top/t3.png"></i><p>店面分销</p></a></li>
-                        <li><a href=""><i><img src="asset/imgs/top/t4.png"></i><p>售后服务</p></a></li>
+                        <li><a href="views/classification.html" external><i><img src="asset/imgs/top/t2.png"></i><p>品牌分类</p></a></li>
+                        <li><a href="views/shops.html" external><i><img src="asset/imgs/top/t3.png"></i><p>店面分销</p></a></li>
+                        <li><a href="views/translate.html" external><i><img src="asset/imgs/top/t4.png"></i><p>售后服务</p></a></li>
                     </ul>
                 </article>
                 
@@ -952,7 +955,7 @@
         </div>
 
 
-        <!--要手动创建这些内联页面，给他们添加id，点击之后就可以跳转-->
+        <!--动态生成页面-->
         <div class="page" id="pageGoodClass"></div>
 
         <div class="page" id="pageShops"></div>
@@ -1097,14 +1100,15 @@
         </div>
         
     </div>
+     <!--禁用路由功能-->
     <!--<script>$.config = { router: false }</script>-->
     <script src="js/frames/sm.min.js"></script>
     <script src="js/frames/sm-extend.min.js"></script>
     <script src="js/frames/common.js"></script>
-    <script src="js/components/title.js"></script>
+   <!-- <script src="js/components/title.js"></script>
     <script src="js/components/card.js"></script>
     <script src="js/components/tpl.js"></script>
-    <script src="js/components/pager.js"></script>
+    <script src="js/components/pager.js"></script>-->
     <script src="js/views/index.js"></script>
 </body>
 </html>

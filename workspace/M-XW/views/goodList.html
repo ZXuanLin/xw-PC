@@ -42,44 +42,50 @@
                 </ul>
             </div>
             <!-- 工具栏 -->
-            <nav class="bar bar-tab">
+            <nav class="bar bar-tab" style="background:#FFF">
                 <a class="tab-item external active" href="../index.html">
                     <span class="icon icon-home"></span>
                     <span class="tab-label">首页</span>
                 </a>
-                <a class="tab-item external" href="#">
-                    <span class="icon icon-star"></span>
-                    <span class="tab-label">收藏</span>
+
+                <a class="tab-item external" href="cart.html">
+                    <span class="icon icon-cart"></span>
+                    <span class="tab-label">购物车</span>
                 </a>
-                <a class="tab-item external" href="#">
-                    <span class="icon icon-settings"></span>
-                    <span class="tab-label">设置</span>
+                <a class="tab-item external" href="recommend.html">
+                    <span class="icon icon-app"></span>
+                    <span class="tab-label">我的订单</span>
+                </a>
+                <a class="tab-item external" href="account.html">
+                    <span class="icon icon-me"></span>
+                    <span class="tab-label">我的</span>
                 </a>
             </nav>
 
             <!-- 这里是页面内容区 -->
             <div class="content">
                 <div class="content-block j-afjea">
-                    
-                    <div class="row no-gutter gl-xkk">
-                        <div class="row col-100">
-                            <div class="col-25 gl-im">
-                                <img src="../asset/imgs/goodList/a1.png" width="100%" />
-                            </div>
-                            <div class="col-75 gl-sed">
-                                <div class="col-100 gl-hj">
-                                    <h4>涪柴牌水泵</h4>
-                                    <div class="gl-nm">
-                                        <p class="gl-rt"><b class="gl-we">￥：</b><span class="gl-ex">566</span><span class="gl-pk">/台</span></p>
-                                        <p class="gl-rt"><span class="gl-bn">热卖</span><span class="gl-ml">包邮</span><span class="gl-sd">限量供应，限时抢购！！</span></p>
-                                        <p class="gl-uo"><span class="icon icon-cart gl-wwd"></span><span class="icon icon-right gl-ttr"></span></p>
+                    <a href="detail.html" external>
+                        <div class="row no-gutter gl-xkk">
+                            <div class="row col-100">
+                                <div class="col-25 gl-im">
+                                    <img src="../asset/imgs/goodList/a1.png" width="100%" />
+                                </div>
+                                <div class="col-75 gl-sed">
+                                    <div class="col-100 gl-hj">
+                                        <h4>涪柴牌水泵</h4>
+                                        <div class="gl-nm">
+                                            <p class="gl-rt"><b class="gl-we">￥：</b><span class="gl-ex">566</span><span class="gl-pk">/台</span></p>
+                                            <p class="gl-rt"><span class="gl-bn">热卖</span><span class="gl-ml">包邮</span><span class="gl-sd">限量供应，限时抢购！！</span></p>
+                                            <p class="gl-uo"><span class="icon icon-cart gl-wwd"></span><span class="icon icon-right gl-ttr"></span></p>
+                                        </div>
+                                        <p class="gl-qw"><span>浙江</span><span class="gl-ppd">台州</span><span class="gl-ppd">46585条评价</span><span class="gl-rrd">月销1000台</span></p>
                                     </div>
-                                    <p class="gl-qw"><span>浙江</span><span class="gl-ppd">台州</span><span class="gl-ppd">46585条评价</span><span class="gl-rrd">月销1000台</span></p>
                                 </div>
                             </div>
+
                         </div>
-                        
-                    </div>
+                    </a>
                     <div class="row no-gutter gl-xkk">
                         <div class="row col-100">
                             <div class="col-25 gl-im">
@@ -186,17 +192,145 @@
     <!-- popup, panel 等放在这里 -->
     <div class="panel-overlay"></div>
     <!-- Left Panel with Reveal effect -->
-    <div class="panel panel-right panel-cover good-select-panel">
-        <div class="content-block">
-            <p>筛选放这里</p>
-            <p></p>
-            <!-- Click on link with "close-panel" class will close panel -->
-            <p><a href="#" class="close-panel">关闭</a></p>
-        </div>
-    </div>
+    <div class="panel panel-right panel-cover good-select-panel gl-block">
+        <div class="content-block gl-block">
+            <div class="m_part">
+                <div class="list-block gl-part-top">
+                    <p class="pull-cone"><a href="#" class="close-panel pull-left">取消</a><span class="gl-sxtitle">筛选</span><a class="pull-right gl-compless">完成</a></p>
+                </div>
+            </div>
+            <div class="m_part gl-part">
+                 <div class="list-block gl-part">
+                            <ul>
+                                <li>
+                                    <a href="" class="item-link item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">
+                                                分类
+                                            </div>
+                                            <div class="pull-right">全部分类</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="item-link item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">
+                                                品牌
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="item-link item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">
+                                                价格
+                                            </div>
+                                            <div class="pull-right">全部价格</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="item-link item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">
+                                                电钻类
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="item-link item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">
+                                                磨/切类
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="item-link item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">
+                                                电钻类
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="item-link item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">
+                                                附件类
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="item-link item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">
+                                                其他功能类
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="item-link item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">
+                                                电钻类
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="item-link item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">
+                                                磨/切类
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="item-link item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">
+                                                电钻类
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="item-link item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">
+                                                附件类
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="item-link item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">
+                                                其他功能类
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Click on link with "close-panel" class will close panel -->
+                   
+                </div>
+            </div>
 
 
-    <script src="../js/frames/sm.min.js"></script>
-    <script src="../js/frames/sm-extend.min.js"></script>
+            <script src="../js/frames/sm.min.js"></script>
+            <script src="../js/frames/sm-extend.min.js"></script>
 </body>
 </html>

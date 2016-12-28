@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商品详情</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!--<link rel="shortcut icon" href="/favicon.ico">-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../css/frames/sm.min.css" rel="stylesheet" />
+    <link href="../css/frames/sm-extend.min.css" rel="stylesheet" />
+    <link href="../css/frames/common.css" rel="stylesheet" />
+    <link href="../css/views/index.css?v=1111" rel="stylesheet" />
+    <link href="../css/views/itmes.css" rel="stylesheet" />
+    <link href="../css/views/reg.css" rel="stylesheet" />
+    <script src="../js/frames/zepto.js"></script>
+</head>
+<body>
+    <div class="page-group">
+        <div class="page page-current">
+            <header class="bar bar-nav">
+                <a class="icon icon-left pull-left back"></a>
+                <h1 class="title">新用户注册</h1>
+            </header>
+            
+            <div class="content reg-co">
+                <ul class="reg-u">
+                    <li>1.输入手机号<span class="icon icon-right"></span></li>
+                    <li>2.输入验证码<span class="icon icon-right"></span></li>
+                    <li>3.设置密码<span class="icon icon-right"></span></li>
+                </ul>
+                <div class="reg-num">
+                    <input type="text" placeholder='请输入您的手机号码'/>
+                </div>
+                <div class="reg-num">
+                    <input type="text" placeholder='请输入短信中的验证码' />
+                </div>
+                <div class="reg-num">
+                    <input type="text" placeholder='请输入密码(长度在6-32个字符之间)' />
+                </div>
+                <div class="reg-num">
+                    <input type="text" placeholder='请再次输入密码' />
+                </div>
+                <div class="content-block reg-btn-con">
+                    <p><a href="#" class="button button-fill button-warning reg-btn-txt open-preloader">获取验证码</a></p>
+                </div>
+                <div class="reg-check-con">
+                    <p class="reg-check"><input type="checkbox"/><a>我已阅读并同意<span class="reg-xieyi"><雄威网用户协议></span></a></p>
+                </div>
+            </div>
+
+        </div>
+            <div clas="page" id="reg-yzm">验证码</div>
+            <div clas="page" id="reg-pwd"></div>
+    </div>
+    <script src="../js/frames/sm.min.js"></script>
+    <script src="../js/frames/sm-extend.min.js"></script>
+    <script>
+        $(document).on('click', '.open-preloader', function () {
+            $.showPreloader('正在获取验证码');
+            setTimeout(function () {
+                $.hidePreloader();
+                $('.reg-num').eq(0).hide();
+                $('.open-preloader').html('提交验证码')
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

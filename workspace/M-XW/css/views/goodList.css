@@ -120,3 +120,34 @@
     .gl-ppd{
         margin-left:1rem;
     }
+    .pull-cone{
+        clear:both;
+        overflow:hidden;
+        padding-right:1rem;
+    }
+
+    .gl-compless{
+        display: inline-block;
+        background: #fd6b2e;
+        color: #fff;
+        width: 2.5rem;
+        text-align: center;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        margin-top: .25rem;
+    }
+    .gl-sxtitle{
+        margin: 0px auto 0 22%;
+    }
+    .gl-part{
+        overflow:scroll;
+        z-index:222;
+        height:20rem;
+    }
+    .gl-part-top{
+         height: 2rem;
+        line-height: 2rem;
+    }
+    .gl-block{
+        overflow:hidden;
+    }

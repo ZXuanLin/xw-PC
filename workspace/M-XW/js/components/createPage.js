@@ -52,12 +52,8 @@ var createPage = (function () {
                 })
                 return bottomFooter;
             }
-    
-
             //创建一个标题函数
             function createTitle(titleType) {
-     
-       
                 //根据类型创建不同的标题 1,2,3,4
                 var contentTitle = $('<div class="bar bar-nav page-top-nav"></div>');
                 switch (titleType) {

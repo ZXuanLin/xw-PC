@@ -190,7 +190,12 @@
     margin-right:.2rem;
 }
 .icon-help{
-     background-image: url('../../asset/icons/icon-repair.png');
+     background-image: url('../../asset/icons/icon-help.png');
+    background-size: 1.2rem 1.2rem;
+    margin-right:.2rem;
+}
+.icon-user-surdre{
+     background-image: url('../../asset/icons/icon-user-surdre.png');
     background-size: 1.2rem 1.2rem;
     margin-right:.2rem;
 }
