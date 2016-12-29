@@ -232,10 +232,28 @@
     width:2rem;
    margin-right: 1rem;
 }
+.index-login-panel{
+    right: -175% !important;
+}
+.panel-login-con{
+    width: 2rem;
+    height: 100%;
+}
+.panel-login-con li{
+    margin-top: 1rem;
+}
+.in-close{
+    color:#fd6b2e;
+}
 .top-shop a{
     display:block;
     height: 2.2rem;
     width:2rem;
+    text-align: center;
+    color:#fff;
+}
+.in-top-menu{
+    font-size:1.3rem !important;
 }
 .search-label{
     right:0;

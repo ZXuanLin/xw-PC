@@ -14,12 +14,14 @@
     <link href="css/frames/common.css" rel="stylesheet" />
     <link href="css/frames/icons.css" rel="stylesheet" />
     <link href="css/views/itmes.css" rel="stylesheet" />
-    <link href="css/views/index.css?v=1111" rel="stylesheet" />
+    <link href="css/views/index.css" rel="stylesheet" />
     <link href="css/views/main.css" rel="stylesheet" />
-    <link href="css/views/shops.css" rel="stylesheet" />
+    <!--<link href="css/views/shops.css" rel="stylesheet" />-->
     <script src="js/components/createPage.js"></script>
     <script src="js/frames/zepto.js"></script>
-    <script src="js/views/shops.js"></script>
+    <script src="js/frames/touch.js"></script>
+    <script src="js/frames/jump.js"></script>
+    <!--<script src="js/views/shops.js"></script>-->
     <script type="text/javascript">
         var token = getCookie('token');
         var code = GetQueryString('code');
@@ -81,22 +83,23 @@
         <div class="page page-current" id="page-Home">
             <!--头部导航-->
             <header class="bar bar-nav row top-content">
-                <!--<div class="logo">
+                <div class="logo">
                     <a href="#">
                         <img src="asset/imgs/top/logo.jpg" style="width:100%;height:100%;"/>
                     </a>
                 </div>
                 <div class="searchbar row col-60 search-label">
-                    <div class="search-input col-100">
-                        <input type="search" id='search'class="open-popup" placeholder='输入关键字...' style="border-radius:1rem;background:#fff" disabled/>
+                    <div class="search-input col-100 index-search" id=''>
+                        <input type="search" placeholder='输入关键字...' style="border-radius:1rem;background:#fff" disabled/>
                     </div>
                     <a class="button button-primary top-button"><span class="icon icon-search"></span></a>
                 </div>
                 <div class="top-shop col-10">
-                    <a href="views/cart.html">
-                        <img src="asset/imgs/top/top-shop.jpg" />
+                    <a href="#" class="">
+                        <span class="icon icon-menu in-top-menu open-panel" data-panel='#index-login-panel'></span>
                     </a>
-                </div>-->
+                    
+                </div>
             </header>
             <!--底部菜单栏-->
             <nav class="bar bar-tab" style="background:#FFF">
@@ -136,7 +139,7 @@
                 <article class="quicklink">
                     <ul class="clearfix" id="linkJump">
                         <li><a href=""><i><img src="asset/imgs/top/t1.png"></i><p>商品分类</p></a></li>
-                        <li><a href="views/classification.html" external><i><img src="asset/imgs/top/t2.png"></i><p>品牌分类</p></a></li>
+                        <li><a href=""><i><img src="asset/imgs/top/t2.png"></i><p>品牌分类</p></a></li>
                         <li><a href="views/shops.html" external><i><img src="asset/imgs/top/t3.png"></i><p>店面分销</p></a></li>
                         <li><a href="views/translate.html" external><i><img src="asset/imgs/top/t4.png"></i><p>售后服务</p></a></li>
                     </ul>
@@ -156,7 +159,7 @@
                                 <div class="row no-gutter">
                                     <div class="col-50">
                                         
-                                        <div class="u_item"> <!--data-param="{'type'='hj', 'id'='LGK-80/CUT80'}"-->
+                                        <div class="u_item">
                                             <a href="views/goodList.html" external>
                                                 <h3 class="x-title">限时特惠</h3>
                                                 <span class="d-num">12大品类</span>
@@ -953,8 +956,6 @@
                 </div>
             </div>
         </div>
-
-
         <!--动态生成页面-->
         <div class="page" id="pageGoodClass"></div>
 
@@ -965,10 +966,10 @@
         <div class="page" id="pageDetail"></div>
 
         <div class="page" id="pageDetail"></div>
-        <div class="panel-overlay"></div>
+        <!--<div class="panel-overlay"></div>-->
 
         <!--右侧弹窗-->
-        <div class="panel panel-right panel-cover u_filter-panel">
+        <!--<div class="panel panel-right panel-cover u_filter-panel">
             <header class="bar bar-nav">
                 <a class="button button-link button-nav pull-left close-panel back" external>
                     <span class="icon icon-left"></span>
@@ -1055,8 +1056,22 @@
                     </div>
                 </div>
             </div>
+        </div>-->
+        <!--右侧弹窗-->
+        <div class="panel panel-right panel-cover" id="index-login-panel" style="right:-182%;background: #242222;">
+            <div class="content-block">
+                <p><a href="#" class="close-panel in-close">关闭</a></p>
+                <div class="panel-login-con">
+                    <ul class="login-go">
+                        <li><a>首页</a></li>
+                        <li><a>登录</a></li>
+                        <li><a>注册</a></li>
+                        <!--<li><a>购物车</a></li>
+                        <li><a>我的雄威</a></li>-->
+                    </ul>
+                </div>
+            </div>
         </div>
-
         <!--底部搜索弹窗-->
         <div class="popup u_popup-search popup--search-popup" data-toggle="scroller" data-type='native'>
             <header class="bar bar-nav row">
@@ -1110,5 +1125,8 @@
     <script src="js/components/tpl.js"></script>
     <script src="js/components/pager.js"></script>-->
     <script src="js/views/index.js"></script>
+    <script>
+       
+    </script>
 </body>
 </html>

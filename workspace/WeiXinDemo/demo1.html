@@ -15,7 +15,22 @@
 </head>
 <body>
     <div class="page-group">
-       <!-- <div class="page page-current">你的html代码</div>-->
+        <div class="page page-current">
+
+            <div class="page page-current" id='router'>
+                <header class="bar bar-nav">
+                    <h1 class='title'>路由</h1>
+                </header>
+                <div class="content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="">ajax加载新页面</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
         <!--页面代码要写在page-group下面-->     
         <!--page 要放在page-groud里面-->
         <div class="page">
@@ -41,6 +56,10 @@
     <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
-
+    <script>
+            $(document).on('click', 'li', function () {
+                $.router.load("demo2.html");
+            })
+    </script>
 </body>
 </html>

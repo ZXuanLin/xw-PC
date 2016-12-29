@@ -79,5 +79,5 @@
         $('.h-adljd').on('click', subNowNum);
        
     })()
-    
+   
 });

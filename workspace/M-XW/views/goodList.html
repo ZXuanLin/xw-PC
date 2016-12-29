@@ -12,35 +12,43 @@
     <link href="../css/frames/sm-extend.min.css" rel="stylesheet" />
     <link href="../css/frames/common.css" rel="stylesheet" />
     <link href="../css/frames/icons.css" rel="stylesheet" />
-    <link href="../css/views/index.css?v=1111" rel="stylesheet" />
+    <link href="../css/views/index.css" rel="stylesheet" />
     <link href="../css/views/goodClass.css" rel="stylesheet" />
     <link href="../css/views/itmes.css" rel="stylesheet" />
+    <link href="../css/views/goodList.css" rel="stylesheet" />
     <script src="../js/frames/zepto.js"></script>
     <script src="../js/frames/common.js"></script>
+    <script src="../js/frames/jump.js"></script>
     <script src="../js/views/goodClass.js"></script>
-    <link href="../css/views/goodList.css" rel="stylesheet" />
 </head>
 <body>
 
-    <!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
     <div class="page-group">
         <!-- 单个page ,第一个.page默认被展示-->
         <div class="page page-current">
-            <!-- 标题栏
-            <header class="bar bar-nav">
-                <a class="icon icon-me pull-left"></a>
-                <h1 class="title">标题</h1>
-            </header> -->
+            <!-- 标题栏-->
             <!--头部导航-->
-            <div class="bar bar-nav page-top-nav">
-                <ul>
-                    <li><a class="j-vaesd back"><span class="icon icon-left back repad"></span></a></li>
-                    <li><a class="j-good-activity">综合</a></li>
-                    <li><a>销量</a></li>
-                    <li><a class="j-xde">价格</a></li>
-                    <li><a class="open-panel">筛选</a></li>
-                </ul>
-            </div>
+            <header class="bar bar-nav row top-content">
+                <div class="logo">
+                    <a href="#">
+                        <img src="../asset/imgs/top/logo.jpg" style="width:100%;height:100%;" />
+                    </a>
+                </div>
+                <div class="searchbar row col-60 search-label">
+                    <div class="search-input col-100 index-search" id=''>
+                        <input type="search" placeholder='输入关键字...' style="border-radius:1rem;background:#fff" disabled />
+                    </div>
+                    <a class="button button-primary top-button"><span class="icon icon-search"></span></a>
+                </div>
+                <div class="top-shop col-10">
+                    <a href="#" class="">
+                        <span class="icon icon-menu in-top-menu open-panel" data-panel='#index-login-panel'></span>
+                    </a>
+
+                </div>
+            </header>
+            <!--头部导航-->
+            
             <!-- 工具栏 -->
             <nav class="bar bar-tab" style="background:#FFF">
                 <a class="tab-item external active" href="../index.html">
@@ -65,6 +73,15 @@
             <!-- 这里是页面内容区 -->
             <div class="content">
                 <div class="content-block j-afjea">
+                    <div class="page-top-nav">
+                        <ul>
+                            <li><a class="j-vaesd back"><span class="icon icon-left back repad"></span></a></li>
+                            <li><a class="j-good-activity">综合</a></li>
+                            <li><a>销量</a></li>
+                            <li><a class="j-xde">价格</a></li>
+                            <li><a class="open-panel" data-panel='#panel-right-shaixuan'>筛选</a></li>
+                        </ul>
+                    </div>
                     <a href="detail.html" external>
                         <div class="row no-gutter gl-xkk">
                             <div class="row col-100">
@@ -191,8 +208,23 @@
 
     <!-- popup, panel 等放在这里 -->
     <div class="panel-overlay"></div>
+    <!--右侧弹窗-->
+    <div class="panel panel-right panel-cover" id="index-login-panel" style="right:-182%;background: #242222;">
+        <div class="content-block">
+            <p><a href="#" class="close-panel in-close">关闭</a></p>
+            <div class="panel-login-con">
+                <ul class="login-go">
+                    <li><a>首页</a></li>
+                    <li><a>登录</a></li>
+                    <li><a>注册</a></li>
+                    <!--<li><a>购物车</a></li>
+                    <li><a>我的雄威</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
     <!-- Left Panel with Reveal effect -->
-    <div class="panel panel-right panel-cover good-select-panel gl-block">
+    <div class="panel panel-right panel-cover good-select-panel gl-block" id="panel-right-shaixuan">
         <div class="content-block gl-block">
             <div class="m_part">
                 <div class="list-block gl-part-top">
@@ -328,9 +360,54 @@
                    
                 </div>
             </div>
-
+     <!--底部搜索弹窗-->
+        <div class="popup u_popup-search popup--search-popup" data-toggle="scroller" data-type='native'>
+            <header class="bar bar-nav row">
+                <div class="col-80">
+                    <div class="searchbar">
+                        <a class="searchbar-cancel close-popup">取消</a>
+                        <div class="search-input">
+                            <label class="icon icon-search" for="search"></label>
+                            <input type="search" id='search-pop' placeholder='输入关键字' />
+                        </div>
+                    </div>
+                </div>
+                <a class="button button-fill button-primary col-20">搜索</a>
+            </header>
+            <div class="content">
+                <div class="content-block">
+                    <div class="u_hot">
+                        <h6>热门搜索</h6>
+                        <ul class="u_search_items clearfix">
+                            <li class="u_search_item"><a href="#">韩光</a></li>
+                            <li class="u_search_item"><a href="#">拳王</a></li>
+                            <li class="u_search_item"><a href="#">周年5折</a></li>
+                            <li class="u_search_item"><a href="#">离子切割机</a></li>
+                            <li class="u_search_item"><a href="#">乙炔割嘴</a></li>
+                            <li class="u_search_item"><a href="#">隆兴</a></li>
+                        </ul>
+                    </div>
+                    <div class="u_history">
+                        <h6>最近搜索</h6>
+                        <ul class="u_search_items clearfix">
+                            <li class="u_search_item"><a href="#">韩光</a></li>
+                            <li class="u_search_item"><a href="#">拳王</a></li>
+                            <li class="u_search_item"><a href="#">周年5折</a></li>
+                            <li class="u_search_item"><a href="#">离子切割机</a></li>
+                            <li class="u_search_item"><a href="#">乙炔割嘴</a></li>
+                            <li class="u_search_item"><a href="#">隆兴</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
             <script src="../js/frames/sm.min.js"></script>
             <script src="../js/frames/sm-extend.min.js"></script>
+    <script>
+        $('.index-search').on('touchstart', function () {
+            $.popup('.popup--search-popup');
+        });
+    </script>
 </body>
 </html>

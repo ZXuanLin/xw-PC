@@ -16,9 +16,9 @@ var createPage = (function () {
                         '<a class="button button-primary top-button"><span class="icon icon-search"></span></a>' +
                     '</div>' +
                     '<div class="top-shop col-10">' +
-                        '<a href="views/cart.html">' +
-                            '<img src="asset/imgs/top/top-shop.jpg" />' +
-                        '</a>' +
+                        ' <a href="#" class="">' +
+                        '<span class="icon icon-menu in-top-menu open-panel" data-panel="#index-login-panel"></span>' +
+                    '</a>' +
                     '</div>' +
                    ' </header>');
                 topHeader.css({
