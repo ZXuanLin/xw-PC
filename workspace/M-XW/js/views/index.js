@@ -16,8 +16,8 @@ $(function () {
         $.reinitSwiper('slive-swiper-content')
     })
     $('#linkJump li').eq(1).on('touchstart', function () {
-        createPage.returnPage('createGoodClass')
-        $.router.load("#pageGoodClass");
+        createPage.returnPage('classifiCation')
+        $.router.load("#classifiCation");
         $.reinitSwiper('slive-swiper-content')
     })
 

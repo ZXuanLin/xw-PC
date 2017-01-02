@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $.ajax({
+                url: 'TextFile.js',
+                type: 'GET',
+                //dataType:'json',
+                success: function (data, status) {
+                    //var data = data.split("");
+                    console.log(data)
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    console.log(errorThrown)
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

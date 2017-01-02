@@ -64,8 +64,20 @@ var createPage = (function () {
                    ' </a>'+
                     '<h1 class="title">'+arguments[1]+'</h1>');
                         contentTitle.append(title);
-                        //pageOne.append(contentTitle)
-                       return contentTitle;
+                        return contentTitle;
+                    case 2:
+                        var title = $('<a class="button button-link button-nav pull-left back" href="../index.html">' +
+                    '<span class="icon icon-left"></span>' +
+                        '返回' +
+                    '</a>' +
+                    '<h1 class="title">品牌分类</h1>' +
+                    '<a class="button button-link button-nav pull-right class-top-search-show" href="">' +
+                        '搜索' +
+                        '<span class="icon icon-down"></span>' +
+                    '</a>');
+                        contentTitle.append(title);
+                        return contentTitle;
+
                 }
             }
 
@@ -78,15 +90,83 @@ var createPage = (function () {
 
             }
             //创建classifiCation页面（品牌分类）
-            function classifiCation() {
+            function classifiCation(pinpai) {
+                var title = createTitle(2);
+                var flag = true;
+                //点击搜索按钮
+                $(document).on('touchstart', '.class-top-search-show', function () {
+                    if (flag) {
+                        searchBar.show();
+                        $('.class-top-search-show span').removeClass('icon-down');
+                        $('.class-top-search-show span').addClass('icon-up');
+                        flag = false;
+                    } else {
+                        searchBar.hide();
+                        $('.class-top-search-show span').removeClass('icon-up');
+                        $('.class-top-search-show span').addClass('icon-down');
+                        flag = true;
+                    }
+                })
+                if (!outContent || !contentPadd || !contentGutter) {
+                    var outContent = $('<div class="content p-xjae"></div>');
+                    var contentPadd = $('<div class="content-padded p-con"></div>');
+                    var contentGutter = $('<div class="row no-gutter p-scroll"></div>');
+                }
 
+                var searchBar = $('<div class="searchbar row c-search-top" style="display:none;">' +
+                        '<div class="search-input col-75 c-search-con-left">' +
+                            '<label class="icon icon-search" for="search"></label>' +
+                            '<input type="search" id="search" placeholder="请输入您要的品牌" class="c-search-inp"/>' +
+                        '</div>' +
+                        '<a class="button button-fill button-primary col-27 c-search-button">搜索品牌</a>' +
+                    '</div>');
+                contentPadd.append(searchBar)
+                var c_search_m = $('<div class="c-search-m col-100"></div>');
+                    var c_ser_ul = $('<ul class="c-ser-ul"></ul>');
+                    c_search_m.append(c_ser_ul);
+                
+                var AKZ = 'ABCDEFJHIJKLMNOPQRSTUVWXYZ';
+                for (var j = 0; j <= AKZ.length-1; j++) {
+                    var c_ser_ul_li_a = $('<li><a>' + AKZ[j] + '</a></li>');
+                    c_ser_ul.append(c_ser_ul_li_a);
+                }
+                //品牌名称
+                var dataName = [];
+                var txt = '';
+                for (var i = 0; i < pinpai;i++){
+                    txt += "品牌名称"+i+" ";
+
+                }
+                dataName.push(txt);
+                dataName = dataName.toString().split(' ').slice(0, dataName.length - 2);
+                var c_pp_con = $('<div class="row no-gutter c-pp-con col-100"></div>');
+                for (var i = 0; i < pinpai; i++) {
+                    var c_pp_inner = $('<div class="col-50 c-pp-inner">' +
+                            '<div class="c-pp-name col-40">' + dataName[i]+ '</div>' +
+                            '<div class="c-pp-im col-60">' +
+                                '<img src="../asset/a1.png" />' +
+                            '</div>' +
+                        '</div>');
+                    c_pp_con.append(c_pp_inner)
+                }
+                
+                contentPadd.append(c_search_m);
+                contentPadd.append(c_pp_con);
+                outContent.append(contentPadd);
+                createGoodContent('#classifiCation').append(title);
+                createGoodContent('#classifiCation').append(outContent);
+                createGoodContent('#classifiCation').append(footer());
+                $('.c-ser-ul li a').eq(0).addClass('c-search-activty');
+                $(document).on('touchstart', '.c-ser-ul li a', function () {
+                    $('.c-ser-ul li a').removeClass('c-search-activty');
+                    $(this).addClass('c-search-activty');
+                })
             }
             //创建goodClass页面（商品分类）
             function createGoodClass() {
                 //创建标题
                 var title = createTitle(1, '商品分类');
-                //外部容器
-                var createGoodClassContent = $('#pageGoodClass');
+               
                 //数据填充
                 var data = [];
                 var txt = '';
@@ -127,9 +207,9 @@ var createPage = (function () {
                 contentGutter.append(contentRight);
                 contentPadd.append(contentGutter);
                 outContent.append(contentPadd);
-                createGoodClassContent.append(outContent);
-                createGoodClassContent.append(title);
-                createGoodClassContent.append(footer())
+                createGoodContent('#pageGoodClass').append(outContent);
+                createGoodContent('#pageGoodClass').append(title);
+                createGoodContent('#pageGoodClass').append(footer())
             }
             //创建detail页面
             function createDetail() {
@@ -139,11 +219,23 @@ var createPage = (function () {
             function createPersonal() {
 
             }
+
+            //返回外部容器
+            function createGoodContent(id) {
+                //外部容器
+                return createGoodClassContent = $(id);
+                
+            }
             var returnPage = function (type) {
                 switch (type) {
                     //根据类型返回不同的页面
                     case 'createGoodClass':
-                        return new createGoodClass()
+                        return new createGoodClass();
+                        break;
+                    case 'classifiCation':
+                        return new classifiCation(17);
+                        break;
+
                 }
             }
 
