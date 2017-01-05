@@ -1,5 +1,6 @@
 ﻿.WP-Order .list-block .item-content {
     padding-left: 0;
+    background: rgb(230, 229, 229);
 }
 
 .WP-Order .list-block .item-content img {
@@ -8,6 +9,7 @@
 
 .WP-Order .list-block .item-content label {
     margin-right: 0.5rem;
+    margin-left: .5rem;
     width:1.68rem;
 }
 
@@ -23,6 +25,7 @@
     padding: 0.1rem 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    font-size:.8rem
 }
 
 .WP-Order .list-block .item-footer .price b {
@@ -59,7 +62,7 @@
 }
 
 .WP-Order .bar-tab .u_amount {
-    margin-left: 1rem;
+    -margin-left: 1rem;
     font-family: arial,verdana,sans-serif !important;
     color: #dd2727;
     letter-spacing: normal;
@@ -71,7 +74,9 @@
 .WP-Order .bar-tab .u_total .u_title{
     font-weight:600;
 }
-
+.u_choose{
+    font-size:.6rem;
+}
 .WP-Order .bar-tab .u_sales {
     color: #808080;
     font-size: 0.6rem;
@@ -79,4 +84,207 @@
 
 .WP-Order .bar-tab .u_right{
     background-color:  rgba(255, 0, 0, 0.80);
+}
+.cart-text{
+    font-size:.6rem !important;
+}
+.cart-class{
+    font-size:.5rem;
+    margin:0;
+}
+.cart-edit-con{
+    margin: 0;
+    font-size: .6rem;
+    text-align: right;
+    color:#808080;
+    height: 2rem;
+    line-height: 2rem;
+    padding-right: .6rem;
+}
+.cart-edit-con span{
+    display: inline-block;
+    width: 2rem;
+    text-align: center;
+    height: 1rem;
+    margin-top: .5rem;
+    line-height: 1rem;
+}
+.cart-getcar{
+    border-right: 1px solid;
+}
+.cart-list-content{
+    margin-top:.32rem;
+    background:#f2f2f2;
+    position:relative;
+}
+.cart-finish{
+    /*margin:0 .3rem 0 .3rem;*/
+}
+.cart-sub-finish{
+    /*margin:0 1rem 0 1rem;*/
+}
+.media-list{
+    margin:0;
+}
+.list-content{
+    background:#fff;
+}
+.delet-content{
+    background: rgb(230, 229, 229);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index:22;
+    top: 0;
+    right:0;
+    -display:none;
+}
+
+.delet-text{
+    width: 2.6rem;
+    color: #fff;
+    background: #f50!important;
+    cursor: pointer;
+    position:absolute;
+    right:0;
+    font-size:.77rem;
+    height:100%;
+    top:0;
+    text-align:center;
+    line-height:6rem;
+    color:#fff;
+}
+.delet-class-text{
+    font-size:.5rem;
+    margin-top:1rem;
+    width: 70%;
+}
+.delet-list{
+    width:100%;
+    height:2rem;
+    position:relative;
+    top:.5rem;
+    text-align:center;
+}
+.delet-reduce,.delet-add{
+    width:20%;
+    /*position: absolute;*/
+    height:2rem;
+    margin:0;
+    text-align:center;
+    line-height:2rem;
+    color:#645c5c;
+    float:left;
+    border-bottom:1px solid #fff;
+    font-size: 1.3rem;
+}
+.delet-reduce{
+    left:0;
+}
+.delet-add{
+   right:2.6rem;
+}
+.delet-input {
+    margin: 0;
+    padding: 0;
+    height: 2rem;
+    /*position: absolute;*/
+    top: 0;
+    width: 30%;
+    left:50%;
+    float:left;
+    border-bottom:1px solid #fff;
+}
+.delet-input input{
+    border:none;
+    text-align:center;
+}
+.u_filter-panel{
+    background:#fff;
+}
+.dp-content{
+    margin:0;
+    padding:0;
+}
+.dp-top{
+    display:flex;
+    padding: .32rem 0;
+    border-bottom: 1px #cdcdcd solid;
+}
+.dpt-l{
+    width:auto;
+    padding-left: .427rem;
+}
+.dpt-l p{
+    margin:0;
+    padding:0;
+    width: 3rem;
+}
+.dpt-r{
+    flex:1;
+    margin-left: .32rem;
+    line-height: 140%;
+    font-size: .62rem;
+}
+.dpt-pri {
+    color: #ff5000;
+    font-weight: 700;
+    margin: .027rem 0;
+    font-family: arial;
+}
+.dp-top, .dpc-tl {
+    border-bottom: 1px #cdcdcd solid;
+}
+.dpc-tl {
+    padding-bottom: .32rem;
+}
+.dpc-p {
+    margin: .427rem 0;
+}
+.dp-cont, .dp-oto {
+    padding: 0 .427rem;
+}
+.dpc-pr {
+    margin-top: .16rem;
+    margin-right: -.267rem;
+    font-size: .32rem;
+}
+.dpc-pr>span {
+    display: inline-block;
+    text-align: center;
+    font-size: .62rem;
+    border-radius: .24rem!important;
+    border: none!important;
+    background: #f1f1f1;
+    padding: 0 .213rem;
+    overflow: hidden;
+    height: 1rem;
+    line-height: 1rem;
+    margin: .267rem .267rem 0 0;
+    border-width: .027rem;
+}
+.dp-btom {
+    display: flex;
+    padding-bottom: 0!important;
+    height: 2rem;
+    line-height: 2rem;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+.dp-cart-btom-cancel,.dp-cart-btom-ok{
+    flex:1;
+    text-align:center;
+    color:#fff;
+}
+.dp-cart-btom-cancel{
+    background:#fd6b2e;
+    
+}
+.dp-cart-btom-ok{
+    background:#f2f2f2;
+    color:#000;
+}
+.item-add-width{
+    width:20% !important;
 }

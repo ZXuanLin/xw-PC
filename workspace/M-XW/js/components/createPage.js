@@ -72,7 +72,7 @@ var createPage = (function () {
                     '</a>' +
                     '<h1 class="title">品牌分类</h1>' +
                     '<a class="button button-link button-nav pull-right class-top-search-show" href="">' +
-                        '搜索' +
+                        '搜索&nbsp;' +
                         '<span class="icon icon-down"></span>' +
                     '</a>');
                         contentTitle.append(title);
@@ -140,6 +140,7 @@ var createPage = (function () {
                 dataName.push(txt);
                 dataName = dataName.toString().split(' ').slice(0, dataName.length - 2);
                 var c_pp_con = $('<div class="row no-gutter c-pp-con col-100"></div>');
+                var clearFloat = $('<div style="height:2rem;width:100%;float:left"></div>');
                 for (var i = 0; i < pinpai; i++) {
                     var c_pp_inner = $('<div class="col-50 c-pp-inner">' +
                             '<div class="c-pp-name col-40">' + dataName[i]+ '</div>' +
@@ -151,6 +152,7 @@ var createPage = (function () {
                 }
                 
                 contentPadd.append(c_search_m);
+                c_pp_con.append(clearFloat);
                 contentPadd.append(c_pp_con);
                 outContent.append(contentPadd);
                 createGoodContent('#classifiCation').append(title);

@@ -91,6 +91,9 @@
     overflow:scroll;
     position: fixed;
 }
+.class-top-search-show{
+    margin-right:0 !important;
+}
 
 /*地图样式*/
  html, body {
