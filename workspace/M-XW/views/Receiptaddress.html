@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商品详情</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!--<link rel="shortcut icon" href="/favicon.ico">-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../css/frames/sm.min.css" rel="stylesheet" />
+    <link href="../css/frames/sm-extend.min.css" rel="stylesheet" />
+    <link href="../css/frames/common.css" rel="stylesheet" />
+    <link href="../css/frames/icons.css" rel="stylesheet" />
+    <link href="../css/views/itmes.css" rel="stylesheet" />
+    <link href="../css/views/submitOrder.css" rel="stylesheet" />
+    <script src="../js/frames/zepto.js"></script>
+    <script src="../js/frames/common.js"></script>
+    <script src="../js/frames/jump.js"></script>
+</head>
+<body>
+    <div class="page-group">
+        <div class="page page-current">
+            <header class="bar bar-nav">
+                <a class="icon icon-left pull-left back"></a>
+                <a class="pull-right index-icon-top">
+                    <img src="../asset/icons/index-icon-top.png" />
+                </a>
+                <h1 class="title">添加收货地址</h1>
+                <div class="public-go-back">
+                    <ul>
+                        <li><a>首页</a></li>
+                        <li><a>登陆</a></li>
+                        <li><a>注册</a></li>
+                        <li><a>购物车</a></li>
+                        <li><a>我的雄威</a></li>
+                        <li><a>用户反馈</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="content sub-content">
+               
+               
+                <div class="content-block SP-block pecei-top">
+                    
+                    <div class="PS-content recei-bor">
+                        <div class="PS-method">收货人：</div>
+                        <div class="PS-free"><input type="text" placeholder="" /></div>
+                    </div>
+                    <div class="PS-content">
+                        <div class="PS-method">手机号：</div>
+                        <div class="PS-free"><input type="text" placeholder="" /></div>
+                    </div>
+                    <div class="PS-content">
+                        <div class="PS-method">所在地区<input type="text" /></div>
+                        <div class="PS-select"><span class="icon icon-right"></span></div>
+                    </div>
+                   
+                    <div class="PS-content">
+                        <div class="PS-method">详细地址：</div>
+                        <div class="PS-free"><textarea></textarea></div>
+                    </div>
+                    
+                    <div style="height:1rem;"></div>
+                </div>
+                <div class="content-block recei-add-ok">确定</div>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    <script src="../js/frames/sm.min.js"></script>
+    <script src="../js/frames/sm-extend.min.js"></script>
+    <script>
+        $(function () {
+            $(".PS-method input").picker({
+                toolbarTemplate: '<header class="bar bar-nav">\
+          <button class="button button-link pull-right close-picker">确定</button>\
+          <h1 class="title">请选择地址</h1>\
+          </header>',
+                cols: [
+                  {
+                      textAlign: 'center',
+                      values: ['北京', '上海', '武汉', '广州', '天津', '厦门', '西安', '深圳']
+                      //如果你希望显示文案和实际值不同，可以在这里加一个displayValues: [.....]
+                  },
+                  {
+                      textAlign: 'center',
+                      values: ['朝阳', '朝阳', '朝阳', '朝阳', '朝阳', '朝阳', '朝阳']
+                  },
+                  {
+                      textAlign: 'center',
+                      values: ['xx', 'xx']
+                  },
+                  {
+                      textAlign: 'center',
+                      values: ['xx', 'xx']
+                  }
+                ]
+            });
+        })
+    </script>
+</body>
+</html>

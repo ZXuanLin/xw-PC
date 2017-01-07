@@ -6,9 +6,9 @@
     })
     $("#picker-name").picker({
         toolbarTemplate: '<header class="bar bar-nav">\
-  <button class="button button-link pull-right close-picker">确定</button>\
-  <h1 class="title">请选择称呼</h1>\
-  </header>',
+          <button class="button button-link pull-right close-picker">确定</button>\
+          <h1 class="title">请选择地址</h1>\
+          </header>',
         cols: [
           {
               textAlign: 'center',

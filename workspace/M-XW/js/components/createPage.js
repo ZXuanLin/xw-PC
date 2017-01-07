@@ -135,7 +135,6 @@ var createPage = (function () {
                 var txt = '';
                 for (var i = 0; i < pinpai;i++){
                     txt += "品牌名称"+i+" ";
-
                 }
                 dataName.push(txt);
                 dataName = dataName.toString().split(' ').slice(0, dataName.length - 2);

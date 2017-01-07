@@ -1,0 +1,190 @@
+﻿
+
+.sub-top-content{
+    top:1rem !important;
+    background:#fff;
+    height:auto;
+    flex-wrap: wrap;
+    padding: .5rem ;
+    margin:0 !important;
+    margin-top:.5rem !important;
+    display:none;
+}
+.sub-content{
+    margin:0 !important
+}
+.sub-top-msg{
+    font-size:.7rem;
+}
+.sub-top-msg p{
+    margin:0 !important;
+}
+.sub-point-right{
+    position:absolute;
+    right:1rem;
+    top:2rem;
+}
+.SP-content{
+    display:flex;
+    vertical-align:middle;
+}
+.SP-opation{
+    font-size:.6rem;
+    color:#ccc;
+}
+.SP-send-time{
+font-size:.6rem;
+    color:#f76924;
+}
+.SP-img{
+    height:100%;
+}
+.SP-img img{
+    vertical-align:text-bottom;
+} 
+.SP-title{
+    font-size:.7rem;
+}
+.SP-num{
+    text-align:right;
+}
+.SP-sign{
+    font-size:.7rem;
+    color:#f50
+}
+.SP-money{
+    color:#f50
+}
+.SP-point,.SP-o{
+    color:#f50
+}
+.SP-block{
+    margin-top:.5rem !important;
+    background:#fff;
+    padding:.5rem .5rem .5rem .5rem;
+}
+.SP-msg-content{
+    margin-left:.5rem;
+}
+.PS-content{
+    border-top:1px solid #ccc;
+    display:flex;
+    margin-top:.5rem;
+    padding-top: .4rem;
+    font-size: .6rem;
+}
+.PS-select{
+    position:absolute;
+    right:1rem;
+    text-align:right;
+}
+.PS-free input {
+    border:none;
+    outline:none;
+    color:#ccc;
+    font-size:.7rem;
+}
+.PS-free-num{
+    font-size:.5rem;
+    color:#fff;
+    background:#fa6e34;
+    line-height: .8rem;
+    height: .8rem;
+    margin-top: .2rem;
+    margin-left:.2rem;
+    padding:0 .2rem 0 .2rem;
+}
+.PS-total{
+    flex:1;
+    text-align:right;
+    padding-right:.5rem;
+}
+.PS-tatal-money{
+    color:#f50
+}
+.PS-total-num{
+    font-size: 1.2rem;
+    font-weight:bold;
+} 
+.PS-kuaidi{
+    background:#fff;
+    padding-left:.5rem;
+    height: 1.8rem !important;
+    border:none;
+}   
+.TJ-submit{
+    position:fixed;
+    bottom:0;
+    background:#fff;
+    display:flex;
+    line-height: 2.4rem;
+}
+.TJ-submit-go{
+    position: absolute;
+    right: 0;
+    background:#f50;
+    color:#fff;
+    padding:0 1rem;
+    height: 100%;
+}
+.TJ-submit-go a{
+    color:#fff;
+}
+.TJ-msg-content{
+    padding-left:.5rem;
+    font-size:.7rem;
+}
+
+/*添加收货地址*/
+
+.PS-free textarea{
+    width: 11rem;
+    height: 5rem;
+    border:1px solid #ccc;
+}
+.pecei-top{
+    padding-top:0;
+    border:none;
+}
+.recei-bor{
+    border-top:none;
+}
+.recei-add-ok{
+    background:#fd6b2e;
+    text-align:center;
+    color:#fff;
+    height: 2rem;
+    line-height: 2rem;
+}
+.PS-method input{
+    width: 11rem;
+    margin-left: .6rem;
+    border:none;
+}
+/*确认订单*/
+.PS-free span{
+    margin-left:1rem;
+}
+.confirm-pay{
+    font-size:1rem;
+}
+.confirm-pay-method{
+    padding-top:.3rem;
+    margin-left: .3rem;
+}
+.PS-method img{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.confirm-pay-content{
+         border-bottom: 1px solid #ccc; 
+    display: flex;
+    /* margin-top: .5rem; */
+    margin-top:0;
+    padding-top: .4rem;
+    font-size: .6rem;
+}
+.confirm-msg{
+    font-size:.5rem;
+    color:#fb634f;
+}
