@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+       body {
+            width:100%;
+            height:100%;
+            background-image: url('54aa4b6450625.jpg');
+            overflow:hidden;
+            background-size:100% 100%;
+            background-repeat:no-repeat;
+            background-position:50% 50%;
+            background-attachment:fixed;
+        }
+       .content{
+           position:relative;
+       }
+        input{
+            display:block;
+            border:none;
+            height:2rem;
+            margin:1rem auto;
+            background:#470503;
+            color:#fff;
+            font-size:1rem;
+            text-indent:5px;
+            position:absolute;
+
+        }
+        #userNum{
+            top:10rem;
+            left:25%;
+        }
+         #userId{
+            top:13rem;
+            left:25%;
+        }
+          #sub{
+            top:17rem;
+            left:40%;
+            padding:0 .6rem 0 .5rem;
+            border-radius:6px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="content">
+            <input type="text" name="usephone" id="userId" placeholder="请输入你的名字"/>
+            <input type="text" name="usename" id="userNum" placeholder="请输入你的电话"/><br />
+            <input type="button" value="确定" id="sub" />
+        </div>
+        
+    </form>
+    <script>
+
+        function showHint(str, userPhone) {
+            var xmlHttp;
+            if (str.length == 0) {
+                alert('请输入名字和电话号码');
+                return;
+            }
+            if (window.XMLHttpRequest) {
+                xmlHttp = new XMLHttpRequest();
+            } else {
+                xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
+            }
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    var re = JSON.parse(xmlHttp.responseText);
+                    var lsStatus = re.Status;
+                    if (lsStatus == 200) {
+                        window.location.href = 'index.html?userPhone=' + userPhone;
+                    }
+                    else {
+                        alert(re.Message);
+                    }
+                }
+                else {
+
+                }
+            }
+
+            xmlHttp.open('POST', 'http://api.xw-scm.com:8090/api/MH/MH01', false);
+            xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
+            xmlHttp.send(str);
+        }
+       
+
+        window.addEventListener('load', function () {
+        var userName = document.getElementById('userId');
+        var userPhone = document.getElementById('userNum');
+        var oBtn = document.getElementById('sub');
+        oBtn.addEventListener('click', function () {
+            if (userName.value.length === 0 || userPhone.value.length === 0) {
+                alert('请完善你的信息')
+                return;
+            } else {
+                showHint("name=" + userName.value + "&phone=" + userPhone.value, userPhone.value);
+            }
+            })
+        })
+    </script>
+</body>
+</html>

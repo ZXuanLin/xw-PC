@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body {
+            background-image: url('54aa4b6450625.jpg');
+            background-repeat:no-repeat;
+            background-size:100%;
+        }
+        li{
+            list-style:none;
+        }
+        .showContent{
+            margin:180px auto;
+            width:300px;
+            height:350px;
+            overflow-y:scroll;
+            overflow-x:hidden
+        }
+        .show{
+            text-align:center;
+            font-size:24px;
+            margin-top:6px;
+            color:#ffd800;
+        }
+        #btn{
+            background:yellow;
+            color:#000;
+            font-size:30px;
+            padding:6px;
+            position:absolute;
+            right:0;
+            top:0;
+            cursor:pointer;
+        }
+        #btn:hover{
+            background:blue;
+            color:#fff;
+        }
+        .totalCon{
+            color:#ffd800;
+            position:fixed;
+            top: 130px;
+            left: 47%;
+        }
+        #total{
+            font-size:30px;
+        }
+        #scro{
+            width:30px;
+            height:400px;
+            background:red;
+            box-shadow:600px 600px 600px 600px #cb1011 inset;
+            position:absolute;
+            left:58%;
+            border:none;
+        }
+    </style>
+</head>
+<body>
+    <div id="scro"></div>
+    <buttonn id="btn">开始摇</buttonn>
+        <div class="totalCon">已经有<span id="total">0</span>人<span id="join">参加</span></div>
+    <div class="showContent">
+        <ul>
+        </ul>
+    </div>
+
+    <script>
+
+        var welCome = '欢迎';
+        var come = '进来了';
+        var urlchange = 'https://api.xw-scm.com/api/MH/MH03';
+
+        function getStyle(obj, name) {
+            if (obj.currentStyle) {
+                return obj.currentStyle[name];
+            }
+            else {
+                return getComputedStyle(obj, false)[name];
+            }
+        }
+        //动画
+        function startMove(obj, json, fnEnd) {
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                var bStop = true;		
+
+                for (var attr in json) {
+                    var cur = 0;
+
+                    if (attr == 'opacity') {
+                        cur = Math.round(parseFloat(getStyle(obj, attr)) * 100);
+                    }
+                    else {
+                        cur = parseInt(getStyle(obj, attr));
+                    }
+
+                    var speed = (json[attr] - cur) / 6;
+                    speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+                    if (cur != json[attr])
+                        bStop = false;
+
+                    if (attr == 'opacity') {
+                        obj.style.filter = 'alpha(opacity:' + (cur + speed) + ')';
+                        obj.style.opacity = (cur + speed) / 100;
+                    }
+                    else {
+                        obj.style[attr] = cur + speed + 'px';
+                    }
+                }
+
+                if (bStop) {
+                    clearInterval(obj.timer);
+
+                    if (fnEnd) fnEnd();
+                }
+            }, 30);
+        }
+
+        //ajax请求
+        function showXHR() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                   
+                    var lsjson = JSON.parse(xhr.responseText);
+                    console.log(lsjson)
+                    if (lsjson.Status !== 200) {
+                        return;
+                    } else {
+                        if (lsjson.Content != null) {
+                            for (var i in lsjson.Content) {
+                                createLi(welCome,lsjson.Content[i].Name,come)
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            xhr.open('GET', urlchange, true);
+            xhr.send();
+        }
+        
+
+        function btnXHR(status) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    console.log(JSON.parse(xhr.responseText))
+                    var lsjson = JSON.parse(xhr.responseText);
+                    if (lsjson.Status !== 200) {
+                        return;
+                    } else {
+
+                    }
+                }
+            }
+            xhr.open('POST', 'https://api.xw-scm.com/api/MH/MH05', true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
+            xhr.send(status);
+        }
+        var i = 0;
+        //新用户
+        function createLi(welCome, user, come) {
+            
+            var oLi = document.createElement('li');
+            
+            var oUl = document.getElementsByTagName('ul')[0];
+            var oTotal = document.getElementById('total');
+            oLi.className = 'show';
+            i++;
+            oLi.innerHTML = welCome + user + come;
+            oTotal.innerHTML = i;
+                
+            if (oUl.children.length > 0) {
+                oUl.insertBefore(oLi, oUl.children[0]);
+            }
+            else {
+                oUl.appendChild(oLi);
+            }
+
+          
+            var iHeight = oLi.offsetHeight;
+
+            oLi.style.height = '0';
+
+            startMove(oLi, { height: iHeight }, function () {
+                startMove(oLi, { opacity: 100 });
+            });
+        };
+        var timer = null;
+        //事件执行
+        window.addEventListener('load', function () {
+            var oUl = document.getElementsByTagName('ul')[0];
+            var oBtn = document.getElementById('btn');
+            var total = document.getElementById('total');
+            var join = document.getElementById('join');
+            var leng = oUl.children.length;
+            var Countdown = 4;
+          setInterval(showXHR, 1000)
+          oBtn.onclick = function () {
+              total.innerHTML = 0;
+              oUl.innerHTML = '';
+              join.innerHTML = '中奖';
+              clearInterval(timer);
+              timer = setInterval(function () {
+                      Countdown--;
+                  if (Countdown < 0) {
+                      Countdown = 0;
+                      clearInterval(timer);
+                      oUl.innerHTML = '';
+                      oUl.style.paddingTop = "0";
+                      join.innerHTML = '中奖';
+                      welCome = '恭喜';
+                      come = '中奖了';
+                      urlchange = 'https://api.xw-scm.com/api/MH/MH04';
+                      btnXHR('ZT=' + 1);
+                      total.innerHTML = leng;
+                      i = 0;
+                  } else {
+                      oUl.innerHTML = '';
+                      oUl.innerHTML = Countdown;
+                      oUl.style.color = 'yellow';
+                      oUl.style.fontSize = '150px';
+                      oUl.style.textAlign = 'center';
+                      oUl.style.paddingTop = "100px";
+                  }
+                  
+              }, 1000);
+                
+            };
+        })
+    </script>
+</body>
+</html>
