@@ -39,6 +39,14 @@
     font-size:.6rem;
     margin:0;
 }
+.jumpShop {
+    display:block;
+    border-radius: 6px;
+    height: auto;
+    width:auto;
+    /*background: url('../../asset/icons/iConjumpShop.png') no-repeat center center;*/
+    /*background-size:100% 1000%;*/
+}
 .g-dfjslk{
     float:right;
     display:block;

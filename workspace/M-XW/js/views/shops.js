@@ -1,20 +1,19 @@
 ﻿/// <reference path="../frames/zepto.js" />
 $(function () {
     function shopsClick(targetTitle, target) {
-        targetTitle.on('click', function () {
+        targetTitle.on('tap', function () {
             if ($('.icon-up')) {
                 $('.shops-more').addClass('icon-down')
             }
             $('.shops-more').removeClass('icon-up');
-            $('.shops-m').css({ 'display': 'none', 'height': 0 })
+            $('.shops-m').css({ 'display': 'none', 'height': 0, 'transition':'all 1s' })
             $('.shops-y').removeClass('shops-activty')
             $(this).addClass('shops-activty');
             $('.shops-activty .shops-more').addClass('icon-up');
             target.animate({
-                height: '13rem',
                 display: 'block',
-                opacity: 1
-            }, 100)
+                height: '13rem'
+            }, 500)
         })
     }
     shopsClick($('#shops-one-title'), $('#shops-one'))

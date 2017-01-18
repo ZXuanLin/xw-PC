@@ -29,6 +29,7 @@
     (function () {
         var inputNum = parseInt($('.h-caldj').val(1));
         var nowNum = parseInt($('.h-caldj').val());
+        var tabItemExternal = $('.tab-item.external');
         var reg = /^[0-9]*$/;
         //总价格
         var totalMoney = parseInt($('.g-efhak').html());
@@ -48,6 +49,9 @@
                $('.h-jluh').html(nowNum);
             }
             console.log(typeof nowNum)
+        })
+        tabItemExternal.eq(3).on('tap', function () {
+            $.toast("添加成功", '2000', 'jumpShop');
         })
         function addNowNum() {
             if (!reg.test(nowNum)) {

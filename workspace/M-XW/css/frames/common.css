@@ -202,7 +202,7 @@ header.bar-nav .searchbar {
 .list-block .item-checkbox input[type=checkbox]:checked + .item-media i.icon-form-checkbox,
 .list-block .item-checkbox input[type=radio]:checked + .item-media i.icon-form-checkbox {
     border: none;
-    background-color: #0894ec;
+    background-color: #F44336;
 }
 
 .m_item-checkbox input[type=checkbox]:checked + .icon_checkbox::after,

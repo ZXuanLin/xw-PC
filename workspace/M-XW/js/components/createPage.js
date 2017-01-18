@@ -38,7 +38,7 @@ var createPage = (function () {
                     '<span class="icon icon-cart"></span>' +
                     '<span class="tab-label">购物车</span>' +
                 '</a>' +
-                '<a class="tab-item external" href="views/recommend.html">' +
+                '<a class="tab-item external" href="views/Ordermanagement.html">' +
                     '<span class="icon icon-app"></span>' +
                     '<span class="tab-label">我的订单</span>' +
                 '</a>' +

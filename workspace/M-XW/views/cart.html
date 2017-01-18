@@ -13,6 +13,10 @@
     <link href="../css/frames/common.css" rel="stylesheet" />
     <link href="../css/frames/icons.css" rel="stylesheet" />
     <link href="../css/views/order.css" rel="stylesheet" />
+    <script src="../js/frames/zepto.js"></script>
+    <script src="../js/frames/touch.js"></script>
+    <script src="../js/frames/fx.animate.js"></script>
+    
 </head>
 <body>
     <div id="WP-Order" class="wrapper WP-Order">
@@ -32,7 +36,7 @@
                     <div class="tab-item item-add-width">
                         <div class="m_item-checkbox">
                             <label>
-                                <input type="checkbox" name="checkbox" checked="checked">
+                                <input type="checkbox" name="checkbox" id="allCheck">
                                 <i class="m_icon icon_checkbox"></i>
                                 <span class="u_title u_choose">全选</span>
                             </label>
@@ -44,7 +48,7 @@
                                 <div class="u_total">
                                     <span class="u_title">总计：</span>
                                     <dfn>¥</dfn>
-                                    <b>12934.34</b>
+                                    <b id="tatolMoney">12934.34</b>
                                 </div>
                                 <div class="u_sales">
                                     <span class="u_title">已优惠：</span>
@@ -68,10 +72,10 @@
                                     <p class="cart-edit-con"><span class="cart-getcar">领券</span><span class="cart-play">编辑</span></p>
                                     <div class="item-checkbox item-link item-content">
                                         <label>
-                                            <input type="checkbox" name="checkbox" checked="checked">
+                                            <input type="checkbox" name="checkbox">
                                             <span class="item-media"><i class="icon icon-form-checkbox"></i></span>
                                         </label>
-                                        <div class="item-media"><img src="../asset/imgs/hj/hj_03.jpg" alt="" /></div>
+                                        <div class=""><img src="../asset/imgs/hj/hj_03.jpg" alt="" /></div>
                                         <div class="item-inner">
                                             <div class="item-text cart-text">地线夹/接地夹/搭铁夹 500A</div>
                                             <p class="cart-class">重量：4.72kg  颜色：12V锂电钻（双电池）</p>
@@ -79,7 +83,7 @@
                                                 <div class="item_price">
                                                     <span class="price">
                                                         <dfn>¥</dfn>
-                                                        <b>45</b>
+                                                        <b class="singleMoney">45</b>
                                                     </span>
                                                     <span class="unit">个</span>
                                                 </div>
@@ -88,14 +92,14 @@
                                                     <input type="text" value="5" id="input_count" class="input_count">
                                                     <i class="m_icon icon_subtraction"></i>-->
                                                     <span>x</span>
-                                                    <span>1</span>
+                                                    <span class="selectNum">1</span>
                                                 </div>
                                             </div>
                                             <div class="delet-content">
                                                 <div class="delet-inner">
                                                     <div class="delet-cart">
                                                         <div class="delet-text">删除</div>
-                                                        <div class="delet-list"><p class="delet-reduce">-</p><p class="delet-input"><input type="text" value="8" /></p><p class="delet-add">+</p></div>
+                                                        <div class="delet-list"><p class="delet-reduce">-</p><p class="delet-input"><input type="text" value="1" /></p><p class="delet-add">+</p></div>
                                                         <p class="delet-class-text open-panel">颜色分类:黑色;鞋码:42-270mm现货<span class="icon icon-down pull-right"></span></p>
                                                     </div>
                                                 </div>
@@ -107,10 +111,10 @@
                                     <p class="cart-edit-con"><span class="cart-getcar">领券</span><span class="cart-play">编辑</span></p>
                                     <div class="item-checkbox item-link item-content">
                                         <label>
-                                            <input type="checkbox" name="checkbox" checked="checked">
+                                            <input type="checkbox" name="checkbox">
                                             <span class="item-media"><i class="icon icon-form-checkbox"></i></span>
                                         </label>
-                                        <div class="item-media"><img src="../asset/imgs/hj/hj_03.jpg" alt="" /></div>
+                                        <div class=""><img src="../asset/imgs/hj/hj_03.jpg" alt="" /></div>
                                         <div class="item-inner">
                                             <div class="item-text cart-text">地线夹/接地夹/搭铁夹 500A</div>
                                             <p class="cart-class">重量：4.72kg  颜色：12V锂电钻（双电池）</p>
@@ -118,7 +122,7 @@
                                                 <div class="item_price">
                                                     <span class="price">
                                                         <dfn>¥</dfn>
-                                                        <b>45</b>
+                                                        <b class="singleMoney">45</b>
                                                     </span>
                                                     <span class="unit">个</span>
                                                 </div>
@@ -127,14 +131,14 @@
                                                     <input type="text" value="5" id="input_count" class="input_count">
                                                     <i class="m_icon icon_subtraction"></i>-->
                                                     <span>x</span>
-                                                    <span>1</span>
+                                                    <span class="selectNum">1</span>
                                                 </div>
                                             </div>
                                             <div class="delet-content">
                                                 <div class="delet-inner">
                                                     <div class="delet-cart">
                                                         <div class="delet-text">删除</div>
-                                                        <div class="delet-list"><p class="delet-reduce">-</p><p class="delet-input"><input type="text" value="8"/></p><p class="delet-add">+</p></div>
+                                                        <div class="delet-list"><p class="delet-reduce">-</p><p class="delet-input"><input type="text" value="1"/></p><p class="delet-add">+</p></div>
                                                         <p class="delet-class-text open-panel">颜色分类:黑色;鞋码:42-270mm现货<span class="icon icon-down pull-right"></span></p>
                                                     </div>
                                                 </div>
@@ -146,10 +150,10 @@
                                     <p class="cart-edit-con"><span class="cart-getcar">领券</span><span class="cart-play">编辑</span></p>
                                     <div class="item-checkbox item-link item-content">
                                         <label>
-                                            <input type="checkbox" name="checkbox" checked="checked">
+                                            <input type="checkbox" name="checkbox">
                                             <span class="item-media"><i class="icon icon-form-checkbox"></i></span>
                                         </label>
-                                        <div class="item-media"><img src="../asset/imgs/hj/hj_03.jpg" alt="" /></div>
+                                        <div class=""><img src="../asset/imgs/hj/hj_03.jpg" alt="" /></div>
                                         <div class="item-inner">
                                             <div class="item-text cart-text">地线夹/接地夹/搭铁夹 500A</div>
                                             <p class="cart-class">重量：4.72kg  颜色：12V锂电钻（双电池）</p>
@@ -157,7 +161,7 @@
                                                 <div class="item_price">
                                                     <span class="price">
                                                         <dfn>¥</dfn>
-                                                        <b>45</b>
+                                                        <b class="singleMoney">45</b>
                                                     </span>
                                                     <span class="unit">个</span>
                                                 </div>
@@ -166,14 +170,14 @@
                                                     <input type="text" value="5" id="input_count" class="input_count">
                                                     <i class="m_icon icon_subtraction"></i>-->
                                                     <span>x</span>
-                                                    <span>1</span>
+                                                    <span class="selectNum">1</span>
                                                 </div>
                                             </div>
                                             <div class="delet-content">
                                                 <div class="delet-inner">
                                                     <div class="delet-cart">
                                                         <div class="delet-text">删除</div>
-                                                        <div class="delet-list"><p class="delet-reduce">-</p><p class="delet-input"><input type="text" value="8" /></p><p class="delet-add">+</p></div>
+                                                        <div class="delet-list"><p class="delet-reduce">-</p><p class="delet-input"><input type="text" value="1" /></p><p class="delet-add">+</p></div>
                                                         <p class="delet-class-text open-panel">颜色分类:黑色;鞋码:42-270mm现货<span class="icon icon-down pull-right"></span></p>
                                                     </div>
                                                 </div>
@@ -185,10 +189,10 @@
                                     <p class="cart-edit-con"><span class="cart-getcar">领券</span><span class="cart-play">编辑</span></p>
                                     <div class="item-checkbox item-link item-content">
                                         <label>
-                                            <input type="checkbox" name="checkbox" checked="checked">
+                                            <input type="checkbox" name="checkbox">
                                             <span class="item-media"><i class="icon icon-form-checkbox"></i></span>
                                         </label>
-                                        <div class="item-media"><img src="../asset/imgs/hj/hj_03.jpg" alt="" /></div>
+                                        <div class=""><img src="../asset/imgs/hj/hj_03.jpg" alt="" /></div>
                                         <div class="item-inner">
                                             <div class="item-text cart-text">地线夹/接地夹/搭铁夹 500A</div>
                                             <p class="cart-class">重量：4.72kg  颜色：12V锂电钻（双电池）</p>
@@ -196,7 +200,7 @@
                                                 <div class="item_price">
                                                     <span class="price">
                                                         <dfn>¥</dfn>
-                                                        <b>45</b>
+                                                        <b class="singleMoney">45</b>
                                                     </span>
                                                     <span class="unit">个</span>
                                                 </div>
@@ -205,14 +209,14 @@
                                                     <input type="text" value="5" id="input_count" class="input_count">
                                                     <i class="m_icon icon_subtraction"></i>-->
                                                     <span>x</span>
-                                                    <span>1</span>
+                                                    <span class="selectNum">1</span>
                                                 </div>
                                             </div>
                                             <div class="delet-content">
                                                 <div class="delet-inner">
                                                     <div class="delet-cart">
                                                         <div class="delet-text">删除</div>
-                                                        <div class="delet-list"><p class="delet-reduce">-</p><p class="delet-input"><input type="text" value="8" /></p><p class="delet-add">+</p></div>
+                                                        <div class="delet-list"><p class="delet-reduce">-</p><p class="delet-input"><input type="text" value="1" /></p><p class="delet-add">+</p></div>
                                                         <p class="delet-class-text open-panel">颜色分类:黑色;鞋码:42-270mm现货<span class="icon icon-down pull-right"></span></p>
                                                     </div>
                                                 </div>
@@ -244,7 +248,8 @@
                                 <div class="dpc-p">
                                     <div class="dpc-tl">鞋码</div>
                                     <div class="dpc-pr" propname="鞋码">
-                                        <span class="J_skuspan" data-id="20549:670">35/220现货</span><span class="J_skuspan" data-id="20549:671">36/225在途</span><span class="J_skuspan" data-id="20549:44895">36.5/230现货</span><span class="J_skuspan" data-id="20549:28388">38/240现货</span><span class="J_skuspan" data-id="20549:44897">38.5/245现货</span><span class="J_skuspan" data-id="20549:672">39/250现货</span><span class="J_skuspan" data-id="20549:28389">40/255现货</span><span class="J_skuspan" data-id="20549:44899">40.5/260现货</span><span class="J_skuspan" data-id="20549:28390">41/265现货</span><span class="J_skuspan" data-id="20549:28391">42/270现货</span><span class="J_skuspan" data-id="20549:44901">42.5/275现货</span><span class="J_skuspan" data-id="20549:28392">43/280现货</span><span class="J_skuspan" data-id="20549:28393">44/285现货</span><span class="J_skuspan" data-id="20549:44903">44.5/290现货</span><span class="J_skuspan" data-id="20549:28394">韩国专柜正品</span><span class="J_skuspan" data-id="20549:44904">支持任何形式验货</span>
+                                        <span class="J_skuspan" data-id="20549:670">35/220现货</span><span class="J_skuspan" data-id="20549:671">36/225在途</span><span class="J_skuspan" data-id="20549:44895">36.5/230现货</span><span class="J_skuspan" data-id="20549:28388">38/240现货</span><span class="J_skuspan" data-id="20549:44897">38.5/245现货</span><span class="J_skuspan" data-id="20549:672">39/250现货</span><span class="J_skuspan" data-id="20549:28389">40/255现货</span><span class="J_skuspan" data-id="20549:44899">40.5/260现货</span><span class="J_skuspan" data-id="20549:28390">41/265现货</span><span class="J_skuspan" data-id="20549:28391">42/270现货</span><span class="J_skuspan" data-id="20549:44901">42.5/275现货</span><span class="J_skuspan" data-id="20549:28392">43/280现货</span><span class="J_skuspan" data-id="20549:28393">44/285现货</span><span class="J_skuspan" data-id="20549:44903">44.5/290现货</span>
+
                                     </div>
                                 </div>
                                 <div class="dpc-p">
@@ -268,12 +273,33 @@
             </div>
         </div>
     </div>
-    <script src="../js/frames/zepto.js"></script>
-    <script>$.config = { router: false }</script>
+    
+    <!--<script>$.config = { router: false }</script>-->
     <script src="../js/frames/sm.min.js"></script>
     <script src="../js/frames/sm-extend.min.js"></script>
     <script src="../js/frames/util.js"></script>
+    <script src="../js/components/card.js"></script>
     <script>
+        $(function () {
+            var html = '';
+            var str = '';
+            $(document).on('tap', '.J_skuspan', function () {
+                if ($(this).hasClass('sel')) {
+                    $(this).removeClass('sel')
+                    console.log('ok')
+                } else {
+                    $(this).addClass('sel');
+                    $(this).siblings().removeClass('sel')
+                }
+                html = $(this).html();
+                if ($(this).hasClass('sel')) {
+                     $('.dpt-opt.J_skutext').html("已选:" + '"' + html + '"' + "<span class='dpt-gray'> 未选: 颜色分类</span>");
+                } else {
+                    $('.dpt-opt.J_skutext').html('还未选 ' + '<span class="dpt-gray">鞋码,颜色分类</span>')
+                }
+            })
+        })
+
         $.init();
     </script>
 
