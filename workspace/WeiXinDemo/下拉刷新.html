@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <style>
+        .content{
+            background:#ccc;
+        }
+        li{
+            border-bottom: 1px solid;
+            height: 3rem;
+            line-height:3rem;
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-group">
+        <div class="page page-current">
+            <header class="bar bar-nav">
+                <h1 class='title'>下拉刷新</h1>
+            </header>
+            <!-- content应该拥有"pull-to-refresh-content"类,表示启用下拉刷新 -->
+            <div class="content pull-to-refresh-content infinite-scroll" data-ptr-distance="55">
+                <!-- 默认的下拉刷新层 -->
+                <div class="pull-to-refresh-layer">
+                    <div class="preloader"></div>
+                    <div class="pull-to-refresh-arrow"></div>
+                </div>
+                <!-- 下面是正文 -->
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-header">card</div>
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                这里是第1个card，下拉刷新会出现第2个card。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">card</div>
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                这里是第1个card，下拉刷新会出现第2个card。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">card</div>
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                这里是第1个card，下拉刷新会出现第2个card。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">card</div>
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                这里是第1个card，下拉刷新会出现第2个card。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">card</div>
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                这里是第1个card，下拉刷新会出现第2个card。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">card</div>
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                这里是第1个card，下拉刷新会出现第2个card。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-ul">
+                    <ul></ul>
+                </div>
+                <!-- 加载提示符 -->
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <script>
+        $(document).on('refresh', '.pull-to-refresh-content', function (e) {
+            //console.log($(e.target).find('.card').length)
+            //js对象和jquery对象的转化就是用$()包裹对象
+            var num = 0;
+            var html = '';
+            setTimeout(function () {
+                num = $(e.target).find('.card').length;
+                html += '<div class="card">' +
+            '<div class="card-header">card</div>' +
+            '<div class="card-content">' +
+            '<div class="card-content-inner">' +
+            '这里是第' + (num + 1) + '个card，下拉刷新会出现第' + (num + 2) + '个card。' +
+            '</div>' +
+                        '</div>' +
+                    '</div>'
+                $('.card-container').prepend(html)
+                $.pullToRefreshDone('.pull-to-refresh-content');
+            }, 1000)
+        });
+        //最多只能加载total条数据
+        var total = 10;
+        //每次加载的条数
+        var iNow = 0;
+        var loading = false;
+        var i;
+        $(document).on('infinite', function (e) {
+            
+            if (loading) {
+                return;
+            }
+
+            loading = true;
+            console.log($(e.target))
+           
+            setTimeout(function () {
+                for ( i = iNow  ; i < iNow + 3; i++) {
+                    var html = '<li>无限刷新' + i + '</li>';
+                    $(".scroll-ul ul").append(html)
+                }
+                iNow = $('li').length;
+                console.log(i)
+                loading = false;
+                if (i >= total) {
+                    i = total;
+                    // 加载完毕，则注销无限加载事件，以防不必要的加载
+                    $.detachInfiniteScroll($('.infinite-scroll'));
+                    // 删除加载提示符
+                    $('.infinite-scroll-preloader').remove();
+                }
+                
+                //$.refreshScroller();
+            }, 1000)
+        })
+        $.init()
+    </script>
+</body>
+</html>
