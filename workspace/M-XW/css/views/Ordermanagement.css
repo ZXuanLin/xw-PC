@@ -1,9 +1,6 @@
 ﻿.tabs-content{
-   overflow:scroll;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height:100%;
+    top:2.1rem !important;
+    
 }
 .order-content{
         
@@ -12,7 +9,7 @@
     z-index:22;
 }
 .order-refresh-content{
-    position:relative;
+    /*position:relative;*/
 }
 .order-tab1{
     margin:0;
@@ -97,4 +94,15 @@
 .cart-footer p{
     display:flex;
     padding-left:.5rem;
+}
+.tool-bar{
+    position: absolute;
+    top: 2.2rem;
+    width: 100%;
+}
+.tabs-absolute{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*top: -2rem;*/
 }

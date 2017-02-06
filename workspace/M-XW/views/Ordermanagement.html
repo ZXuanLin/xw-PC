@@ -25,7 +25,7 @@
                 <a class="icon icon-left pull-left back"></a>
                 <h1 class="title">订单管理</h1>
             </header>
-            <div class="content order-content" data-type="">
+            <div class="tool-bar" data-type="">
                 <div class="buttons-tab fixed-tab order-fixed-tab" data-offset="44">
                     <a href="#tabAll" class="tab-link active button">全部</a>
                     <a href="#tabWaitPay" class="tab-link button">待付款</a>
@@ -33,139 +33,159 @@
                     <a href="#tabWaitGet" class="tab-link button">待收货</a>
                     <a href="#tabWaitSpeak" class="tab-link button">待评价</a>
                 </div>
-
-                <div class="tabs tabs-content">
-                    <div id="tabAll" class="tab active pull-to-refresh-content order-refresh-content infinite-scroll" data-distance="">
-                        <!--下拉提示符-->
-                        <div class="pull-to-refresh-layer order-refresh">
-                            <div class="preloader"></div>
-                            <div class="pull-to-refresh-arrow"></div>
-                        </div>
-                        <div class="card-container tabs-content cartCont" id="">
-                            <div class="card order-cart">
-                                <div class="order-cart-header">等待付款</div>
-                                <div class="card-content">
-                                    <div class="card-content-inner">
-                                        <div class="cart-img-content">
-                                            <img src="../asset/imgs/Ordermanagement/147.png" />
-                                        </div>
-                                        <div class="cart-indru-content">
-                                            <p><span class="pull-left">博世（AO）TSF 1234T394<br />充电式电钻/起子机双电版</span><span class="pull-right">x<b>1</b></span></p>
-                                            <p class="cart-guige">重量：4.72kg  颜色：12V锂电钻（双电池）</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cart-footer">
-                                    <p><span class="cart-total">合计：<b>134</b>元(包含运费<b>0.00</b>元)</span><a class="cart-cancel-class">取消订单</a><a class="cart-go-pay">去付款</a></p>
-                                </div>
+            </div>
+            <div class="content tabs-content">
+                    <div class="tabs tabs-absolute">
+                        <div id="tabAll" class="tab active pull-to-refresh-content order-refresh-content infinite-scroll" data-distance="">
+                            <!--下拉提示符-->
+                            <div class="pull-to-refresh-layer order-refresh">
+                                <div class="preloader"></div>
+                                <div class="pull-to-refresh-arrow"></div>
                             </div>
-
-                            <div class="card order-cart">
-                                <div class="order-cart-header">等待付款</div>
-                                <div class="card-content">
-                                    <div class="card-content-inner">
-                                        <div class="cart-img-content">
-                                            <img src="../asset/imgs/Ordermanagement/147.png" />
-                                        </div>
-                                        <div class="cart-indru-content">
-                                            <p><span class="pull-left">博世（AO）TSF 1234T394<br />充电式电钻/起子机双电版</span><span class="pull-right">x<b>1</b></span></p>
-                                            <p class="cart-guige">重量：4.72kg  颜色：12V锂电钻（双电池）</p>
+                            <div class="card-container tabs-content cartCont" id="">
+                                <div class="card order-cart">
+                                    <div class="order-cart-header">等待付款</div>
+                                    <div class="card-content">
+                                        <div class="card-content-inner">
+                                            <div class="cart-img-content">
+                                                <img src="../asset/imgs/Ordermanagement/147.png" />
+                                            </div>
+                                            <div class="cart-indru-content">
+                                                <p><span class="pull-left">博世（AO）TSF 1234T394<br />充电式电钻/起子机双电版</span><span class="pull-right">x<b>1</b></span></p>
+                                                <p class="cart-guige">重量：4.72kg  颜色：12V锂电钻（双电池）</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="cart-footer">
-                                    <p><span class="cart-total">合计：<b>134</b>元(包含运费<b>0.00</b>元)</span><a class="cart-cancel-class">取消订单</a><a class="cart-go-pay">去付款</a></p>
-                                </div>
-                            </div>
-
-                            <div class="card order-cart">
-                                <div class="order-cart-header">等待付款</div>
-                                <div class="card-content">
-                                    <div class="card-content-inner">
-                                        <div class="cart-img-content">
-                                            <img src="../asset/imgs/Ordermanagement/147.png" />
-                                        </div>
-                                        <div class="cart-indru-content">
-                                            <p><span class="pull-left">博世（AO）TSF 1234T394<br />充电式电钻/起子机双电版</span><span class="pull-right">x<b>1</b></span></p>
-                                            <p class="cart-guige">重量：4.72kg  颜色：12V锂电钻（双电池）</p>
-                                        </div>
+                                    <div class="cart-footer">
+                                        <p><span class="cart-total">合计：<b>134</b>元(包含运费<b>0.00</b>元)</span><a class="cart-cancel-class">取消订单</a><a class="cart-go-pay">去付款</a></p>
                                     </div>
                                 </div>
-                                <div class="cart-footer">
-                                    <p><span class="cart-total">合计：<b>134</b>元(包含运费<b>0.00</b>元)</span><a class="cart-cancel-class">取消订单</a><a class="cart-go-pay">去付款</a></p>
+
+                                <div class="card order-cart">
+                                    <div class="order-cart-header">等待付款</div>
+                                    <div class="card-content">
+                                        <div class="card-content-inner">
+                                            <div class="cart-img-content">
+                                                <img src="../asset/imgs/Ordermanagement/147.png" />
+                                            </div>
+                                            <div class="cart-indru-content">
+                                                <p><span class="pull-left">博世（AO）TSF 1234T394<br />充电式电钻/起子机双电版</span><span class="pull-right">x<b>1</b></span></p>
+                                                <p class="cart-guige">重量：4.72kg  颜色：12V锂电钻（双电池）</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-footer">
+                                        <p><span class="cart-total">合计：<b>134</b>元(包含运费<b>0.00</b>元)</span><a class="cart-cancel-class">取消订单</a><a class="cart-go-pay">去付款</a></p>
+                                    </div>
                                 </div>
+
+                                <div class="card order-cart">
+                                    <div class="order-cart-header">等待付款</div>
+                                    <div class="card-content">
+                                        <div class="card-content-inner">
+                                            <div class="cart-img-content">
+                                                <img src="../asset/imgs/Ordermanagement/147.png" />
+                                            </div>
+                                            <div class="cart-indru-content">
+                                                <p><span class="pull-left">博世（AO）TSF 1234T394<br />充电式电钻/起子机双电版</span><span class="pull-right">x<b>1</b></span></p>
+                                                <p class="cart-guige">重量：4.72kg  颜色：12V锂电钻（双电池）</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-footer">
+                                        <p><span class="cart-total">合计：<b>134</b>元(包含运费<b>0.00</b>元)</span><a class="cart-cancel-class">取消订单</a><a class="cart-go-pay">去付款</a></p>
+                                    </div>
+                                </div>
+                                <div class="card order-cart">
+                                    <div class="order-cart-header">等待付款</div>
+                                    <div class="card-content">
+                                        <div class="card-content-inner">
+                                            <div class="cart-img-content">
+                                                <img src="../asset/imgs/Ordermanagement/147.png" />
+                                            </div>
+                                            <div class="cart-indru-content">
+                                                <p><span class="pull-left">博世（AO）TSF 1234T394<br />充电式电钻/起子机双电版</span><span class="pull-right">x<b>1</b></span></p>
+                                                <p class="cart-guige">重量：4.72kg  颜色：12V锂电钻（双电池）</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-footer">
+                                        <p><span class="cart-total">合计：<b>134</b>元(包含运费<b>0.00</b>元)</span><a class="cart-cancel-class">取消订单</a><a class="cart-go-pay">去付款</a></p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!-- 加载提示符-->
+                            <div class="infinite-scroll-preloader">
+                                <div class="preloader"></div>
                             </div>
                         </div>
-                        <!-- 加载提示符 -->
-                        <div class="infinite-scroll-preloader">
-                            <div class="preloader"></div>
-                        </div>
-                    </div>
-                    <div id="tabWaitPay" class="tab pull-to-refresh-content order-refresh-content infinite-scroll">
-                        <!--下拉提示符-->
-                        <div class="pull-to-refresh-layer order-refresh">
-                            <div class="preloader"></div>
-                            <div class="pull-to-refresh-arrow"></div>
-                        </div>
-                        <div class="card-container tabs-content cartCont" id="">
-                            待付款
-                        </div>
                         
-                        <!-- 加载提示符 -->
+                        <div id="tabWaitPay" class="tab pull-to-refresh-content order-refresh-content infinite-scroll">
+                            <!--下拉提示符-->
+                            <div class="pull-to-refresh-layer order-refresh">
+                                <div class="preloader"></div>
+                                <div class="pull-to-refresh-arrow"></div>
+                            </div>
+                            <div class="card-container tabs-content cartCont" id="">
+                                待付款
+                            </div>
+
+                            <!-- 加载提示符-->
                         <div class="infinite-scroll-preloader">
                             <div class="preloader">
                             </div>
                         </div>
-                    </div>
-                    <div id="tabWaitSet" class="tab pull-to-refresh-content order-refresh-content infinite-scroll">
-                        <!--下拉提示符-->
-                        <div class="pull-to-refresh-layer order-refresh">
-                            <div class="preloader"></div>
-                            <div class="pull-to-refresh-arrow"></div>
                         </div>
-                        <div class="card-container tabs-content cartCont" id="">
-                            待发货
-                        </div>
-                        
-                        <!-- 加载提示符 -->
+                        <div id="tabWaitSet" class="tab pull-to-refresh-content order-refresh-content infinite-scroll">
+                            <!--下拉提示符-->
+                            <div class="pull-to-refresh-layer order-refresh">
+                                <div class="preloader"></div>
+                                <div class="pull-to-refresh-arrow"></div>
+                            </div>
+                            <div class="card-container tabs-content cartCont" id="">
+                                待发货
+                            </div>
+
+                            <!-- 加载提示符-->
                         <div class="infinite-scroll-preloader">
                             <div class="preloader">
                             </div>
                         </div>
-                    </div>
-                    <div id="tabWaitGet" class="tab pull-to-refresh-content order-refresh-content infinite-scroll">
-                        <!--下拉提示符-->
-                        <div class="pull-to-refresh-layer order-refresh">
-                            <div class="preloader"></div>
-                            <div class="pull-to-refresh-arrow"></div>
                         </div>
-                        <div class="card-container tabs-content cartCont" id="">
-                            待收货
-                        </div>
-                        
-                        <!-- 加载提示符 -->
+                        <div id="tabWaitGet" class="tab pull-to-refresh-content order-refresh-content infinite-scroll">
+                            <!--下拉提示符-->
+                            <div class="pull-to-refresh-layer order-refresh">
+                                <div class="preloader"></div>
+                                <div class="pull-to-refresh-arrow"></div>
+                            </div>
+                            <div class="card-container tabs-content cartCont" id="">
+                                待收货
+                            </div>
+
+                            <!-- 加载提示符-->
                         <div class="infinite-scroll-preloader">
                             <div class="preloader">
                             </div>
                         </div>
-                    </div>
-                    <div id="tabWaitSpeak" class="tab pull-to-refresh-content infinite-scroll order-refresh-content">
-                        <!--下拉提示符-->
-                        <div class="pull-to-refresh-layer order-refresh">
-                            <div class="preloader"></div>
-                            <div class="pull-to-refresh-arrow"></div>
                         </div>
-                        <div class="card-container tabs-content cartCont" id="">
-                            待评价
-                        </div>
-                        
-                        <!-- 加载提示符 -->
+                        <div id="tabWaitSpeak" class="tab pull-to-refresh-content infinite-scroll order-refresh-content">
+                            <!--下拉提示符-->
+                            <div class="pull-to-refresh-layer order-refresh">
+                                <div class="preloader"></div>
+                                <div class="pull-to-refresh-arrow"></div>
+                            </div>
+                            <div class="card-container tabs-content cartCont" id="">
+                                待评价
+                            </div>
+
+                            <!-- 加载提示符-->
                         <div class="infinite-scroll-preloader">
                             <div class="preloader">
                             </div>
                         </div>
+                        </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>
@@ -195,7 +215,6 @@
                     }, 2000);
                 });
 
-
                 //多个标签页下的无限滚动
                 $(document).on("pageInit", "#page-fixed-tab-infinite-scroll", function (e, id, page) {
                     console.log($('.order-cart').length)
@@ -207,7 +226,7 @@
                     //隐藏加载提示符，这里应该要先做个判断,第一次进来没有加载
                     var loading = false;
                     if (!loading) {
-                       // 
+                        // 
                     }
                     // 每次加载添加多少条目
                     var itemsPerLoad = 2;
@@ -218,23 +237,23 @@
                     function addItems(number, lastIndex) {
                         // 生成新条目的HTML
                         var html = '';
-                        for (var i =  1; i <=  number; i++) {
-                            html += '<div class="card order-cart">'+
-                            '<div class="order-cart-header">等待付款</div>'+
-                            '<div class="card-content">'+
-                            '<div class="card-content-inner">'+
-                            '<div class="cart-img-content">'+
-                            '<img src="../asset/imgs/Ordermanagement/147.png" />'+
-                            '</div>'+
-                            '<div class="cart-indru-content">'+
+                        for (var i = 1; i <= number; i++) {
+                            html += '<div class="card order-cart">' +
+                            '<div class="order-cart-header">等待付款</div>' +
+                            '<div class="card-content">' +
+                            '<div class="card-content-inner">' +
+                            '<div class="cart-img-content">' +
+                            '<img src="../asset/imgs/Ordermanagement/147.png" />' +
+                            '</div>' +
+                            '<div class="cart-indru-content">' +
                             '<p><span class="pull-left">博世（AO）TSF 1234T394<br />充电式电钻/起子机双电版</span><span class="pull-right">x<b>1</b></span></p>' +
-                            '<p class="cart-guige">重量：4.72kg  颜色：12V锂电钻（双电池）</p>'+
-                            '</div>'+
-                            '</div>'+
-                            '</div>'+
-                            '<div class="cart-footer">'+
-                            '<p><span class="cart-total">合计：<b>134</b>元(包含运费<b>0.00</b>元)</span><a class="cart-cancel-class">取消订单</a><a class="cart-go-pay">去付款</a></p>'+
-                                '</div>'+
+                            '<p class="cart-guige">重量：4.72kg  颜色：12V锂电钻（双电池）</p>' +
+                            '</div>' +
+                            '</div>' +
+                            '</div>' +
+                            '<div class="cart-footer">' +
+                            '<p><span class="cart-total">合计：<b>134</b>元(包含运费<b>0.00</b>元)</span><a class="cart-cancel-class">取消订单</a><a class="cart-go-pay">去付款</a></p>' +
+                                '</div>' +
                             '</div>';
                         }
                         // 添加新条目
@@ -245,7 +264,7 @@
                         // 如果正在加载，则退出
                         if (loading) {
                             return;
-                        } 
+                        }
                         // 设置flag
                         loading = true;
                         var tabIndex = 0;
@@ -265,7 +284,7 @@
                             tabIndex = 4;
                         }
                         lastIndex = $('.cartCont').eq(tabIndex).find('.order-cart').length;
-                       
+
                         // 模拟1s的加载过程
                         setTimeout(function () {
                             // 重置加载flag
@@ -273,7 +292,7 @@
                             //加载数目总数
                             if (lastIndex >= maxItems) {
                                 // 加载完毕，则注销无限加载事件，以防不必要的加载
-                                $.detachInfiniteScroll($('.infinite-scroll').eq(tabIndex));
+                                //$.detachInfiniteScroll($('.infinite-scroll').eq(tabIndex));
                                 // 删除加载提示符,再显示一句话‘没有更多了’
                                 $('.infinite-scroll-preloader').hide();
                                 return;
@@ -281,11 +300,13 @@
                             // 更新最后加载的序号
                             addItems(itemsPerLoad, lastIndex);
                             lastIndex = $('.cartCont').eq(tabIndex).find('.order-cart').length;
-                            
+
                             $.refreshScroller();
                         }, 1000);
                     });
                 });
+
+                
 
                 $.init();
             });
